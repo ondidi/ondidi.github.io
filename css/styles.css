@@ -68,7 +68,7 @@
     margin-bottom: 5px;
     position: relative;
     
-    background: #888bed;
+    background: #6d422f;
     border-radius: 3px;
     
     z-index: 1;
@@ -92,7 +92,7 @@
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #888bed
+    background: #f3e3e3
   }
   
   #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -111,7 +111,7 @@
     padding: 50px;
     padding-top: 125px;
     
-    background: rgba(187, 152, 243, 0.76);
+    background: rgba(227, 164, 68, 0.76);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -164,6 +164,7 @@
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
+    margin-top: 20px;
 
 }
 
@@ -173,7 +174,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 500px;
+    top: 460px;
     position: relative;
 }
 #page1 p {
@@ -197,19 +198,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 700px;
+    top: 550px;
     position: relative;
     text-align: center;
-    font-family: 'Croissant One', cursive;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-family: "Roboto", serif;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
     padding-right: 20px;
     padding-left: 20px;
 }
 #page2 .sec{
   font-size: 12px;
   font-weight: 400;
-  top: 600px;
+  top: 500px;
 }
 .clean {
   margin-top: 650px;
@@ -317,8 +319,24 @@ margin-top: -600px;
 }
 .pe {
   text-align: center;
-  margin-top: 400px;
+  margin-top: -420px;
 }
+
+#page1 .pe {
+  font-family: "Roboto", serif;
+  font-size: 14px;
+}
+
+/* Estilo para a linha */
+hr {
+  border: none; 
+  height: 4px; 
+  background-color: #16669b; 
+  width: 80%;
+  margin: 20px auto; 
+  margin-top: 470px;
+}
+
 
 
 @media (min-width: 992px) {
@@ -339,18 +357,33 @@ margin-top: -600px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 580px;
+    top: 500px;
     position: relative;
     text-align: center;
-    font-family: 'Croissant One', cursive;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+    font-family: "Roboto", serif;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    padding-right: 20px;
+    padding-left: 20px;
    }
-  .pe {
+
+  .pe p {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 85px;
+    font-family: "Roboto", serif;
    }
+
+   /* Estilo para a linha */
+hr {
+  border: none; 
+  height: 4px; 
+  background-color: #3498db; 
+  width: 80%;
+  margin: 20px auto; 
+  margin-top: 470px;
 }
-    
+}
+  
 
