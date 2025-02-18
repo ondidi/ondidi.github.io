@@ -17,6 +17,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Inter&display=swap" rel="stylesheet">
     </head>
     
@@ -33,16 +37,23 @@
     <body>
         <div class="page active" id="page1">
            
-            <p>"Navegar é preciso</p>
-            <p>viver não é preciso..."</p>
+            <p>Viver é um presente,</p>
+            <p>renovar é uma sabedoria.</p>
 
-            <p class="abre">Cada jornada é marcada por desafios, e esses desafios são alimentados pelos nossos sonhos. Cada sonho merece ser conquistado - independentemente das circunstâncias - seja de maneira plena ou da forma que se apresentar. Não culpe os outros pelos seus erros, mas também não cometa erros em nome de outra pessoa. Se tem ódio, não há lugar para o amor.</p>
+            <p class="abre">Neste espaço pessoal, versão 2025, a proposta é vida e movimento, evolução e redescoberta. Tenho internalizado que cada desafio é um convite para o crescimento. Bibliografias não faltam. A filosofia me ensina que não é a exatidão do percurso que traz a felicidade, mas o desejo de superar obstáculos, de transformar cada instante em aprendizado e renovação. A ideia aqui não é oferecer receitas, mas interpretar os fenômenos com a naturalidade que a vida exige – afinal, tudo muda, tudo passa, e é nisso que reside a beleza dos encontros e desencontros. Internalizar a impermanência não é perder, mas entender que cada momento tem seu valor e que a verdadeira liberdade está em conhecer quem vive em você. Viver é ótimo!</p>
                                
             
-            <button onclick="changePage(1)"class="btn btn-primary">Bora Navegar comigo</button>
+            <button onclick="changePage(1)"class="btn btn-primary">Partiu...</button>
+
+            <hr>
+
+            <footer>
+                <p class="pe">&copy; 2025 - Diógenes (Didi) Pasqualini. Todos os direitos reservados.</p>
+            </footer> 
             
         </div>
 
+        
         <div class="page" id="page2">
                     <!--navegador-->
             <nav role="navigation">
@@ -56,18 +67,20 @@
                     <div class="linhamenu"></div>
                     <a href="mailto:didispbr@gmail.com?subject=Contato"><li><i class="far fa-envelope-open third-color"> </i> E-mail</li></a>
                     <a href="https://api.whatsapp.com/send?phone=5519997094329&text=Mensagem..."><li><i class="fab fa-whatsapp-square"></i> Whatsapp</li></a>
-                    <a href="https://www.linkedin.com/in/didibr/"><li><i class="fab fa-whatsapp-square"></i> + do mesmo</li></a>
+                    <a href="https://www.linkedin.com/in/didibr/"><li><i class="fab fa-whatsapp-square"></i> LinkedIn</li></a>
                 
                 </ul>
                 </div>
             </nav>
 
-            <p>Fascinante e incerto, o mundo é repleto de surpresas e desafios. Minha jornada tornou-se mais rica. De repente, caminhos diferentes e a oportunidade de me abrir a novas perspectivas. Explorar coisas que realmente valem a pena, sabe. Sozinho ou em companhia estou me encontrando e parto em busca de minha própria compreensão e existência. Sem "achismos", estou a abraçar a curiosidade e a gratidão, que sempre foram companheiras de minha essência. Para não me alongar muito, a jornada de se encontrar e se perder no mundo está no modo "on". Compartilho minhas imagens para inspirar e poder respirar, rssss. A bike tem sido a amiga de todas as horas, me leva até onde dá para chegar. Fica o convite, quem quiser pode vir, pois quando a gente divide, não deixa de somar.</p>
+            <p>As fotos que compartilho são um convite para viver em harmonia com a vida e a natureza. Não busco mostrar uma realidade onde tudo é felicidade – se fosse esse o propósito, usaria as redes sociais para isso. Minha intenção é outra: estar aberto a novas experiências e lembrar que o convite é para somar, nunca dividir.
+            A bike é apenas um facilitador, um meio para explorar caminhos, mas jamais substituir o que realmente importa: amizade, companheirismo, solidariedade e compaixão. O aprendizado é contínuo, e as perspectivas de dias melhores não estão fora, mas dentro de cada um de nós.</p>
             
             <p class="sec">Em cada seção, toque na primeira foto ou passe o mouse para ler a descrição</p>
 
             <div class="clean"></div>
 
+            
             <!-- Santa Olimpia -->
             <div class="container" id="olimpia">
                 <div class="linha"></div>
@@ -1064,7 +1077,7 @@
                             <img src="img/caminho-fé/cf (12).jpg" class="card-img-top" alt="Diógenes Didi Pasqualini">
                         </div>
                     </div>
-                </div>
+                </div>d
             </div>
             <!-- Godinhos -->
             <div class="linha5"></div>
@@ -1094,9 +1107,7 @@
                 </div>
             </div>
         </div> 
-        <footer>
-            <p class="pe">&copy; 2024 - Diógenes (Didi) Pasqualini. Todos os direitos reservados.</p>
-        </footer>     
+    
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -1110,5 +1121,6 @@
                 page2.classList.add('active');
             }
         </script>
+        
     </body>
 </html>
