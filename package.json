@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/ondidi/ondidi.github.io",
+  "homepage": "https://github.io/ondidi.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
