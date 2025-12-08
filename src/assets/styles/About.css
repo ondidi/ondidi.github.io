@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -38,10 +38,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 
+/*texto abertura facebike*/
 p {
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
+    color: #5A6A85;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
 }
 
 .divider {
@@ -66,7 +69,7 @@ p {
 .gallery-title {
     font-size: 24px;
     font-weight: bold;
-    color: #222;
+    color: #5A6A85;
 }
 
 .gallery-date {
@@ -77,12 +80,19 @@ p {
 
 .gallery-description {
     font-size: 16px;
-    color: #444;
+    color: #5A6A85;
 }
 
 .gallery {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px; 
+}
+
+.gallery img {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
 }
 
 /*botão voltar*/
@@ -249,22 +259,17 @@ p {
 
 /*seta acima*/
 .scroll-to-top {
+  font-size: 14px;
+  color: #212121;
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #007bff;
-  color: white;
+  background-color: #d6d7d8;
+  padding: 8px;
+  border-radius: 10px;
   border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
 }
 
 .scroll-to-top:hover {
@@ -276,6 +281,21 @@ p {
 }
 
 
+.about-button {
+  background-color: #bd6a28;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  display: block;   
+  margin-left: auto;    
+  margin-right: auto; 
+}
 
 
 

@@ -19,42 +19,115 @@ function About() {
             <div className="about-image-container">
                 <img src="/img/imagem-principal2.webp" alt="didi pasqualini" width="300" />
             </div>
-
-            {/* Menu de Navegação */}
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="menu">
-                        <li className="contato">Estou por aqui</li>
-                        <div className="linhamenu"></div>
-
-                        <a href="mailto:didispbr@gmail.com?subject=Contato" target="_blank" rel="noopener noreferrer">
-                            <li><i className="far fa-envelope-open third-color"></i> E-mail</li>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=5519997094329&text=Mensagem..." target="_blank" rel="noopener noreferrer">
-                            <li><i className="fab fa-whatsapp-square"></i> Whatsapp</li>
-                        </a>
-                        <a href="https://www.linkedin.com/in/didibr/" target="_blank" rel="noopener noreferrer">
-                            <li><i className="fab fa-linkedin"></i> LinkedIn</li>
-                        </a>
-                        <a href="/Facebike">
-                            <li><i className="fas fa-bicycle"></i> Facebike</li>
-                        </a>
-                    </ul>
-                </div>
-            </nav>
-
+            
+             {/* Linha Suave */}
+             <hr className="divider" />
             <p>
                 As fotos que compartilho são um convite para viver em harmonia com a vida e a natureza. 
                 Não busco mostrar uma realidade onde tudo é felicidade – se fosse esse o propósito, usaria 
                 as redes sociais para isso. Minha intenção é outra: estar aberto a novas experiências e lembrar 
                 que o convite é para somar, nunca dividir. A bike é apenas um facilitador, um meio para explorar 
                 caminhos, mas jamais substituir o que realmente importa: amizade, companheirismo, solidariedade
-                e compaixão. No Menu ao lado, em Facebike, estão muitas pessoas que dividiram muitos pedais. Passa lá!
+                e compaixão.  
             </p>
+   
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Graciosa/Morretes*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Graciosa/Morretes - PR</h2>
+                <p className="gallery-date">Publicado em 25 de Março de 2025</p>
+                <p className="gallery-description">
+                A Serra da Graciosa encanta pela beleza e charme. A percorri de carro e outra vez no tradicional passeio trem/van. Este pedal foi difícil, foram quase 70 km de extensão, descendo e subindo do Portal até Morretes. Um desnível de quase 1000 metros. O tempo mais do que ajudou, sol forte, mesmo à sombra o desgaste testou todos os limites da resistência. Não sabia, mas o trajeto faz parte da Estrada Real, que era utilizada desde o período colonial para o transporte de mercadorias entre o litoral e Curitiba. Uma jornada exaustiva, mas que voltaria a fazer.
+                </p>
+            </div>
+
+            <div className="gallery">
+                <img src="/img/Graciosa/gra (1).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (2).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (3).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (12).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (4).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (5).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (6).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (7).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (8).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (9).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (10).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (11).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (13).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Graciosa/gra (14).webp" alt="Didi Pasqualini- 0" />
+               
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+                        {/* Galeria Pontal do Paraná*/}
+                        <div className="gallery-info">
+                <h2 className="gallery-title">Pontal do Paraná - PR</h2>
+                <p className="gallery-date">Publicado em 23 de Março de 2025</p>
+                <p className="gallery-description">
+                    A descida da serra pela Estrada do Café foi desafiadora. A logistica era não pedalar por boa parte de Curitiba. Então planejei um pedal misto carro/bike/ônibus: deixei o carro no início da serra e pedalei até o Pontal, explorando boa parte das praias paranaenses.
+                    Foram mais de 120 km, sendo 80 km de rodovia e o restante pelas praias, combinando trechos urbanos, a emocionante descida da Serra do Mar e a beleza do litoral paranaense. O percurso passa por cenários incríveis, e a sensação de descer a serra é como estar em uma montanha-russa natural, com curvas que revelam vistas de tirar o fôlego.
+                    Chegando ao litoral, o destaque ficou por conta da infraestrutura bem planejada para ciclistas e pedestres. Algumas praias contam com ciclofaixas separadas dos carros, tornando o passeio ainda mais seguro e agradável.
+                    Seja para desafiar seus limites, apreciar a natureza ou simplesmente curtir um pedal longo e recompensador, essa rota é altamente recomendada!
+                </p>
+            </div>
+
+            <div className="gallery">
+                <img src="/img/Pontal do parana/Ponta (9).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (1).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (2).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (3).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (4).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (5).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (6).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (7).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (8).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (10).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (11).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (12).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (13).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (14).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (15).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Pontal do parana/Ponta (16).webp" alt="Didi Pasqualini- 0" />
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Galeria Curitiba */}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Curitiba - PR</h2>
+                <p className="gallery-date">Publicado em 22 de Março de 2025</p>
+                <p className="gallery-description">
+                Explorar Curitiba sobre duas rodas, foi uma experiência incrível! O tempo ajudou, clima de começo de outono, fresquinho, sem muito calor, deixou tudo mais agradável para pedalar e, claro, fazer bons registros. A capital paranaense é um convite ao turismo, e percorrê-la de bicicleta foi um sonho realizado. Aqui tenho boas lembranças, que trazem aquela sensação gostosa de nostalgia. Devo ter pedalado mais de 70 quilômetros, e o melhor; sem gastar um litro de combustível, apenas água no "motor".
+                </p>
+            </div>
+
+            <div className="gallery">
+                <img src="/img/Curitiba/cur16.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur14.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur12.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur1.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur2.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur3.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur4.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur5.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur17.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur6.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur7.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur8.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur9.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur10.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur11.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur13.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Curitiba/cur15.webp" alt="Didi Pasqualini- 0" />
+            </div>
 
             {/* Linha Suave */}
             <hr className="divider" />
