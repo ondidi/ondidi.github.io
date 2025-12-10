@@ -30,7 +30,82 @@ function About() {
                 caminhos, mas jamais substituir o que realmente importa: amizade, companheirismo, solidariedade
                 e compaixão.  
             </p>
-   
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Guaxupe*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Rota do café - Guaxupé - MG</h2>
+                <p className="gallery-date">Publicado em 6 de Dezembro de 2025</p>
+                <p className="gallery-description">
+                Pedalar pela Rota do Café, em Guaxupé, foi uma experiência intensa. Entre fazendas centenárias e belas paisagens, o percurso virou um verdadeiro teste de resistência: mais de 40 km com cerca de 2 mil metros de altimetria acumulada. O ponto mais alto marcou 1.221 metros no Garmin.
+                Fui solo. Como diz o ditado, sozinho a gente vai mais rápido, mas acompanhado vai mais longe. No meu caso, fui rápido… e pouco. Ainda assim, valeu cada metro.
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/Aparecida/Paris.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Aparecida/Paris 2.webp" alt="Didi Pasqualini- 0"/>
+            
+
+               
+
+            </div>
+
+                        {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Cafécomtrem*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Campinas - Jaguariúna</h2>
+                <p className="gallery-date">Publicado em 13 de Setembro de 2025</p>
+                <p className="gallery-description">
+                Fiz um pedal entre Campinas e Jaguariúna margeando a antiga linha férrea por onde ainda passa a charmosa Maria Fumaça. A rota tem trechos muito bem preservados e cenários que misturam natureza, história e aquela sensação gostosa de pedalar em um clima nostálgio foi muito gostoso. Em alguns pontos, o visual faz a gente diminuir o ritmo só para apreciar.
+                O trajeto oferece opções para todos os gostos — desde passeios tranquilos até desafios mais técnicos de MTB — e fiz tudo isso com amigos, o que deixou a experiência ainda mais divertida. No fim, ficou aquela alegria simples de quem viveu um dia leve, conectando paisagem, aventura e boa companhia.
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/Aparecida/Paris 2.webp" alt="Didi Pasqualini- 0"/>
+
+               
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Caminhodafe*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Depois de uma década, voltei ao Caminho da Fé</h2>
+                <p className="gallery-date">Publicado em 17 de Julho de 2025</p>
+                <p className="gallery-description">
+                Não foi dessa vez que usei bike moderna ou apoio logístico — fui com a mesma bicicleta de 10 anos atrás, equipada com alforjes de 14 kg, mais comida, água e todo o peso das vestes, minhas e da minha namorada. 
+                Meu propósito era claro: zerar o percurso. Isso significa não colocar o pé no chão nem nas subidas mais teimosas — inclusive a famosa e temida Serra da Luminosa, que costuma testar até os mais experientes.
+                Partimos de São José do Rio Pardo, em vez de Rio Claro, como já fiz. Essa pequena mudança aumentou — e muito — o desafio. A altimetria acumulada passou dos 10.000 metros e a distância originalmente planejada de 357 km acabou se transformando em 418 km de pura vivência.
+                Essa travessia não foi apenas um esforço físico; foi um lembrete luminoso de que sempre podemos recomeçar, de que existe força onde às vezes achamos só cansaço e que a fé — seja ela qual for — é também capacidade de seguir em frente, reinventar nossos passos e acolher novas versões de nós mesmos.
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/Aparecida/Paris 2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Aparecida/Paris 2.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Aparecida/Paris 3.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Aparecida/Paris 4.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Aparecida/Paris-5.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Aparecida/Paris-6.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/Aparecida/Paris-7.webp" alt="Didi Pasqualini- 0" />
+               
+
+            </div>
+
             {/* Linha Suave */}
             <hr className="divider" />
 
