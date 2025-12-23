@@ -44,6 +44,7 @@ const Facebike = () => {
       <div className="gallery-info"><h2 className="gallery-title">Aro 29</h2></div>
 
       <div className="gallery">
+        <img src="/img/Aro29/new (8).webp" alt="Didi Pasqualini- 0" />
         <img src="/img/Aro29/new (6).webp" alt="Didi Pasqualini- 0" />
         <img src="/img/Aro29/new (1).webp" alt="Didi Pasqualini- 0" />
         <img src="/img/Aro29/new (2).webp" alt="Didi Pasqualini- 0" />
@@ -59,7 +60,8 @@ const Facebike = () => {
       
 
       <div className="gallery">
-        
+
+      
         <img src="/img/Facebike/Face (30).webp" alt="Didi Pasqualini- 0" />
         <img src="/img/Facebike/Face (1).webp" alt="Didi Pasqualini- 0" />
         <img src="/img/Facebike/Face (2).webp" alt="Didi Pasqualini- 0" />

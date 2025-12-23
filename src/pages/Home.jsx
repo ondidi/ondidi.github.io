@@ -53,27 +53,52 @@ const Home = () => {
     <div className="home">
       <img src="/img/imagem-principal1.webp" alt="Didi Pasqualini" className="home-image" />
       <div className="icon-links">
-        <Link to="/about">
-          <img src="/about.webp" alt="About" className="home-icon" />
-        </Link>
-        <Link to="/facebike">
-          <img src="/facebike.webp" alt="Facebike" className="home-icon" />
-        </Link>
-        <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
-          <img src="/whatsapp.webp" alt="WhatsApp" className="home-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/didibr/" target="_blank" rel="noopener noreferrer">
-          <img src="/LinkedIn.webp" alt="LinkedIn" className="home-icon" />
-        </a>
-        <a href="#" onClick={() => setIsModalOpen(true)}>
-          <img src="/email.webp" alt="Email" className="home-icon" />
-        </a>
+      <Link to="/about" className="icon-item">
+        <img src="/about.webp" alt="Sobre mim" className="home-icon" />
+        <span className="icon-label">Pedaladas</span>
+      </Link>
+      <Link to="/facebike" className="icon-item">
+        <img src="/facebike.webp" alt="Minhas pedaladas" className="home-icon" />
+        <span className="icon-label">Amigos</span>
+      </Link>
+      <a
+        href="https://wa.me/123456789"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icon-item"
+        >
+        <img src="/whatsapp.webp" alt="WhatsApp" className="home-icon" />
+        <span className="icon-label">WhatsApp</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/didibr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icon-item"
+      >
+      <img src="/LinkedIn.webp" alt="Meu LinkedIn" className="home-icon" />
+      <span className="icon-label">LinkedIn</span>
+    </a>
+    <a
+      href="#"
+      onClick={() => setIsModalOpen(true)}
+      className="icon-item"
+      aria-label="Enviar um e-mail"
+    >
+      <img src="/email.webp" alt="Contato por e-mail" className="home-icon" />
+      <span className="icon-label">Contato</span>
+    </a>
       </div>
-      <h1 className="home-title">Viver é uma concessão, pedalar é um privilégio.</h1>
+
+      <h1 className="home-title">Estado da arte.</h1>
       <p className="home-text">
-          Pedalar é liberdade. Viajar é descoberta. Aqui, compartilho um pouco das minhas experiências, aprendizados e momentos que a vida me presenteou. Se você gosta de natureza, movimento e boas histórias, seja bem-vindo. Respire fundo, explore cada imagem e aproveite a jornada.
-        {expanded && (
-          <>  Neste espaço pessoal, versão 2025, a proposta é vida e movimento, evolução e redescoberta. Tenho aprendido que cada desafio é um convite ao crescimento e que viver é uma concessão da natureza. Pedalar é um privilégio, e estar feliz, a verdadeira apoteose de tudo isso. Se você me permite não exagerar muito, me considero uma pessoa de muita sorte. Sorte por ter amigos incríveis, por ter nascido em uma família que me deu uma boa educação, por ter tido a oportunidade de me relacionar com muitas pessoas. Com algumas, como diz Martinho, “certo tempo fiquei”, para outras, “apenas um pouco me dei”. Sorte também por ter sido parte essencial na vida de duas pessoas maravilhosas: meus filhos, Juliano e Evelyn. Ser pai deles é, sem dúvida, uma das maiores alegrias da minha vida. Acompanhar suas trajetórias, ver seus sonhos ganhando forma e saber que, de alguma maneira, pude contribuir para com suas histórias é um privilégio indescritível. Sorte ainda por ter construído uma carreira profissional maravilhosa, por ter estudado, me graduado e pós-graduado. Então, se você chegou até este ponto do texto, venha tranquilo. Leia, respire, inspire-se. Deixe que cada palavra encontre seu próprio espaço dentro da sua história. Não tenha pressa, não julgue, seja impecável com sua consciência, pois ao fazer este site dei o melhor de mim. E se, depois de ler, sentir vontade de mandar um “Oi”, escolha um canal nos ícones acima. Vou adorar te receber.
+        A vida é uma ideia em movimento. A jornada é o caminho.
+        Nesta versão 2026 do meu espaço de aventuras, levo adiante aquilo que, em meus estudos de pós-graduação, chamávamos de estado da arte.        {expanded && (
+          <>  Aqui celebro aventuras, descobertas, viagens e novas amizades — encontros que surgem e vão dando lugar a conexões, pelas quais, pouco a pouco, construímos aquilo que chamamos de história.
+              Tenho descoberto que viver não é chegar a um estado pronto, acabado — sobretudo à medida que caminhamos um pouco mais pela estrada da vida —, mas um processo contínuo de ajuste.
+              Nele, incorporamos novos valores, afetos, consciência e sentido, que convivem e contrastam com perdas, dores, silêncios e caminhos.
+              O exterior nos toca, nos ensina, nos conduz aos sonhos. Mas é no interior que corrigimos rotas, ajustamos os tons. Afinar a beleza da vida é o ponto central.
+              A bike tem sido a catalisadora de tudo isso. No equilíbrio, ela nos ensina a escutar — e a não perder o ritmo. Nos encontramos por aí, quem sabe.
           </>
         )}
       </p>
@@ -127,7 +152,7 @@ const Home = () => {
       <PieChart />
 
       <footer className="footer">
-        <p>&copy; 2025 - Diógenes (Didi) Pasqualini. Todos os direitos reservados.</p>
+        <p>&copy; 2026 - Diógenes (Didi) Pasqualini. Todos os direitos reservados.</p>
       </footer>
     </div>
   );

@@ -58,7 +58,7 @@ const BarChart = () => {
 
   return (
     <div className="pie-container">
-      <h3>Estatísticas do último pedal</h3>
+      <h3>Estatística</h3>
       <Bar data={data} options={options} />
     </div>
   );

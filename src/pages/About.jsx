@@ -34,6 +34,49 @@ function About() {
             {/* Linha Suave */}
             <hr className="divider" />
 
+            {/* jacupiranga-cananeia*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Jacupiranga - Cananéia - Ilha do Cardoso</h2>
+                <p className="gallery-date">Publicado em 15 de Dezembro de 2025</p>
+                <p className="gallery-description">
+                Cada pedal carrega uma história, e toda história percorre uma jornada que nem sempre pode ser dita — seja pelas palavras, seja pelas imagens.
+                Nesta última cicloviagem, segui acompanhado de um time muito bacana: com alguns já havia pedalado antes, outros encontrei pelo próprio caminho.
+                Este foi um ano de muitas aventuras e pedais marcantes. Um ano mais leve, mais romântico e, sobretudo, de astral elevado.
+                Viver não é apenas o que se registra, mas o todo — com tudo aquilo que o destino nos oferece. A chuva e o sol, o dia e a noite, as vitórias e as derrotas. Em tudo, há sempre algo que ensina, algo que vale.
+                Assim, encerro este pedal de 2025, com as belas paisagens de Jacupiranga, Cananéia, Ilha Comprida e Ilha do Cardoso, e fecho um ano em que cumpri grande parte daquilo que desejo como ser humano: ser impecável com as palavras, não levar nada pelo lado pessoal, não tirar conclusões e o mais importante, buscar fazer sempre o melhor.
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/Cana/PCJ1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ17.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ18.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ19.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ20.webp" alt="Didi Pasqualini- 0"/>
+
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
             {/* Guaxupe*/}
             <div className="gallery-info">
                 <h2 className="gallery-title">Rota do café - Guaxupé - MG</h2>
