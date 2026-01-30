@@ -1,10 +1,9 @@
-
 /*font dos icones*/
 
 .home {
     text-align: center;
     padding-top: 5px;
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
  }
   
@@ -13,9 +12,34 @@
     max-width: 500px;
     height: auto;
   }
+
+  /* Título principal */
+.abre {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.6rem, 4.5vw, 2.2rem);
+  font-weight: 400;
+  color: #2E2E2E;
+  margin: 16px auto 6px;
+  max-width: 720px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Subtítulo */
+.home-title2 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  font-weight: 400;
+  color: #555;
+  margin: 0 auto 18px;
+  max-width: 720px;
+  line-height: 1.45;
+  text-align: center;
+  opacity: 0.9;
+}
   
   /*fonte do título principal*/
-  
   .home-title {
     font-size: 22px;
     font-weight: 900;
@@ -42,7 +66,7 @@
   
 
   .footer {
-    background-color: #e3d4c8;
+    background-color: #F5FAFE;
     font-family: 'Plus Jakarta Sans';
     padding-top: 0,5px;
     padding-bottom: 0,6px;
@@ -81,10 +105,10 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  /*botão ver mais*/
+  /*botão ver textão*/
 
   .toggle-button {
-    background-color: #E3EDF5;
+    background-color: #F5FAFE;
     color: #2E2E2E;
     border: none;
     padding: 8px 30px;
@@ -117,7 +141,7 @@
     gap: 40px; /* Espaçamento entre os ícones */
     margin-top: 5px; /* Espaço entre o botão e os ícones */
     margin-bottom: 20px;
-    background-color: #ebf1f5;
+    background-color: #F5FAFE;
   }
   
   .home-icon {
@@ -194,8 +218,10 @@
   cursor: pointer;
 }
 
+/*cor da fonte dos icones*/
+
 .contact-form button:hover {
-  background: #b30003;
+  background: #2E2E2E;
 }
 
 .status-message {
@@ -245,3 +271,8 @@
 .pie-container h3 {
   color: #2E2E2E;
 }
+
+
+
+
+

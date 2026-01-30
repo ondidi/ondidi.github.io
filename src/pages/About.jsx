@@ -34,6 +34,36 @@ function About() {
             {/* Linha Suave */}
             <hr className="divider" />
 
+                        {/* Rota Márcia Prado*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">São Paulo - Santos</h2>
+                <p className="gallery-date">Publicado em 1º de fevereiro de 2026</p>
+                <p className="gallery-description">
+                Percorrer a Rota Márcia Prado, que liga São Paulo a Santos passando por São Bernardo do Campo, foi uma experiência marcante, dessas que ficam no corpo e na memória.
+                Além da beleza do trajeto e da sensação única de descer a serra pedalando, há algo a mais nesse caminho. Conheci a história de Márcia Regina de Andrade Prado ainda em vida, quando eu trabalhava em São Paulo, na Alesp. Foi também naquele período que retomei o hábito de pedalar, muito influenciado pelo meu filho.
+                Hoje, cruzar essa rota e ver seu nome eternizado ao longo do percurso traz um sentimento especial. Não se trata apenas de um trajeto ciclístico, mas de uma conquista construída na resistência, no risco e na coragem de quem ousou ocupar as ruas em um país que quase nunca pensa no ciclista.
+                Entre túneis, curvas, amor e a companhia de tantos outros ciclistas, a liberdade aparece de forma concreta: no vento, no movimento contínuo e na sensação de pertencimento. É um percurso que mistura paisagem, história e emoção.
+                Valeu, grupo. A estrada segue viva — e nós seguimos pedalando.
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/Cana/PCJ1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Cana/PCJ7.webp" alt="Didi Pasqualini- 0"/>
+
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
             {/* jacupiranga-cananeia*/}
             <div className="gallery-info">
                 <h2 className="gallery-title">Jacupiranga - Cananéia - Ilha do Cardoso</h2>
@@ -612,22 +642,23 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/caminho-fé/cf (1).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (2).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (3).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (4).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (5).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (6).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (7).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (8).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (9).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (10).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (11).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (12).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (13).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (14).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (15).webp" alt="Didi pasqualini" />
-                <img src="/img/caminho-fé/cf (16).webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_1.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_2.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_3.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_4.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_5.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_6.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_7.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_8.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_9.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_10.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_11.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_12.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_13.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_14.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_15.webp" alt="Didi pasqualini" />
+                <img src="/img/Caminhofe/caminho_16.webp" alt="Didi pasqualini" />
+
             </div>
 
             {/* Linha Suave */}

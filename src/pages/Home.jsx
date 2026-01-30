@@ -49,8 +49,12 @@ const Home = () => {
       );
   };
 
+
   return (
     <div className="home">
+      <h2 className="abre">Olá Internauta!</h2>
+      <h3 className="home-title2">Seja bem-vindo ao meu lar</h3>
+
       <img src="/img/imagem-principal1.webp" alt="Didi Pasqualini" className="home-image" />
       <div className="icon-links">
       <Link to="/about" className="icon-item">
@@ -70,15 +74,7 @@ const Home = () => {
         <img src="/whatsapp.webp" alt="WhatsApp" className="home-icon" />
         <span className="icon-label">WhatsApp</span>
       </a>
-      <a
-        href="https://www.linkedin.com/in/didibr/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icon-item"
-      >
-      <img src="/LinkedIn.webp" alt="Meu LinkedIn" className="home-icon" />
-      <span className="icon-label">LinkedIn</span>
-    </a>
+
     <a
       href="#"
       onClick={() => setIsModalOpen(true)}
