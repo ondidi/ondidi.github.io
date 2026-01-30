@@ -169,7 +169,7 @@ function About() {
                 <h2 className="gallery-title">Após uma década, voltei ao Caminho da Fé</h2>
                 <p className="gallery-date">Publicado em 17 de Julho de 2025</p>
                 <p className="gallery-description">
-                Não foi dessa vez que usei bike moderna ou apoio logístico — fui com a mesma bicicleta de 10 anos atrás, equipada com alforjes de 14 kg, mais comida, água e todo o peso das vestes, minhas e da minha ex-namorada. 
+                Não foi dessa vez que usei bike moderna ou apoio logístico — fui com a mesma bicicleta de 10 anos atrás, equipada com alforjes de 14 kg, mais comida, água e todo o peso das vestes, minhas e da parceira. 
                 Meu propósito era claro: zerar o percurso. Isso significa não colocar o pé no chão nem nas subidas mais teimosas — inclusive a famosa e temida Serra da Luminosa, que costuma testar até os mais experientes.
                 Partimos de São José do Rio Pardo, em vez de Rio Claro, como já fiz. Essa pequena mudança aumentou — e muito — o desafio. A altimetria acumulada passou dos 10.000 metros e a distância originalmente planejada de 357 km acabou se transformando em 418 km de pura vivência.
                 Essa travessia não foi apenas um esforço físico; foi um lembrete luminoso de que sempre podemos recomeçar, de que existe força onde às vezes achamos só cansaço e que a fé — seja ela qual for — é também capacidade de seguir em frente, reinventar nossos passos e acolher novas versões de nós mesmos.
