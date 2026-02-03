@@ -50,13 +50,28 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Cana/PCJ1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP0.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP17.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP18.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP19.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP20.webp" alt="Didi Pasqualini- 0"/>
+
 
 
             </div>
