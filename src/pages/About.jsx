@@ -34,7 +34,7 @@ function About() {
             {/* Linha Suave */}
             <hr className="divider" />
 
-                        {/* Rota Márcia Prado*/}
+            {/* Rota Márcia Prado*/}
             <div className="gallery-info">
                 <h2 className="gallery-title">São Paulo - Santos</h2>
                 <p className="gallery-date">Publicado em 1º de fevereiro de 2026</p>
@@ -53,6 +53,7 @@ function About() {
                 <img src="/img/Marcia/MP0.webp" alt="Didi Pasqualini- 0"/>
                 <img src="/img/Marcia/MP1.webp" alt="Didi Pasqualini- 0"/>
                 <img src="/img/Marcia/MP2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/Marcia/MP21.webp" alt="Didi Pasqualini- 0"/>
                 <img src="/img/Marcia/MP3.webp" alt="Didi Pasqualini- 0"/>
                 <img src="/img/Marcia/MP4.webp" alt="Didi Pasqualini- 0"/>
                 <img src="/img/Marcia/MP5.webp" alt="Didi Pasqualini- 0"/>
