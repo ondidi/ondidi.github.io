@@ -34,6 +34,128 @@ function About() {
             {/* Linha Suave */}
             <hr className="divider" />
 
+            {/* Frutas*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Rota das frutas - Louveira/Vinhedo – SP</h2>
+                <p className="gallery-date">Publicado em 12 de abril de 2026</p>
+                <p className="gallery-description">
+                Aproveitando a região de Jundiaí, fiz um pedal pela Rota das Frutas, no trecho mais curto entre Vinhedo e Louveira.
+
+                A paisagem muda completamente, diferentemente da Serra do Japi: mais gastronômica e etílica, cercada por parreirais e com pouca estrada de terra.
+
+                Um pedal leve, daqueles para curtir o caminho — e, claro, as paradas.
+                </p>
+            </div>
+
+                        <div className="gallery">
+              
+                <img src="/img/rota-frutas/RF1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/rota-frutas/RF11.webp" alt="Didi Pasqualini- 0"/>
+
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Japi*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Serra do Japi – Jundiaí – SP</h2>
+                <p className="gallery-date">Publicado em 11 de abril de 2026</p>
+                <p className="gallery-description">
+                Pedalar pela Serra do Japi é uma experiência que mistura esforço e recompensa o tempo todo.
+
+                As trilhas são cercadas por mata densa, com trechos úmidos, sombra constante e aquele friozinho característico da região. Em vários pontos, a água cruza o caminho — seja em pequenas nascentes ou cachoeiras.
+
+                As subidas exigem, mas os mirantes compensam. E muito.
+
+                O mais curioso é a sensação de isolamento: mesmo estando perto de São Paulo, parece que você entrou em outro mundo.
+
+                Um pedal ideal para quem gosta de natureza de verdade, sem filtro.
+
+                </p>
+            </div>
+
+                        <div className="gallery">
+              
+                <img src="/img/japi/japi1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/japi/japi14.webp" alt="Didi Pasqualini- 0"/>
+
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
+            {/* Japi*/}
+            <div className="gallery-info">
+                <h2 className="gallery-title">Rota das Capelas – Serra Negra – SP</h2>
+                <p className="gallery-date">Publicado em 2 de março de 2026</p>
+                <p className="gallery-description">
+                Percorri a Rota das Capelas, em Serra Negra, inicialmente movido pela curiosidade. Não imaginava que o desafio seria tão expressivo.
+                O trajeto passa por capelas históricas e por pontos que favorecem tanto o ciclismo quanto uma caminhada contemplativa. A paisagem impõe respeito: estradas de terra, silêncio e uma sucessão de subidas longas e trechos bastante íngremes.
+                Apesar dos cerca de 40 km, a dificuldade é elevada. É um percurso que exige preparo, constância e disciplina nas subidas.
+                Aproveitei o final de semana para estender a aventura até Monte Alegre do Sul, ali bem próximo. No total, foram mais de 80 km percorridos, com altimetria acumulada próxima de 2.500 metros, incluindo a subida ao Morro do Cristo.
+                Foi um daqueles desafios que testam as pernas — e, de certa forma, também organizam a mente.
+
+
+                </p>
+            </div>
+
+            <div className="gallery">
+              
+                <img src="/img/capelas/Capelas1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas17.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas18.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas19.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas20.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas21.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas22.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/capelas/Capelas24.webp" alt="Didi Pasqualini- 0"/>
+
+
+
+            </div>
+
+            {/* Linha Suave */}
+            <hr className="divider" />
+
             {/* Rota Márcia Prado*/}
             <div className="gallery-info">
                 <h2 className="gallery-title">São Paulo - Santos</h2>
@@ -50,28 +172,28 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Marcia/MP0.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP21.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP7.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP8.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP9.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP10.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP11.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP12.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP13.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP14.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP15.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP16.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP17.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP18.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP19.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Marcia/MP20.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP0.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP21.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP17.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP18.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP19.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/marcia/MP20.webp" alt="Didi Pasqualini- 0"/>
 
 
 
@@ -96,26 +218,26 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Cana/PCJ1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ7.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ8.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ9.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ10.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ11.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ12.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ13.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ14.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ15.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ16.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ17.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ18.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ19.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Cana/PCJ20.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ17.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ18.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ19.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/cana/PCJ20.webp" alt="Didi Pasqualini- 0"/>
 
 
             </div>
@@ -136,18 +258,18 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Guaxu/CAF1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF7.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF8.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF9.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF10.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF11.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Guaxu/CAF12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/guaxu/CAF12.webp" alt="Didi Pasqualini- 0"/>
 
             </div>
 
@@ -167,14 +289,14 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Trem/T1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T7.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Trem/T8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/trem/T8.webp" alt="Didi Pasqualini- 0"/>
             </div>
 
             {/* Linha Suave */}
@@ -195,22 +317,22 @@ function About() {
 
             <div className="gallery">
               
-                <img src="/img/Aparecida/AP1.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP2.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP3.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP4.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP5.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP6.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP7.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP8.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP9.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP10.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP11.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP12.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP13.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP14.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP15.webp" alt="Didi Pasqualini- 0"/>
-                <img src="/img/Aparecida/AP16.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP1.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP2.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP3.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP4.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP5.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP6.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP7.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP8.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP9.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP10.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP11.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP12.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP13.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP14.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP15.webp" alt="Didi Pasqualini- 0"/>
+                <img src="/img/aparecida/AP16.webp" alt="Didi Pasqualini- 0"/>
 
             </div>
 
@@ -227,20 +349,20 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Graciosa/gra (1).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (2).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (3).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (12).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (4).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (5).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (6).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (7).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (8).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (9).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (10).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (11).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (13).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Graciosa/gra (14).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (1).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (2).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (3).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (12).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (4).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (5).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (6).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (7).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (8).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (9).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (10).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (11).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (13).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/graciosa/gra (14).webp" alt="Didi Pasqualini- 0" />
                
 
             </div>
@@ -261,22 +383,22 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Pontal do parana/Ponta (9).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (1).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (2).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (3).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (4).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (5).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (6).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (7).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (8).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (10).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (11).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (12).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (13).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (14).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (15).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Pontal do parana/Ponta (16).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (9).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (1).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (2).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (3).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (4).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (5).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (6).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (7).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (8).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (10).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (11).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (12).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (13).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (14).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (15).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/pontal/Ponta (16).webp" alt="Didi Pasqualini- 0" />
 
             </div>
 
@@ -293,23 +415,23 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Curitiba/cur16.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur14.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur12.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur1.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur2.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur3.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur4.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur5.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur17.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur6.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur7.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur8.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur9.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur10.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur11.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur13.webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Curitiba/cur15.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur16.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur14.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur12.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur1.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur2.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur3.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur4.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur5.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur17.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur6.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur7.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur8.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur9.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur10.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur11.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur13.webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/curitiba/cur15.webp" alt="Didi Pasqualini- 0" />
             </div>
 
             {/* Linha Suave */}
@@ -325,19 +447,19 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Sta-Olimpia/StaOlimpia (0).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (1).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (2).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (3).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (4).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (6).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (7).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (8).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (9).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (10).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (11).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (12).webp" alt="Didi Pasqualini- 0" />
-                <img src="/img/Sta-Olimpia/StaOlimpia (13).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (0).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (1).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (2).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (3).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (4).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (6).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (7).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (8).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (9).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (10).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (11).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (12).webp" alt="Didi Pasqualini- 0" />
+                <img src="/img/staolimpia/StaOlimpia (13).webp" alt="Didi Pasqualini- 0" />
        
             </div>
 
@@ -355,19 +477,19 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Rio-pardo/Rio-pardo (0).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (9).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (10).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (11).webp" alt="Didi pasqualini" />
-                <img src="/img/Rio-pardo/Rio-pardo (12).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (0).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (1).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (2).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (3).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (4).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (5).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (6).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (7).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (8).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (9).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (10).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (11).webp" alt="Didi pasqualini" />
+                <img src="/img/riopardo/Rio-pardo (12).webp" alt="Didi pasqualini" />
             </div>
 
              {/* Linha Suave */}
@@ -409,12 +531,12 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Ana/ana0.webp" alt="Didi pasqualini" />
-                <img src="/img/Ana/ana1.webp" alt="Didi pasqualini" />
-                <img src="/img/Ana/ana3.webp" alt="Didi pasqualini" />
-                <img src="/img/Ana/ana4.webp" alt="Didi pasqualini" />
-                <img src="/img/Ana/ana5.webp" alt="Didi pasqualini" />
-                <img src="/img/Ana/ana6.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana0.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana1.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana3.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana4.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana5.webp" alt="Didi pasqualini" />
+                <img src="/img/ana/ana6.webp" alt="Didi pasqualini" />
                     
             </div>
 
@@ -433,18 +555,18 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Cananeia/CAN (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (9).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (10).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (11).webp" alt="Didi pasqualini" />
-                <img src="/img/Cananeia/CAN (12).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (1).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (2).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (3).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (4).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (5).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (6).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (7).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (8).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (9).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (10).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (11).webp" alt="Didi pasqualini" />
+                <img src="/img/cananeia/CAN (12).webp" alt="Didi pasqualini" />
                     
             </div>
 
@@ -461,18 +583,18 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Ilha-comprida/IC (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (9).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (10).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (11).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-comprida/IC (12).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (1).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (2).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (3).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (4).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (5).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (6).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (7).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (8).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (9).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (10).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (11).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhacomprida/IC (12).webp" alt="Didi pasqualini" />
                     
             </div>
 
@@ -489,15 +611,15 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Ilha-bela/ilha (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Ilha-bela/ilha (9).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (1).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (2).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (3).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (4).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (5).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (6).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (7).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (8).webp" alt="Didi pasqualini" />
+                <img src="/img/ilhabela/ilha (9).webp" alt="Didi pasqualini" />
                     
             </div>
 
@@ -514,12 +636,12 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/SB/SB (1).webp" alt="Didi pasqualini" />
-                <img src="/img/SB/SB (2).webp" alt="Didi pasqualini" />
-                <img src="/img/SB/SB (3).webp" alt="Didi pasqualini" />
-                <img src="/img/SB/SB (4).webp" alt="Didi pasqualini" />
-                <img src="/img/SB/SB (5).webp" alt="Didi pasqualini" />
-                <img src="/img/SB/SB (6).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (1).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (2).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (3).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (4).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (5).webp" alt="Didi pasqualini" />
+                <img src="/img/saosebastiao/SB (6).webp" alt="Didi pasqualini" />
                     
             </div>
 
@@ -537,12 +659,12 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Horto/HF-1.jpg" alt="Didi pasqualini" />
-                <img src="/img/Horto/HF-2.jpg" alt="Didi pasqualini" />
-                <img src="/img/Horto/HF-3.jpg" alt="Didi pasqualini" />
-                <img src="/img/Horto/HF-4.jpg" alt="Didi pasqualini" />
-                <img src="/img/Horto/HF-5.jpg" alt="Didi pasqualini" />
-                <img src="/img/Horto/HF-6.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-1.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-2.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-3.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-4.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-5.jpg" alt="Didi pasqualini" />
+                <img src="/img/horto/HF-6.jpg" alt="Didi pasqualini" />
                     
             </div>
 
@@ -585,20 +707,20 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Caminho-anjos/CA (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (9).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (11).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (12).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (13).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (14).webp" alt="Didi pasqualini" />
-                <img src="/img/Caminho-anjos/CA (15).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (1).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (2).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (3).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (4).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (5).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (6).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (7).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (8).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (9).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (11).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (12).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (13).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (14).webp" alt="Didi pasqualini" />
+                <img src="/img/anjos/CA (15).webp" alt="Didi pasqualini" />
               
             </div>
 
@@ -637,11 +759,11 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Gruta/gruta (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Gruta/gruta (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Gruta/gruta (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Gruta/gruta (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Gruta/gruta (5).webp" alt="Didi pasqualini" />
+                <img src="/img/gruta/gruta (1).webp" alt="Didi pasqualini" />
+                <img src="/img/gruta/gruta (2).webp" alt="Didi pasqualini" />
+                <img src="/img/gruta/gruta (3).webp" alt="Didi pasqualini" />
+                <img src="/img/gruta/gruta (4).webp" alt="Didi pasqualini" />
+                <img src="/img/gruta/gruta (5).webp" alt="Didi pasqualini" />
             </div>
 
              {/* Linha Suave */}
@@ -658,22 +780,22 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Caminhofe/caminho_1.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_2.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_3.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_4.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_5.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_6.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_7.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_8.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_9.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_10.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_11.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_12.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_13.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_14.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_15.webp" alt="Didi pasqualini" />
-                <img src="/img/Caminhofe/caminho_16.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_1.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_2.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_3.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_4.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_5.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_6.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_7.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_8.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_9.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_10.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_11.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_12.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_13.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_14.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_15.webp" alt="Didi pasqualini" />
+                <img src="/img/caminhofe/caminho_16.webp" alt="Didi pasqualini" />
 
             </div>
 
@@ -691,10 +813,10 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Godinho/god (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Godinho/god (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Godinho/god (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Godinho/god (4).webp" alt="Didi pasqualini" />
+                <img src="/img/godinho/god (1).webp" alt="Didi pasqualini" />
+                <img src="/img/godinho/god (2).webp" alt="Didi pasqualini" />
+                <img src="/img/godinho/god (3).webp" alt="Didi pasqualini" />
+                <img src="/img/godinho/god (4).webp" alt="Didi pasqualini" />
                
             </div>
              {/* Linha Suave */}
@@ -709,17 +831,17 @@ function About() {
             </div>
 
             <div className="gallery">
-                <img src="/img/Paraitinga/parai (1).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (2).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (3).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (4).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (5).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (6).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (7).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (8).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (9).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (10).webp" alt="Didi pasqualini" />
-                <img src="/img/Paraitinga/parai (11).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (1).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (2).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (3).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (4).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (5).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (6).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (7).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (8).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (9).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (10).webp" alt="Didi pasqualini" />
+                <img src="/img/paraitinga/parai (11).webp" alt="Didi pasqualini" />
                
             </div>
             {/* Botão Fixo no Rodapé */}
