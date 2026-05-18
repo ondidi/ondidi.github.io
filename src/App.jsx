@@ -13,6 +13,7 @@ import Frutas from "./pages/Frutas";
 import Japi from "./pages/Japi";
 import Capelas from "./pages/Capelas";
 import Marcia from "./pages/Marcia";
+import Cananeia from "./pages/Cananeia";
 
 
 import Sidebar from "./components/Sidebar";
@@ -63,6 +64,10 @@ const App = () => {
             <Route
               path="/aventuras/marcia"
               element={<Marcia />}
+            />
+              <Route
+              path="/aventuras/cananeia"
+              element={<Cananeia />}
             />
 
           </Routes>

@@ -269,11 +269,11 @@ const Sidebar = () => {
 
           {sortedAdventures.map((item) => (
 
-            <Link
-              key={item.id}
-              to={`/aventuras/${item.slug}`}
-              className="menu-item"
-            >
+        <Link
+          key={item.slug}
+          to={`/aventuras/${item.slug}`}
+          className="menu-item"
+>
 
               <img
                 src={item.image}
