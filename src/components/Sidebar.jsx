@@ -196,11 +196,11 @@ const adventures = [
   },
 
   {
-    title: "Cananéia",
-    year: 2017,
+    title: "Cananeia",
+    year: 2023,
     date: "2017-05-21",
-    image: "/img/cana/thumb.webp",
-    slug: "cananeia-2017"
+    image: "/img/cananeia/thumb.webp",
+    slug: "cananeia-2023"
   },
 
   {

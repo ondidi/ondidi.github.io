@@ -20,6 +20,11 @@ import Caminho from "./pages/Caminho";
 import Graciosa from "./pages/Graciosa";
 import Pontal from "./pages/Pontal";
 import Curitiba from "./pages/Curitiba";
+import Santa from "./pages/Santa";
+import Riopardo from "./pages/Riopardo";
+import Brotas from "./pages/Brotas";
+import Ana from "./pages/Ana";
+import Cananeia2023 from "./pages/Cananeia2023";
 
 
 import Sidebar from "./components/Sidebar";
@@ -98,6 +103,26 @@ const App = () => {
               <Route
               path="/aventuras/curitiba"
               element={<Curitiba />}
+            />
+              <Route
+              path="/aventuras/santa-olimpia"
+              element={<Santa />}
+            />
+              <Route
+              path="/aventuras/rio-pardo"
+              element={<Riopardo />}
+            />
+              <Route
+              path="/aventuras/brotas-torrinha"
+              element={<Brotas />}
+            />
+              <Route
+              path="/aventuras/analandia"
+              element={<Ana />}
+            />
+              <Route
+              path="/aventuras/cananeia-2023"
+              element={<Cananeia2023 />}
             />
 
           </Routes>
