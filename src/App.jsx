@@ -17,6 +17,9 @@ import Cananeia from "./pages/Cananeia";
 import Guaxu from "./pages/Guaxu";
 import Jaguariuna from "./pages/Jaguariuna";
 import Caminho from "./pages/Caminho";
+import Graciosa from "./pages/Graciosa";
+import Pontal from "./pages/Pontal";
+import Curitiba from "./pages/Curitiba";
 
 
 import Sidebar from "./components/Sidebar";
@@ -83,6 +86,18 @@ const App = () => {
               <Route
               path="/aventuras/caminho-da-fe"
               element={<Caminho />}
+            />
+              <Route
+              path="/aventuras/serra-da-graciosa"
+              element={<Graciosa />}
+            />
+              <Route
+              path="/aventuras/pontal-do-parana"
+              element={<Pontal />}
+            />
+              <Route
+              path="/aventuras/curitiba"
+              element={<Curitiba />}
             />
 
           </Routes>
