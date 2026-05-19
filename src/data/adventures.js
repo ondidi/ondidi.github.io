@@ -22,6 +22,13 @@ export const adventures = [
     year: 2025,
     image: "/img/cardoso.webp",
     slug: "ilha-do-cardoso"
-  }
+  },
+{
+  id: 4,
+  title: "Marcia Prado",
+  year: 2026,
+  image: "/img/marcia.webp",
+  slug: "marcia"
+}
 
 ];

@@ -39,7 +39,7 @@ const recentRides = [
     km: "48 km",
     level: "Moderado",
     image: "/img/marcia/thumb.webp",
-    slug: "marcia-prado"
+    slug: "marcia"
   }
 
 ];
