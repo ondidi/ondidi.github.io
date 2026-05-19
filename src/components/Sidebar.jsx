@@ -52,7 +52,7 @@ const adventures = [
   },
 
   {
-    title: "Jaguariúna",
+    title: "Jaguariuna",
     year: 2025,
     date: "2025-10-08",
     image: "/img/trem/thumb.webp",

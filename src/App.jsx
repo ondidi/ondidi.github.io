@@ -14,6 +14,9 @@ import Japi from "./pages/Japi";
 import Capelas from "./pages/Capelas";
 import Marcia from "./pages/Marcia";
 import Cananeia from "./pages/Cananeia";
+import Guaxu from "./pages/Guaxu";
+import Jaguariuna from "./pages/Jaguariuna";
+import Caminho from "./pages/Caminho";
 
 
 import Sidebar from "./components/Sidebar";
@@ -68,6 +71,18 @@ const App = () => {
               <Route
               path="/aventuras/cananeia"
               element={<Cananeia />}
+            />
+              <Route
+              path="/aventuras/rota-do-cafe"
+              element={<Guaxu />}
+            />
+              <Route
+              path="/aventuras/jaguariuna"
+              element={<Jaguariuna />}
+            />
+              <Route
+              path="/aventuras/caminho-da-fe"
+              element={<Caminho />}
             />
 
           </Routes>
