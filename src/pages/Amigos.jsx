@@ -2,47 +2,52 @@ import "../assets/styles/Gallery.css";
 
 const fotos = [
 
-  "new (1).webp",
-  "new (2).webp",
-  "new (3).webp",
-  "new (4).webp",
-  "new (5).webp",
-  "new (6).webp",
-  "new (7).webp",
-  "new (8).webp",
-  "new (9).webp",
-  "Face (1).webp",
-  "Face (2).webp",
-  "Face (3).webp",
-  "Face (4).webp",
-  "Face (5).webp",
-  "Face (6).webp",
-  "Face (7).webp",
-  "Face (8).webp",
-  "Face (9).webp",
-  "Face (10).webp",
-  "Face (11).webp",
-  "Face (12).webp",
-  "Face (13).webp",
-  "Face (14).webp",
-  "Face (15).webp",
-  "Face (16).webp",
-  "Face (17).webp",
-  "Face (18).webp",
-  "Face (19).webp",
-  "Face (20).webp",
-  "Face (21).webp",
-  "Face (22).webp",
-  "Face (23).webp",
-  "Face (24).webp",
-  "Face (25).webp",
-  "Face (26).webp",
-  "Face (27).webp",
-  "Face (28).webp",
-  "Face (29).webp",
-  "Face (30).webp",
-  "Face (31).webp",
-  "Face (32).webp",
+  
+  "amig (2).webp",
+  "amig (3).webp",
+  "amig (4).webp",
+  "amig (5).webp",
+  "amig (6).webp",
+  "amig (7).webp",
+  "amig (8).webp",
+  "amig (9).webp",
+  "amig (1).webp",
+  "amig (9).webp",
+  "amig (10).webp",
+  "amig (11).webp",
+  "amig (12).webp",
+  "amig (13).webp",
+  "amig (14).webp",
+  "amig (15).webp",
+  "amig (16).webp",
+  "amig (17).webp",
+  "amig (18).webp",
+  "amig (19).webp",
+  "amig (20).webp",
+  "amig (21).webp",
+  "amig (22).webp",
+  "amig (23).webp",
+  "amig (24).webp",
+  "amig (25).webp",
+  "amig (26).webp",
+  "amig (27).webp",
+  "amig (28).webp",
+  "amig (29).webp",
+  "amig (30).webp",
+  "amig (31).webp",
+  "amig (32).webp",
+  "amig (33).webp",
+  "amig (34).webp",
+  "amig (35).webp",
+  "amig (36).webp",
+  "amig (37).webp",
+  "amig (38).webp",
+  "amig (39).webp",
+  "amig (40).webp",
+  "amig (41).webp",
+  "amig (42).webp",
+  "amig (43).webp",
+  "amig (44).webp",
 
 ];
 
@@ -74,7 +79,7 @@ const Amigos = () => {
           porém movidas por algo parecido.
           Fiz muitas amizades ao longo dos caminhos.
           Histórias, risadas, conversas e tanto
-          compartilhamento.
+          compartilhamento, amores, dores, sabores, conhecimento, alento, talento que até hoje acalento...
 
         </p>
 
@@ -99,7 +104,7 @@ const Amigos = () => {
             <div className="photo-footer">
 
               <span>
-                AMIGOS NO PEDAL
+                GALERIA DOS AMIGOS
               </span>
 
             </div>

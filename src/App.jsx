@@ -37,6 +37,7 @@ import Paraitinga from "./pages/Paraitinga.jsx";
 import Anjos from "./pages/Anjos.jsx";
 import Caminhofe from "./pages/Caminhofe.jsx";
 import Amigos from "./pages/Amigos.jsx";
+import Lugares from "./pages/Lugares.jsx";
 
 
 
@@ -196,6 +197,10 @@ const App = () => {
               <Route
               path="/amigos"
               element={<Amigos />}
+            />
+              <Route
+              path="/lugares"
+              element={<Lugares />}
             />
 
           </Routes>
