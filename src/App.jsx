@@ -42,6 +42,7 @@ import Lugares from "./pages/Lugares.jsx";
 
 
 import Sidebar from "./components/Sidebar";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.css";
 
@@ -51,6 +52,8 @@ const App = () => {
   return (
 
     <Router>
+
+      <ScrollToTop />
 
       <div className="layout">
 
