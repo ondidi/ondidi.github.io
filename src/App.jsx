@@ -35,6 +35,7 @@ import Canta from "./pages/Canta.jsx";
 import Piracicaba from "./pages/Piracicaba.jsx";
 import Paraitinga from "./pages/Paraitinga.jsx";
 import Anjos from "./pages/Anjos.jsx";
+import Caminhofe from "./pages/Caminhofe.jsx";
 
 
 
@@ -186,6 +187,11 @@ const App = () => {
             <Route
               path="/aventuras/caminho-dos-anjos"
               element={<Anjos />}
+            />
+
+              <Route
+              path="/aventuras/caminho-da-fe-2015"
+              element={<Caminhofe />}
             />
 
           </Routes>
