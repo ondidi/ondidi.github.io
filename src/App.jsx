@@ -25,11 +25,24 @@ import Riopardo from "./pages/Riopardo";
 import Brotas from "./pages/Brotas";
 import Ana from "./pages/Ana";
 import Cananeia2023 from "./pages/Cananeia2023";
+import Ilha from "./pages/Ilha.jsx";
+import Ilhabela from "./pages/Ilhabela.jsx";
+import SaoSebastiao from "./pages/SaoSebastiao.jsx";
+import Horto from "./pages/Horto.jsx";
+import Esqueleto from "./pages/Esqueleto.jsx";
+import Pico from "./pages/Pico.jsx";
+import Canta from "./pages/Canta.jsx";
+import Piracicaba from "./pages/Piracicaba.jsx";
+import Paraitinga from "./pages/Paraitinga.jsx";
+import Anjos from "./pages/Anjos.jsx";
+
+
 
 
 import Sidebar from "./components/Sidebar";
 
 import "./App.css";
+
 
 const App = () => {
 
@@ -123,6 +136,56 @@ const App = () => {
               <Route
               path="/aventuras/cananeia-2023"
               element={<Cananeia2023 />}
+            />
+
+            <Route
+              path="/aventuras/ilha-comprida"
+              element={<Ilha />}
+            />
+
+            <Route
+              path="/aventuras/ilha-bela"
+              element={<Ilhabela />}
+            />
+
+            <Route
+              path="/aventuras/sao-sebastiao"
+              element={<SaoSebastiao />}
+            />
+
+            <Route
+              path="/aventuras/horto-florestal"
+              element={<Horto />}
+            />
+
+            <Route
+              path="/aventuras/ponte-do-esqueleto"
+              element={<Esqueleto />}
+            />
+
+            <Route
+              path="/aventuras/pico-do-gaviao"
+              element={<Pico />}
+            />
+
+            <Route
+              path="/aventuras/cantagalo"
+              element={<Canta />}
+            />
+
+            <Route
+              path="/aventuras/piracicaba"
+              element={<Piracicaba />}
+            />
+
+            <Route
+              path="/aventuras/sao-luis-do-paraitinga"
+              element={<Paraitinga />}
+            />
+
+            <Route
+              path="/aventuras/caminho-dos-anjos"
+              element={<Anjos />}
             />
 
           </Routes>
