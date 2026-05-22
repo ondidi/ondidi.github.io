@@ -39,6 +39,7 @@ import Caminhofe from "./pages/Caminhofe.jsx";
 import Amigos from "./pages/Amigos.jsx";
 import Lugares from "./pages/Lugares.jsx";
 import Blog from "./pages/Blog.jsx";
+import Castas from "./pages/blog/Castas.jsx";
 
 
 
@@ -209,6 +210,10 @@ const App = () => {
               <Route
               path="/blog"
               element={<Blog />}
+            />
+              <Route
+              path="/blog/castas-e-crencas"
+              element={<Castas />}
             />
 
           </Routes>

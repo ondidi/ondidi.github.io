@@ -2,6 +2,8 @@
 
 import "../assets/styles/Blog.css";
 import { NavLink } from "react-router-dom";
+import BlogHeader from "../components/blog/BlogHeader";
+import BlogFooter from "../components/blog/BlogFooter";
 
 const recentPosts = [
 
@@ -79,14 +81,9 @@ const Blog = () => {
             Início
           </NavLink>
 
-          <NavLink
-            to="/blog/textos"
-            className={({ isActive }) =>
-              isActive ? "blog-link active" : "blog-link"
-            }
-          >
+          <span className="blog-link-indicator">
             Textos
-          </NavLink>
+          </span>
 
         </nav>
 
@@ -128,7 +125,10 @@ const Blog = () => {
 
           </p>
 
-          <button className="read-button">
+            <a
+              href="/blog/castas-e-crencas"
+              className="read-button"
+            >
 
             Ler o texto
 
@@ -137,7 +137,7 @@ const Blog = () => {
               alt="Seta"
             />
 
-          </button>
+          </a>
 
         </div>
 
