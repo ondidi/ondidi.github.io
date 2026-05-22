@@ -332,7 +332,7 @@ const Sidebar = () => {
           </Link>
 
           <a
-            href="https://wa.me/123456"
+            href="https://wa.me/+55 19 997094329"
             className="footer-link"
           >
 
@@ -346,20 +346,20 @@ const Sidebar = () => {
 
           </a>
 
-          <a
-            href="#"
+          <Link
+            to="/blog"
             className="footer-link"
           >
 
             <img
-              src="/img/icons/contato.svg"
-              alt="Contato"
+              src="/img/icons/blog.svg"
+              alt="Blog"
               className="footer-icon"
             />
 
-            <span>Contato</span>
+            <span>Blog</span>
 
-          </a>
+          </Link>
 
         </div>
 
