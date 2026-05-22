@@ -441,3 +441,34 @@
   color: #1E1E1E;
 
 }
+.blog-link {
+
+  text-decoration: none;
+  color: #1E1E1E;
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 6px;
+  position: relative;
+
+}
+
+.blog-link.active::after {
+
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #8A7356;
+
+}
+.inactive-link {
+
+  opacity: 0.75;
+  cursor: default;
+
+}

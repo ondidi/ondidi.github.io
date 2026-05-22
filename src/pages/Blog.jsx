@@ -1,6 +1,7 @@
 // src/pages/Blog.jsx
 
 import "../assets/styles/Blog.css";
+import { NavLink } from "react-router-dom";
 
 const recentPosts = [
 
@@ -68,8 +69,24 @@ const Blog = () => {
 
         <nav className="blog-nav">
 
-          <a href="/">Início</a>
-          <a href="#">Textos</a>
+          <NavLink
+            to="/blog"
+            end
+            className={({ isActive }) =>
+              isActive ? "blog-link active" : "blog-link"
+            }
+          >
+            Início
+          </NavLink>
+
+          <NavLink
+            to="/blog/textos"
+            className={({ isActive }) =>
+              isActive ? "blog-link active" : "blog-link"
+            }
+          >
+            Textos
+          </NavLink>
 
         </nav>
 
