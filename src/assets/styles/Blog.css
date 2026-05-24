@@ -656,3 +656,23 @@
   cursor: default;
 
 }
+.font-controls {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.clickable {
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+}
+
+.clickable:hover {
+
+  opacity: 0.6;
+
+}

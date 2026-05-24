@@ -291,3 +291,96 @@
 body{
   overflow-x: hidden;
 }
+.mobile-menu-button {
+
+  display: none;
+
+}
+
+.close-menu {
+
+  display: none;
+
+}
+
+@media (max-width: 768px) {
+
+  .mobile-menu-button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #E8E1D6;
+
+    z-index: 9999;
+
+    cursor: pointer;
+
+  }
+
+  .mobile-menu-button img {
+
+    width: 22px;
+
+  }
+
+  .sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: -100%;
+
+    width: 280px;
+    height: 100vh;
+
+    z-index: 9998;
+
+    transition: 0.3s ease;
+
+    overflow-y: auto;
+
+  }
+
+  .sidebar.open {
+
+    left: 0;
+
+  }
+
+  .close-menu {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+  }
+
+  .close-menu img {
+
+    width: 18px;
+
+  }
+
+}

@@ -221,7 +221,8 @@ const adventures = [
 
 ];
 
-const Sidebar = () => {
+
+const Sidebar = ({ menuOpen, setMenuOpen }) => {
 
   const sortedAdventures = [...adventures].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
@@ -229,7 +230,19 @@ const Sidebar = () => {
 
   return (
 
-    <aside className="sidebar">
+    <aside className={`sidebar ${menuOpen ? "open" : ""}`}>
+
+      <button
+        className="close-menu"
+        onClick={() => setMenuOpen(false)}
+      >
+
+        <img
+          src="/img/icons/fechar.svg"
+          alt="Fechar"
+        />
+
+      </button>
 
       <div className="sidebar-header">
 
@@ -269,11 +282,11 @@ const Sidebar = () => {
 
           {sortedAdventures.map((item) => (
 
-        <Link
-          key={item.slug}
-          to={`/aventuras/${item.slug}`}
-          className="menu-item"
->
+            <Link
+              key={item.slug}
+              to={`/aventuras/${item.slug}`}
+              className="menu-item"
+            >
 
               <img
                 src={item.image}
@@ -305,7 +318,7 @@ const Sidebar = () => {
 
         {/* LINKS INFERIORES */}
 
-        <div className="menu-footer-links">
+                <div className="menu-footer-links">
 
           <Link to="/amigos" className="footer-link">
 
@@ -332,8 +345,10 @@ const Sidebar = () => {
           </Link>
 
           <a
-            href="https://wa.me/+55 19 997094329"
+            href="https://wa.me/5519997094329"
             className="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
 
             <img

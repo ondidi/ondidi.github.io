@@ -55,9 +55,7 @@ const BlogFooter = () => {
 
         <p className="footer-text">
 
-          Mestre e Doutor em Comunicação.
-          Especialista em Marketing Político
-          e Propaganda Eleitoral.
+          Mestre e Doutor em Comunicação. Especialista em Marketing Político e Propaganda Eleitoral. Estudou nas Universidades Unimep - Piracicaba, USP - Universidade de São Paulo e PUC - Pontifícia Universidade de São Paulo por 12 anos.
 
         </p>
 
@@ -67,9 +65,7 @@ const BlogFooter = () => {
 
         <p className="footer-text">
 
-          Tecnologia e Informação.
-          Atua em Tecnologia Ltda,
-          em São Paulo.
+            Tecnologia e Informação. Na TI encontrou uma nova oportunidade de Comunicação e desenvolvimento de Projetos. Atua na Empresa Softpark Tecnologia Ltda, em São Paulo.
 
         </p>
 

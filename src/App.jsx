@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import {
   BrowserRouter as Router,
@@ -40,6 +41,10 @@ import Amigos from "./pages/Amigos.jsx";
 import Lugares from "./pages/Lugares.jsx";
 import Blog from "./pages/Blog.jsx";
 import Castas from "./pages/blog/Castas.jsx";
+import Custodes from "./pages/blog/Custodes.jsx";
+import Deus from "./pages/blog/Deus.jsx";
+import Conversa from "./pages/blog/Conversa.jsx";
+import Menino from "./pages/blog/Menino.jsx";
 
 
 
@@ -51,24 +56,41 @@ import "./App.css";
 
 const App = () => {
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
 
     <Router>
 
       <ScrollToTop />
 
+      <button
+        className="mobile-menu-button"
+        onClick={() => setMenuOpen(true)}
+      >
+
+        <img
+          src="/img/icons/hamburguer.svg"
+          alt="Menu"
+        />
+
+      </button>
+
       <div className="layout">
 
-        <Sidebar />
+        <Sidebar
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+        />
 
         <div className="page-content">
 
-          <Routes>
+      <Routes>
 
-            <Route
-              path="/"
-              element={<Home />}
-            />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
             <Route
               path="/about"
@@ -214,6 +236,22 @@ const App = () => {
               <Route
               path="/blog/castas-e-crencas"
               element={<Castas />}
+            />
+              <Route
+              path="/blog/custodes"
+              element={<Custodes />}
+            />
+              <Route
+              path="/blog/deus"
+              element={<Deus />}
+            />
+              <Route
+              path="/blog/conversa"
+              element={<Conversa />}
+            />
+              <Route
+              path="/blog/menino"
+              element={<Menino />}
             />
 
           </Routes>

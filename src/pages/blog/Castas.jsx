@@ -1,8 +1,10 @@
+import { useState } from "react";
 import "../../assets/styles/Blog.css";
 import BlogHeader from "../../components/blog/BlogHeader";
 import BlogFooter from "../../components/blog/BlogFooter";
 
 const Castas = () => {
+  const [fontSize, setFontSize] = useState(1);
 
   return (
 
@@ -52,10 +54,31 @@ const Castas = () => {
 
           <div className="meta-item">
 
-            <img
-              src="/img/icons/texto.svg"
-              alt="Texto"
-            />
+            <div className="font-controls">
+
+              <img
+                src="/img/icons/textomenos.svg"
+                alt="Diminuir fonte"
+                className="article-meta-icon clickable"
+                onClick={() => {
+                  if (fontSize > 0.9) {
+                    setFontSize(fontSize - 0.1);
+                  }
+                }}
+              />
+
+              <img
+                src="/img/icons/textomais.svg"
+                alt="Aumentar fonte"
+                className="article-meta-icon clickable"
+                onClick={() => {
+                  if (fontSize < 1.5) {
+                    setFontSize(fontSize + 0.1);
+                  }
+                }}
+              />
+
+            </div>
 
           </div>
 
@@ -63,7 +86,12 @@ const Castas = () => {
 
       </section>
 
-      <article className="article-content">
+      <article
+        className="article-content"
+        style={{
+          fontSize: `${fontSize}rem`
+          }}
+        >
 
         <p className="drop-cap">
 
