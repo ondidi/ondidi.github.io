@@ -6,7 +6,9 @@
 
 body{
 
-  overflow: hidden;
+  overflow-x: hidden;
+
+  overflow-y: auto;
 
   background: #F7F7F7;
 
@@ -45,5 +47,37 @@ body{
   overflow-x: hidden;
 
   background: #F7F7F7;
+
+}
+
+@media (max-width: 768px) {
+
+  body {
+
+    overflow-x: hidden;
+
+  }
+
+  .layout {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+  .page-content {
+
+    margin-left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    overflow-y: visible;
+
+  }
 
 }

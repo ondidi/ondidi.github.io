@@ -3,42 +3,39 @@ import "../assets/styles/Gallery.css";
 const fotos = [
 
 
-  "new (7).webp",
-  "new (8).webp",
-  "new (9).webp",
-  "Face (1).webp",
-  "Face (2).webp",
-  "Face (3).webp",
-  "Face (4).webp",
-  "Face (5).webp",
-  "Face (6).webp",
-  "Face (7).webp",
-  "Face (8).webp",
-  "Face (9).webp",
-  "Face (10).webp",
-  "Face (11).webp",
-  "Face (12).webp",
-  "Face (13).webp",
-  "Face (14).webp",
-  "Face (15).webp",
-  "Face (16).webp",
-  "Face (17).webp",
-  "Face (18).webp",
-  "Face (19).webp",
-  "Face (20).webp",
-  "Face (21).webp",
-  "Face (22).webp",
-  "Face (23).webp",
-  "Face (24).webp",
-  "Face (25).webp",
-  "Face (26).webp",
-  "Face (27).webp",
-  "Face (28).webp",
-  "Face (29).webp",
-  "Face (30).webp",
-  "Face (31).webp",
-  "Face (32).webp",
-
+  "lug-1.webp",
+  "lug-2.webp",
+  "lug-3.webp",
+  "lug-4.webp",
+  "lug-5.webp",
+  "lug-6.webp",
+  "lug-7.webp",
+  "lug-8.webp",
+  "lug-9.webp",
+  "lug-10.webp",
+  "lug-11.webp",
+  "lug-12.webp",
+  "lug-13.webp",
+  "lug-14.webp",
+  "lug-15.webp",
+  "lug-16.webp",
+  "lug-17.webp",
+  "lug-18.webp",
+  "lug-19.webp",
+  "lug-20.webp",
+  "lug-21.webp",
+  "lug-22.webp",
+  "lug-23.webp",
+  "lug-24.webp",
+  "lug-25.webp",
+  "lug-26.webp",
+  "lug-27.webp",
+  "lug-28.webp",
+  "lug-29.webp",
+  "lug-30.webp",
+  "lug-31.webp",
+  "lug-32.webp",
+ 
 ];
 
 const Lugares = () => {
@@ -54,7 +51,7 @@ const Lugares = () => {
         <div className="gallery-box">
 
           <h1 className="gallery-title">
-            Pedaços do mundo
+            Lugares que eu curti
           </h1>
 
           <p className="gallery-date">
@@ -65,7 +62,11 @@ const Lugares = () => {
 
         <p className="gallery-description">
 
-            Lorem, ipusm, doted, mistk, carmt sillus vini vidi vice. Ametn com padb dicatus alimentus ribus ipusm carmm
+          Nem todo registro significa a mesma coisa para todos.
+          O que toca alguém pode passar despercebido por outro — porque viver um momento é sempre algo íntimo, impossível de reproduzir por completo em uma fotografia.
+
+          Cada pedaço de chão por onde passei carrega um pouco dessa essência.
+          E muitas vezes, não foram os cartões-postais ou os lugares mais famosos que ficaram marcados a mim, mas sim um ângulo esquecido, uma luz inesperada, um detalhe simples que quase ninguém percebeu. Como no amor e nas grandes conquistas, as vezes, a beleza está escondida em pequenos detalhes.
 
         </p>
 
@@ -83,7 +84,7 @@ const Lugares = () => {
           >
 
             <img
-              src={`/img/amigos/${foto}`}
+              src={`/img/lugares/${foto}`}
               alt="Lugares"
             />
 

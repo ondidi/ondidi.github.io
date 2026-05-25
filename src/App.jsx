@@ -50,6 +50,7 @@ import Menino from "./pages/blog/Menino.jsx";
 
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
+import MobileHeader from "./components/MobileHeader";
 
 import "./App.css";
 
@@ -63,9 +64,9 @@ const App = () => {
     <Router>
 
       <ScrollToTop />
+      <MobileHeader setMenuOpen={setMenuOpen} />
 
       <button
-        className="mobile-menu-button"
         onClick={() => setMenuOpen(true)}
       >
 
