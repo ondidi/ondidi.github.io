@@ -8,6 +8,15 @@ const MobileFooter = () => {
 
     <footer className="mobile-footer">
 
+      <Link to="/" className="mobile-footer-item">
+
+        <img
+          src="/img/icons/home.svg"
+          alt="Home"
+        />
+
+      </Link>
+
       <Link to="/amigos" className="mobile-footer-item">
 
         <img
@@ -32,7 +41,7 @@ const MobileFooter = () => {
       >
 
         <img
-          src="/img/icons/whats.svg"
+          src="/img/icons/whatsapp.svg"
           alt="WhatsApp"
         />
 

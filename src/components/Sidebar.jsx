@@ -282,23 +282,24 @@ const Sidebar = ({ menuOpen, setMenuOpen }) => {
 
           {sortedAdventures.map((item) => (
 
-            <Link
-              key={item.slug}
-              to={`/aventuras/${item.slug}`}
-              className="menu-item"
-            >
+          <Link
+            key={item.slug}
+            to={`/aventuras/${item.slug}`}
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
 
-              <img
-                src={item.image}
-                alt={item.title}
-                className="menu-thumb"
-              />
+            <img
+              src={item.image}
+              alt={item.title}
+              className="menu-thumb"
+            />
 
-              <div className="menu-info">
+            <div className="menu-info">
 
-                <span className="menu-title">
-                  {item.title}
-                </span>
+              <span className="menu-title">
+                {item.title}
+              </span>
 
                 <small className="menu-year">
                   {item.year}

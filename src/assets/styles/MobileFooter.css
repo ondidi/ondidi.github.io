@@ -25,7 +25,7 @@
 
     align-items: center;
 
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     z-index: 9999;
 
@@ -39,12 +39,11 @@
 
     justify-content: center;
 
-    width: 42px;
-    height: 42px;
+    width: 38px;
 
-    border-radius: 14px;
+    height: 38px;
 
-    transition: 0.2s ease;
+    text-decoration: none;
 
   }
 
