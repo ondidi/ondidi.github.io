@@ -11,13 +11,13 @@
     position: fixed;
 
     top: 0;
-    left: 28px;
+    left: 12px;
 
-    width: calc(100% - 56px);
+    width: calc(100% - 24px);
 
     height: 56px;
 
-    background: #F4E9D5;
+    background: #E6F6F4;
 
     backdrop-filter: blur(10px);
 

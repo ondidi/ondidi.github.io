@@ -480,4 +480,28 @@
 
   }
 
+  .menu-home,
+  .menu-divider,
+  .menu-footer-links {
+
+    display: none !important;
+
+  }
+
+  .adventure-list {
+
+    max-height: calc(100vh - 180px);
+
+  }
+    .footer {
+
+    display: none;
+
+  }
+    .home {
+
+    padding: 0 12px 90px 12px;
+
+  }
+
 }

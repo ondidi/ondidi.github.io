@@ -51,6 +51,7 @@ import Menino from "./pages/blog/Menino.jsx";
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
 import MobileHeader from "./components/MobileHeader";
+import MobileFooter from "./components/MobileFooter";
 
 import "./App.css";
 
@@ -65,6 +66,7 @@ const App = () => {
 
       <ScrollToTop />
       <MobileHeader setMenuOpen={setMenuOpen} />
+      <MobileFooter />
 
       <button
         onClick={() => setMenuOpen(true)}
