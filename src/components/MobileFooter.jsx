@@ -41,7 +41,7 @@ const MobileFooter = () => {
       >
 
         <img
-          src="/img/icons/whatsapp.svg"
+          src="/img/icons/whats.svg"
           alt="WhatsApp"
         />
 

@@ -3,206 +3,144 @@
 .home{
 
   min-height: 100vh;
-
   background: #F7F7F7;
-
   padding: 0 28px 28px 28px;
-
   font-family: 'Plus Jakarta Sans', sans-serif;
-
 }
 
-/* HERO */
+/* Hero - foto maior */
 
 .hero{
 
   position: relative;
-
   width: 100%;
-
   height: 618px;
-
   overflow: hidden;
-
   margin-bottom: 34px;
-
 }
 
-/* IMAGE */
+/* Imagem */
 
 .hero-image{
 
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   object-position: center top;
-
   display: block;
-
 }
 
-/* OVERLAY */
+/* Sobreposição */
 
 .hero-overlay{
 
   position: absolute;
-
   top: 0;
   right: 0;
-
   width: 72%;
-
   height: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: flex-end;
-
   padding-right: 50px;
-
   padding-left: 140px;
-
 }
 
-/* TITLE */
+/* Titulo principal */
 
 .hero-title{
 
   font-size: 40px;
-
   line-height: 1.1;
-
   font-weight: 700;
-
   color: #C28A2C;
-
   max-width: 100%;
-
   margin-bottom: 18px;
-
   text-align: right;
-
 }
 
-/* SUBTITLE */
+/* Subtítulo */
 
 .hero-subtitle{
 
   font-size: 20px;
-
   line-height: 1.6;
-
   color: #2E2E2E;
-
   margin-bottom: 24px;
-
   text-align: right;
-
 }
 
 
-/* RECENT */
+/* Nova seção */
 
 .recent-section{
 
   background: rgba(194, 138, 44, 0.08);
-
   border-radius: 26px;
-
   padding: 34px;
-
 }
 
-/* HEADER */
+/* Top, o mesmo que Header */
 
 .recent-header{
 
   display: flex;
-
   align-items: center;
-
   gap: 14px;
-
   margin-bottom: 26px;
-
 }
 
 .recent-header h2{
 
   font-size: 20px;
-
   color: #263238;
-
   font-weight: 800;
-
 }
 
 .recent-icon{
 
   width: 26px;
-
   height: 26px;
-
   object-fit: contain;
-
 }
 
-/* GRID */
+/* Grade */
 
 .rides-grid{
 
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 24px;
-
 }
 
-/* CARD */
+/* Cartões */
 
 .ride-card{
 
   background: #F8FAF8;
-
   border: 1px solid rgba(194, 138, 44, 0.45);
-
   border-radius: 26px;
-
   overflow: hidden;
-
   transition: 0.3s ease;
-
 }
 
 .ride-card:hover{
 
   transform: translateY(-4px);
-
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
 }
 
-/* IMAGE */
+/* Tamanho da imagem */
 
 .ride-image{
 
   width: 100%;
-
   height: 180px;
-
   object-fit: cover;
-
 }
 
-/* CONTENT */
+/* Espaçamento */
 
 .ride-content{
 
@@ -210,182 +148,130 @@
 
 }
 
-/* CITY */
+/* Cidade visitada */
 
 .ride-city{
 
   font-size: 13px;
-
   font-weight: 700;
-
   color: #C28A2C;
-
 }
 
-/* TITLE */
+/* Título */
 
 .ride-title{
 
   font-size: 20px;
-
   color: #263238;
-
   margin-top: 8px;
-
   margin-bottom: 14px;
 
 }
 
-/* INFO */
+/* Informções do pedal */
 
 .ride-info{
 
   display: flex;
-
   gap: 18px;
-
   flex-wrap: wrap;
-
   margin-bottom: 18px;
-
 }
 
 .ride-info span{
 
   display: flex;
-
   align-items: center;
-
   gap: 6px;
-
   font-size: 14px;
-
   color: #4E4E4E;
-
   font-weight: 600;
-
 }
 
-/* ICON */
+/* Icones da informação */
 
 .info-icon{
 
   width: 16px;
-
   height: 16px;
-
   object-fit: contain;
-
 }
 
-/* BUTTON */
+/* Botão ver pedal */
 
 .ride-button{
 
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 12px 22px;
-
   border-radius: 999px;
-
   background: #17343A;
-
   color: #FFF;
-
   text-decoration: none;
-
   font-size: 14px;
-
   font-weight: 700;
-
   transition: 0.3s ease;
-
 }
 
 .ride-button:hover{
 
   background: #0F2428;
-
   transform: scale(1.03);
-
 }
 
-/* FOOTER */
+/* Pé da página */
 
 .footer{
 
   margin-top: 28px;
-
   background: #EFF3F6;
-
   padding: 16px;
-
   border-radius: 18px;
-
   text-align: center;
-
 }
 
 .footer p{
 
   font-size: 13px;
-
   color: #666;
-
 }
+
+/* Queries */
 
 @media (max-width: 768px) {
 
   .hero {
 
     position: relative;
-
     width: 100%;
-
     height: 300px;
-
     overflow: hidden;
-
     margin-top: 18px;
-
     margin-bottom: 24px;
-
   }
 
   .hero-image {
 
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center;
-
     display: block;
-
   }
 
   .hero-overlay {
 
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     padding: 24px;
-
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
     align-items: flex-start;
-
     background: linear-gradient(
       to bottom,
       rgba(245,241,234,0.10),
@@ -397,87 +283,62 @@
   .hero-title {
 
     font-size: 22px;
-
     line-height: 1.2;
-
     text-align: right;
-
     color: #C28A2C;
-
     max-width: 220px;
-
     margin-left: auto;
-
     margin-top: 70px;
-
   }
 
   .hero-subtitle {
 
     font-size: 16px;
-
     line-height: 1.4;
-
     text-align: right;
-
     color: #2E2E2E;
-
     max-width: 180px;
-
     margin-left: auto;
-
   }
 
   .recent-section {
 
     padding: 22px;
-
     border-radius: 22px;
-
   }
 
   .rides-grid {
 
     display: flex;
-
     flex-direction: column;
-
     gap: 22px;
-
   }
 
   .ride-card {
 
     width: 100%;
-
     border-radius: 24px;
-
   }
 
   .ride-image {
 
     height: 210px;
-
   }
 
   .ride-content {
 
     padding: 20px;
-
   }
 
   .ride-title {
 
     font-size: 18px;
-
   }
 
   .ride-button {
 
     width: 100%;
-
     justify-content: center;
-
   }
 
   .menu-home,
@@ -485,23 +346,19 @@
   .menu-footer-links {
 
     display: none !important;
-
   }
 
   .adventure-list {
 
     max-height: calc(100vh - 180px);
-
   }
     .footer {
 
     display: none;
-
   }
     .home {
 
     padding: 0 12px 90px 12px;
-
   }
 
 }

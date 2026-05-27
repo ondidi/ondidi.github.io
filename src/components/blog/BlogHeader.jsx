@@ -10,13 +10,15 @@ const BlogHeader = ({ article = false }) => {
 
         <img
           src="/img/blog/didifotocircular.webp"
-          alt="Diógenes"
+          alt="Autor"
           className="author-photo"
         />
 
-        <span className="author-name">
-          Diógenes Pasqualini
-        </span>
+        <img
+          src="/img/blog/logoblog.webp"
+          alt="Blog do Dids"
+          className="blog-logo"
+        />
 
       </div>
 
@@ -43,12 +45,6 @@ const BlogHeader = ({ article = false }) => {
         </span>
 
       </nav>
-
-      <img
-        src="/img/blog/logoblog.webp"
-        alt="Blog do Dids"
-        className="blog-logo"
-      />
 
     </header>
 

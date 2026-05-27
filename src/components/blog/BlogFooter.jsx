@@ -1,77 +1,125 @@
+import { useState } from "react";
+
 const BlogFooter = () => {
+
+  const [bioOpen, setBioOpen] = useState(false);
 
   return (
 
-    <footer className="blog-footer">
+    <>
+    
+      <footer className="blog-footer">
 
-      <div className="footer-col footer-editorial">
+        <div className="footer-col footer-editorial">
 
-        <div className="footer-contact-row">
+          <div className="footer-contact-row">
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-linkedin-anchor"
+            >
+
+              <img
+                src="/img/icons/linkedin.svg"
+                alt="LinkedIn"
+                className="footer-icon-small"
+              />
+
+              <span className="footer-name">
+                Diógenes Pasqualini
+              </span>
+
+            </a>
+
+            <button
+              className="footer-info-button"
+              onClick={() => setBioOpen(true)}
+            >
+
+              <img
+                src="/img/icons/inform.svg"
+                alt="Informações"
+                className="footer-info-icon"
+              />
+
+            </button>
+
+          </div>
 
           <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-linkedin-anchor"
+            href="mailto:contato@ondids.com"
+            className="footer-mail-icon"
           >
 
             <img
-              src="/img/icons/linkedin.svg"
-              alt="LinkedIn"
+              src="/img/icons/contato.svg"
+              alt="Contato"
               className="footer-icon-small"
             />
 
-            <span className="footer-name">
-              Diógenes Pasqualini
-            </span>
-
           </a>
+
+          <p className="footer-text footer-mini-text">
+
+            Este Blog é alimentado pelos textos
+            que publico regularmente em mídia impressa.
+
+          </p>
 
         </div>
 
-        <a
-          href="mailto:contato@ondids.com"
-          className="footer-mail-icon"
+      </footer>
+
+      {bioOpen && (
+
+        <div
+          className="bio-modal-overlay"
+          onClick={() => setBioOpen(false)}
         >
 
-          <img
-            src="/img/icons/contato.svg"
-            alt="Contato"
-            className="footer-icon-small"
-          />
+          <div
+            className="bio-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
 
-        </a>
+            <button
+              className="bio-close"
+              onClick={() => setBioOpen(false)}
+            >
 
-        <p className="footer-text">
+              ✕
 
-          Este Blog é alimentado pelos textos
-          que publico regularmente em mídia impressa.
+            </button>
 
-        </p>
+            <h3>
+              Diógenes Pasqualini
+            </h3>
 
-      </div>
 
-      <div className="footer-col">
+            <p>
 
-        <p className="footer-text">
+            Mestre e Doutor em Comunicação. Especialista em Marketing Político e Propaganda Eleitoral. Estudou nas Universidades Unimep - Piracicaba, onde fez jornalismo. USP - Universidade de São Paulo - SP, Marketing Político e Propaganda Eleitoral e PUC-SP - Pontifícia Universidade de São Paulo, Comunicação e Semiótica. Jornada de 12 anos.
 
-          Mestre e Doutor em Comunicação. Especialista em Marketing Político e Propaganda Eleitoral. Estudou nas Universidades Unimep - Piracicaba, USP - Universidade de São Paulo e PUC - Pontifícia Universidade de São Paulo por 12 anos.
+            </p>
+            <p>
+              Pai dos adoráveis Juliano e Evelyn.
+            </p>
 
-        </p>
+            <p>
 
-      </div>
+            E hoje? Tecnologia e Informação. Na TI encontrou uma nova oportunidade de Comunicação e desenvolvimento de Projetos. Atua na Empresa Softpark Tecnologia Ltda, em São Paulo.
 
-      <div className="footer-col">
+            </p>
 
-        <p className="footer-text">
+          </div>
 
-            Tecnologia e Informação. Na TI encontrou uma nova oportunidade de Comunicação e desenvolvimento de Projetos. Atua na Empresa Softpark Tecnologia Ltda, em São Paulo.
+        </div>
 
-        </p>
+      )}
 
-      </div>
-
-    </footer>
+    </>
 
   );
 

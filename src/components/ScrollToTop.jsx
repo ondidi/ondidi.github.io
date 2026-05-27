@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
@@ -7,14 +8,14 @@ const ScrollToTop = () => {
 
   useEffect(() => {
 
-    const content = document.querySelector(".page-content");
+    window.scrollTo(0, 0);
+
+    const content =
+      document.querySelector(".page-content");
 
     if (content) {
 
-      content.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      content.scrollTop = 0;
 
     }
 

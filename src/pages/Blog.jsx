@@ -60,6 +60,16 @@ const Blog = () => {
 
       <section className="featured-post">
 
+        <div className="featured-image-container">
+
+          <img
+            src="/img/blog/castas.webp"
+            alt="Castas e crenças"
+            className="featured-image"
+          />
+
+        </div>
+
         <div className="featured-content">
 
           <span className="section-label">
@@ -86,10 +96,10 @@ const Blog = () => {
 
           </p>
 
-            <a
-              href="/blog/castas-e-crencas"
-              className="read-button"
-            >
+          <a
+            href="/blog/castas-e-crencas"
+            className="read-button"
+          >
 
             Ler o texto
 
@@ -99,16 +109,6 @@ const Blog = () => {
             />
 
           </a>
-
-        </div>
-
-        <div className="featured-image-container">
-
-          <img
-            src="/img/blog/castas.webp"
-            alt="Castas e crenças"
-            className="featured-image"
-          />
 
         </div>
 
