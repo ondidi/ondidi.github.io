@@ -1,4 +1,5 @@
 import "../assets/styles/Home.css";
+import { Link } from "react-router-dom";
 
 const recentRides = [
 
@@ -150,12 +151,12 @@ const Home = () => {
 
                 </div>
 
-                <a
-                  href={`/aventuras/${ride.slug}`}
+                <Link
+                  to={`/aventuras/${ride.slug}`}
                   className="ride-button"
                 >
                   Ver pedal
-                </a>
+                </Link>
 
               </div>
 
