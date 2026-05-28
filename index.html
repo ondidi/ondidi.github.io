@@ -48,6 +48,58 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
+      <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+
+      window.OneSignalDeferred =
+        window.OneSignalDeferred || [];
+
+      OneSignalDeferred.push(async function(OneSignal) {
+
+        await OneSignal.init({
+
+          appId: "8e7666e9-1c02-40df-9f8a-25bf9fa67195",
+
+          promptOptions: {
+
+            slidedown: {
+
+              prompts: [
+
+                {
+
+                  type: "push",
+
+                  autoPrompt: false,
+
+                  text: {
+
+                    actionMessage:
+                      "Oi, sou o Dids! Posso te avisar quando tiver novidades no site?",
+
+                    acceptButton:
+                      "Permitir",
+
+                    cancelButton:
+                      "Agora não"
+
+                  }
+
+                }
+
+              ]
+
+            }
+
+          }
+
+        });
+        OneSignal.Slidedown.promptPush();
+
+      });
+
+    </script>
+
   </head>
 
    <!-- Google tag (gtag.js) -->

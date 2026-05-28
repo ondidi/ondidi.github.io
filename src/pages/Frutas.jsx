@@ -21,6 +21,54 @@ const fotos = [
 ];
 
 const Frutas = () => {
+  const compartilharFoto = async (foto) => {
+
+    const imageUrl =
+      `/img/rota-frutas/${foto}`;
+
+    try {
+
+      const response =
+        await fetch(imageUrl);
+
+      const blob =
+        await response.blob();
+
+      const file = new File(
+
+        [blob],
+        foto,
+
+        { type: blob.type }
+
+      );
+
+      if (navigator.canShare &&
+          navigator.canShare({ files: [file] })) {
+
+        await navigator.share({
+
+          title: "Rota das Frutas",
+          text: "Confira esta foto 🚴",
+          files: [file],
+
+        });
+
+      } else {
+
+        alert(
+          "Seu navegador não suporta compartilhamento de imagem."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+    };
 
   return (
 
@@ -83,19 +131,33 @@ const Frutas = () => {
                 ROTA DAS FRUTAS
               </span>
 
-              <div className="photo-actions">
+            <div className="photo-actions">
+
+              <a
+                href={`/img/rota-frutas/${foto}`}
+                download
+              >
 
                 <img
                   src={copiarIcon}
-                  alt="Copiar"
+                  alt="Baixar"
                 />
+
+              </a>
+
+              <button
+                onClick={() => compartilharFoto(foto)}
+                className="share-button"
+              >
 
                 <img
                   src={enviarIcon}
-                  alt="Enviar"
+                  alt="Compartilhar"
                 />
 
-              </div>
+              </button>
+
+            </div>
 
             </div>
 
