@@ -23,9 +23,7 @@ const Custodes = () => {
 
         <p className="article-subtitle">
 
-          Este texto busca dialogar com uma reflexão
-          que há muito tempo me acompanha:
-          o meio molda quem somos?
+          Tenho acompanhado a greve dos alunos da Universidade de São Paulo, mais especificamente no campus Butantã, por conta de minha filha que estuda por lá.
 
         </p>
 
@@ -100,7 +98,7 @@ const Custodes = () => {
 
         <p className="drop-cap">
 
-          Tenho acompanhado a greve dos alunos da Universidade de São Paulo, mais especificamente no campus Butantã, por conta de minha filha que estuda por lá. O que se vê, no fim das contas, é um retrato bastante brasileiro: reposição salarial e valorização de carreira avançam com relativa rapidez, enquanto estudantes, funcionários terceirizados, manutenção predial e qualidade de vida universitária seguem em segundo plano.
+           O que se vê, no fim das contas, é um retrato bastante brasileiro: reposição salarial e valorização de carreira avançam com relativa rapidez, enquanto estudantes, funcionários terceirizados, manutenção predial e qualidade de vida universitária seguem em segundo plano.
 
             Boa parte do orçamento universitário é consumida por salários e aposentadorias. Ou seja, há pouca flexibilidade orçamentária dentro da universidade.
             <br /><br />
