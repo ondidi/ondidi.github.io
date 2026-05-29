@@ -26,6 +26,54 @@ const fotos = [
 ];
 
 const Pontal = () => {
+    const compartilharFoto = async (foto) => {
+
+    const imageUrl =
+      `/img/pontal/${foto}`;
+
+    try {
+
+      const response =
+        await fetch(imageUrl);
+
+      const blob =
+        await response.blob();
+
+      const file = new File(
+
+        [blob],
+        foto,
+
+        { type: blob.type }
+
+      );
+
+      if (navigator.canShare &&
+          navigator.canShare({ files: [file] })) {
+
+        await navigator.share({
+
+          title: "Pontal do Parané",
+          text: "Confira esta foto 🚴",
+          files: [file],
+
+        });
+
+      } else {
+
+        alert(
+          "Seu navegador não suporta compartilhamento de imagem."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  };
 
   return (
 
@@ -79,15 +127,30 @@ const Pontal = () => {
 
               <div className="photo-actions">
 
-                <img
-                  src={copiarIcon}
-                  alt="Copiar"
-                />
+                <a
+                  href={`/img/pontal/${foto}`}
+                  download
+                >
 
-                <img
-                  src={enviarIcon}
-                  alt="Enviar"
-                />
+                  <img
+                    src={copiarIcon}
+                    alt="Baixar"
+                  />
+
+                </a>
+
+                <button
+                  onClick={() => compartilharFoto(foto)}
+                  className="share-button"
+                >
+
+                  <img
+                    src={enviarIcon}
+                    alt="Compartilhar"
+                  />
+
+                </button>
+
 
               </div>
 

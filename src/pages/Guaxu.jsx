@@ -22,6 +22,54 @@ const fotos = [
 ];
 
 const Guaxu = () => {
+    const compartilharFoto = async (foto) => {
+
+    const imageUrl =
+      `/img/guxu/${foto}`;
+
+    try {
+
+      const response =
+        await fetch(imageUrl);
+
+      const blob =
+        await response.blob();
+
+      const file = new File(
+
+        [blob],
+        foto,
+
+        { type: blob.type }
+
+      );
+
+      if (navigator.canShare &&
+          navigator.canShare({ files: [file] })) {
+
+        await navigator.share({
+
+          title: "Rota do Café",
+          text: "Confira esta foto 🚴",
+          files: [file],
+
+        });
+
+      } else {
+
+        alert(
+          "Seu navegador não suporta compartilhamento de imagem."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  };
 
   return (
 
@@ -73,17 +121,32 @@ const Guaxu = () => {
                 ROTA DO CAFÉ
               </span>
 
-              <div className="photo-actions">
+            <div className="photo-actions">
+
+              <a
+                href={`/img/guaxu/${foto}`}
+                download
+              >
 
                 <img
                   src={copiarIcon}
-                  alt="Copiar"
+                  alt="Baixar"
                 />
+
+              </a>
+
+              <button
+                onClick={() => compartilharFoto(foto)}
+                className="share-button"
+              >
 
                 <img
                   src={enviarIcon}
-                  alt="Enviar"
+                  alt="Compartilhar"
                 />
+
+              </button>
+
 
               </div>
 

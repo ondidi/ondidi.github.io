@@ -1,24 +1,81 @@
-<!doctype html>
-<html lang="pt-br">
+<head>
 
-  <head>
+  <meta charset="UTF-8" />
 
-    <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-    <link
-      rel="icon"
-      href="favicon.ico"
-      type="image/x-icon"
-    >
+  <link
+    rel="icon"
+    href="favicon.ico"
+    type="image/x-icon"
+  >
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+  <title>Ondids - My way, my history, my life</title>
 
-    <title>
-      My way, my history, my life
-    </title>
+  <meta
+    name="description"
+    content="Aventuras de bicicleta, pedaladas, lugares incríveis, histórias, reflexões e experiências registradas por Dids."
+  />
+
+  <meta
+    name="keywords"
+    content="ciclismo, pedaladas, bicicleta, aventuras, viagens, turismo, blog, ondids"
+  />
+
+  <meta
+    name="author"
+    content="Diógenes Pasqualini"
+  />
+
+  <link
+    rel="canonical"
+    href="https://ondids.com.br/"
+  />
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Ondids - My way, my history, my life"
+  />
+
+  <meta
+    property="og:description"
+    content="Aventuras de bicicleta, pedaladas, lugares incríveis, histórias, reflexões e experiências registradas por Dids."
+  />
+
+  <meta
+    property="og:url"
+    content="https://ondids.com.br/"
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Ondids"
+  />
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Ondids - My way, my history, my life"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Aventuras de bicicleta, pedaladas, lugares incríveis, histórias, reflexões e experiências registradas por Dids."
+  />
 
     <!-- FONT AWESOME -->
 
@@ -49,10 +106,12 @@
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
       <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
     <script>
 
-      window.OneSignalDeferred =
-        window.OneSignalDeferred || [];
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
 
       OneSignalDeferred.push(async function(OneSignal) {
 
@@ -94,7 +153,10 @@
           }
 
         });
-        OneSignal.Slidedown.promptPush();
+
+        setTimeout(() => {
+          OneSignal.Slidedown.promptPush();
+        }, 3000);
 
       });
 

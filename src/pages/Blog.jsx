@@ -1,5 +1,3 @@
-// src/pages/Blog.jsx
-
 import "../assets/styles/Blog.css";
 import { NavLink, Link } from "react-router-dom";
 import BlogHeader from "../components/blog/BlogHeader";
@@ -96,8 +94,8 @@ const Blog = () => {
 
           </p>
 
-          <a
-            href="/blog/castas-e-crencas"
+          <Link
+            to="/blog/castas-e-crencas"
             className="read-button"
           >
 
@@ -108,7 +106,7 @@ const Blog = () => {
               alt="Seta"
             />
 
-          </a>
+          </Link>
 
         </div>
 

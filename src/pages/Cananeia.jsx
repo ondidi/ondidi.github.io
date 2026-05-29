@@ -30,6 +30,54 @@ const fotos = [
 ];
 
 const Cananeia = () => {
+    const compartilharFoto = async (foto) => {
+
+    const imageUrl =
+      `/img/cananeia/${foto}`;
+
+    try {
+
+      const response =
+        await fetch(imageUrl);
+
+      const blob =
+        await response.blob();
+
+      const file = new File(
+
+        [blob],
+        foto,
+
+        { type: blob.type }
+
+      );
+
+      if (navigator.canShare &&
+          navigator.canShare({ files: [file] })) {
+
+        await navigator.share({
+
+          title: "Cananéia/ilhas",
+          text: "Confira esta foto 🚴",
+          files: [file],
+
+        });
+
+      } else {
+
+        alert(
+          "Seu navegador não suporta compartilhamento de imagem."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  };
 
   return (
 
@@ -83,15 +131,30 @@ const Cananeia = () => {
 
               <div className="photo-actions">
 
+              <a
+                href={`/img/cana/${foto}`}
+                download
+              >
+
                 <img
                   src={copiarIcon}
-                  alt="Copiar"
+                  alt="Baixar"
                 />
+
+              </a>
+
+              <button
+                onClick={() => compartilharFoto(foto)}
+                className="share-button"
+              >
 
                 <img
                   src={enviarIcon}
-                  alt="Enviar"
+                  alt="Compartilhar"
                 />
+
+              </button>
+
 
               </div>
 

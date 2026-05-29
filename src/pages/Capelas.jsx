@@ -29,7 +29,7 @@ const fotos = [
   "Capelas21.webp",
   "Capelas22.webp",
   "Capelas23.webp",
-  "Capelas24.webp",
+  "Capela24.webp",
 
 ];
 
