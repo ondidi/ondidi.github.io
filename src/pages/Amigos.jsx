@@ -2,7 +2,7 @@ import "../assets/styles/Gallery.css";
 
 const fotos = [
 
-  
+  "amig (0).webp",
   "amig (2).webp",
   "amig (3).webp",
   "amig (4).webp",

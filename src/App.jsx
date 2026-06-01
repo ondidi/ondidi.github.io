@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Facebike from "./pages/Facebike";
@@ -46,12 +47,15 @@ import Deus from "./pages/blog/Deus.jsx";
 import Conversa from "./pages/blog/Conversa.jsx";
 import Menino from "./pages/blog/Menino.jsx";
 
-
-
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
 import MobileHeader from "./components/MobileHeader";
 import MobileFooter from "./components/MobileFooter";
+
+import Login from "./admin/pages/Login";
+import Dashboard from "./admin/pages/Dashboard";
+import Pedaladas from "./admin/pages/Pedaladas";
+import BlogAdmin from "./admin/pages/BlogAdmin";
 
 import "./App.css";
 
@@ -88,12 +92,12 @@ const App = () => {
 
         <div className="page-content">
 
-      <Routes>
+          <Routes>
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
+            <Route
+              path="/"
+                element={<Home />}
+              />
 
             <Route
               path="/about"
@@ -104,13 +108,33 @@ const App = () => {
               path="/facebike"
               element={<Facebike />}
             />
+                  {/* ADMIN */}
+
+            <Route
+              path="/admin"
+              element={<Login />}
+            />
+
+            <Route
+              path="/admin/dashboard"
+              element={<Dashboard />}
+            />
+
+            <Route
+              path="/admin/pedaladas"
+              element={<Pedaladas />}
+            />
+            <Route
+            path="/admin/blog"
+            element={<BlogAdmin />}
+            />
 
             <Route
               path="/aventuras/rota-das-frutas"
               element={<Frutas />}
             />
             <Route
-               path="/aventuras/serra-do-japi"
+              path="/aventuras/serra-do-japi"
               element={<Japi />}
             />
             <Route
@@ -121,52 +145,52 @@ const App = () => {
               path="/aventuras/marcia"
               element={<Marcia />}
             />
-              <Route
+            <Route
               path="/aventuras/cananeia"
               element={<Cananeia />}
             />
-              <Route
-              path="/aventuras/rota-do-cafe"
-              element={<Guaxu />}
+            <Route
+            path="/aventuras/rota-do-cafe"
+            element={<Guaxu />}
             />
-              <Route
-              path="/aventuras/jaguariuna"
+            <Route
+            path="/aventuras/jaguariuna"
               element={<Jaguariuna />}
             />
-              <Route
+            <Route
               path="/aventuras/caminho-da-fe"
               element={<Caminho />}
             />
-              <Route
+            <Route
               path="/aventuras/serra-da-graciosa"
               element={<Graciosa />}
             />
-              <Route
+            <Route
               path="/aventuras/pontal-do-parana"
               element={<Pontal />}
             />
-              <Route
+            <Route
               path="/aventuras/curitiba"
               element={<Curitiba />}
             />
-              <Route
+            <Route
               path="/aventuras/santa-olimpia"
               element={<Santa />}
             />
-              <Route
+            <Route
               path="/aventuras/rio-pardo"
               element={<Riopardo />}
             />
-              <Route
+            <Route
               path="/aventuras/brotas-torrinha"
               element={<Brotas />}
             />
-              <Route
+            <Route
               path="/aventuras/analandia"
               element={<Ana />}
             />
-              <Route
-              path="/aventuras/cananeia-2023"
+            <Route
+            path="/aventuras/cananeia-2023"
               element={<Cananeia2023 />}
             />
 
@@ -174,7 +198,6 @@ const App = () => {
               path="/aventuras/ilha-comprida"
               element={<Ilha />}
             />
-
             <Route
               path="/aventuras/ilha-bela"
               element={<Ilhabela />}
@@ -184,7 +207,6 @@ const App = () => {
               path="/aventuras/sao-sebastiao"
               element={<SaoSebastiao />}
             />
-
             <Route
               path="/aventuras/horto-florestal"
               element={<Horto />}
@@ -212,47 +234,47 @@ const App = () => {
 
             <Route
               path="/aventuras/sao-luis-do-paraitinga"
-              element={<Paraitinga />}
+                element={<Paraitinga />}
             />
 
             <Route
               path="/aventuras/caminho-dos-anjos"
-              element={<Anjos />}
+                element={<Anjos />}
             />
 
-              <Route
+            <Route
               path="/aventuras/caminho-da-fe-2015"
               element={<Caminhofe />}
             />
-              <Route
+            <Route
               path="/amigos"
               element={<Amigos />}
             />
-              <Route
+            <Route
               path="/lugares"
               element={<Lugares />}
             />
-              <Route
+            <Route
               path="/blog"
               element={<Blog />}
             />
-              <Route
+            <Route
               path="/blog/castas-e-crencas"
               element={<Castas />}
             />
-              <Route
+            <Route
               path="/blog/custodes"
               element={<Custodes />}
             />
-              <Route
+            <Route
               path="/blog/deus"
               element={<Deus />}
             />
-              <Route
+            <Route
               path="/blog/conversa"
               element={<Conversa />}
             />
-              <Route
+            <Route
               path="/blog/menino"
               element={<Menino />}
             />
