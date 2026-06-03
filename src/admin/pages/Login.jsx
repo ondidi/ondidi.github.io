@@ -12,13 +12,7 @@ export default function Login() {
   return (
     <div className="login-container">
 
-      <div className="login-logo">
 
-        <h1>On Dids</h1>
-
-        <span>Administrator</span>
-
-      </div>
 
       <div className="login-card">
 

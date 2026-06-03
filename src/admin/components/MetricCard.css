@@ -1,0 +1,54 @@
+.metric-card {
+  width: 320px;
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #e9e6dd;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.metric-icon {
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #7DA8D8;
+  background: #9fc0e4;
+
+  border-radius: 14px;
+}
+
+.metric-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.metric-content h2 {
+  margin: 5px 0;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.metric-content span {
+
+  color: #3dc35f;
+  font-size: 12px;
+  font-weight: 600;
+}
+.metric-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}

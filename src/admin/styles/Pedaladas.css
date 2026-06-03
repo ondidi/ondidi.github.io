@@ -1,0 +1,497 @@
+.admin-page {
+
+  display: flex;
+
+}
+
+.admin-content {
+
+  width: 100%;
+
+  padding: 40px;
+
+}
+
+/* ==========================
+   TÍTULOS DAS SEÇÕES
+========================== */
+
+.section-title {
+
+  background: #DDF0F0;
+
+  text-align: center;
+
+  padding: 10px;
+
+  margin-top: 40px;
+
+  margin-bottom: 30px;
+
+  border-radius: 8px;
+
+}
+
+/* ==========================
+   PRIMEIRA LINHA
+========================== */
+
+.pedaladas-top {
+
+  display: flex;
+
+  gap: 30px;
+
+  align-items: flex-start;
+
+}
+
+/* ==========================
+   UPLOAD THUMB
+========================== */
+
+.upload-thumb {
+
+  width: 240px;
+
+  height: 140px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.upload-thumb p {
+
+  margin: 0 0 10px;
+
+  font-weight: 600;
+
+}
+
+.upload-thumb small {
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+.pedaladas-form {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.pedaladas-form input {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+}
+
+.row {
+
+  display: flex;
+
+  gap: 20px;
+
+}
+
+/* ==========================
+   PREVIEW SIDEBAR
+========================== */
+
+.preview-sidebar {
+
+  width: 240px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+}
+
+.preview-sidebar h4 {
+
+  text-align: center;
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+}
+
+.preview-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+.thumb {
+
+  width: 60px;
+
+  height: 60px;
+
+  background: #D9D9D9;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+}
+
+.preview-item strong {
+
+  display: block;
+
+  margin-bottom: 4px;
+
+}
+
+.preview-item p {
+
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #666;
+
+}
+.dados-card {
+
+  display: flex;
+
+  gap: 30px;
+
+  align-items: flex-start;
+
+  margin-top: 40px;
+
+  margin-bottom: 40px;
+
+}
+
+.upload-card {
+
+  width: 240px;
+
+  height: 140px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.dados-form {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.dados-form input {
+
+  padding: 12px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+}
+
+.dificuldade-box {
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  padding: 14px;
+
+  display: flex;
+
+  gap: 30px;
+
+}
+
+.preview-card {
+
+  width: 260px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 30px;
+
+  padding: 20px;
+
+  text-align: center;
+
+}
+
+.preview-foto {
+
+  height: 120px;
+
+  background: #D8D4CA;
+
+  border-radius: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 15px 0;
+
+}
+
+.preview-cidade {
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+
+}
+
+.preview-card h4 {
+
+  margin: 0 0 10px;
+
+}
+
+.preview-info {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+
+  font-size: 14px;
+
+}
+
+.preview-card button {
+
+  width: 100%;
+
+  border: none;
+
+  border-radius: 30px;
+
+  padding: 10px;
+
+  background: #1E2A44;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+.preview-info {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+
+}
+
+.preview-info span {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 14px;
+
+}
+
+.preview-info img {
+
+  width: 18px;
+
+  height: 18px;
+
+}
+/* ==========================
+   GALERIA
+========================== */
+
+.galeria-container {
+
+  display: flex;
+
+  gap: 30px;
+
+  margin-top: 40px;
+
+  margin-bottom: 50px;
+
+}
+
+.upload-galeria {
+
+  width: 240px;
+
+  height: 140px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.galeria-form {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.galeria-form input {
+
+  padding: 12px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+}
+
+.galeria-footer {
+
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+
+}
+
+.btn-rascunho {
+
+  padding: 12px 24px;
+
+  border: 1px solid #BCE7EF;
+
+  background: white;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}
+
+.btn-publicar {
+
+  padding: 12px 24px;
+
+  border: none;
+
+  background: #BCE7EF;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}
+.ql-toolbar {
+
+  border: 1px solid #BCE7EF !important;
+
+  border-radius: 8px 8px 0 0;
+
+}
+
+.ql-container {
+
+  min-height: 180px;
+
+  border: 1px solid #BCE7EF !important;
+
+  border-top: none !important;
+
+  border-radius: 0 0 8px 8px;
+
+  background: white;
+
+}
