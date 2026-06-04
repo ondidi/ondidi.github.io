@@ -15,15 +15,36 @@ export default function AdminSidebar() {
       <nav className="admin-menu">
 
         <a href="/admin/dashboard">
-          🏠 Dashboard
+
+          <img
+            src="/img/icons/home.svg"
+            alt="Dashboard"
+          />
+
+          Dashboard
+
         </a>
 
         <a href="/admin/pedaladas">
-          🚴 Pedaladas
+
+          <img
+            src="/img/icons/bike.svg"
+            alt="Pedaladas"
+          />
+
+          Pedaladas
+
         </a>
 
         <a href="/admin/blog">
-          📝 Blog
+
+          <img
+            src="/img/icons/blog.svg"
+            alt="Blog"
+          />
+
+          Blog
+
         </a>
 
       </nav>

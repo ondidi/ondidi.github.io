@@ -44,7 +44,7 @@
 
   border-radius: 50%;
 
-  background: #0E7B72;
+  background: #f1f4f4;
 
   display: flex;
 
@@ -58,8 +58,8 @@
 
 .admin-notification img {
 
-  width: 22px;
-  height: 22px;
+  width: 42px;
+  height: 42px;
 
 }
 

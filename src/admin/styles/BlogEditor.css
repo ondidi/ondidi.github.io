@@ -1,0 +1,228 @@
+.admin-page {
+
+  display: flex;
+
+}
+
+.admin-content {
+
+  width: 100%;
+
+  padding: 40px;
+
+}
+
+.section-title {
+
+  background: #DDF0F0;
+
+  text-align: center;
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  margin-bottom: 25px;
+
+  font-size: 1.8rem;
+
+}
+
+/* =====================
+   CHAMADA
+===================== */
+
+.blog-chamada {
+
+  display: flex;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+
+}
+
+.upload-principal {
+
+  width: 220px;
+
+  height: 180px;
+
+  border: 1px solid #BCE7EF;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.blog-chamada-form {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+.blog-chamada-form input,
+.blog-chamada-form textarea {
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  padding: 12px;
+
+}
+
+.blog-chamada-form textarea {
+
+  height: 120px;
+
+}
+
+.blog-home {
+
+  width: 220px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  padding: 15px;
+
+}
+
+.blog-home small {
+
+  display: block;
+
+  margin-top: 10px;
+
+}
+
+/* =====================
+   TEXTO COMPLETO
+===================== */
+
+.blog-completo {
+
+  display: flex;
+
+  gap: 30px;
+
+  margin-bottom: 25px;
+
+}
+
+.col-esquerda {
+
+  width: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+.col-direita {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+.col-esquerda input,
+.col-direita input,
+.col-direita textarea {
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  padding: 12px;
+
+}
+
+.destaque-texto {
+
+  height: 120px;
+
+}
+
+/* =====================
+   TEXTO PRINCIPAL
+===================== */
+
+.texto-principal textarea {
+
+  width: 100%;
+
+  min-height: 300px;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 6px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+}
+
+/* =====================
+   BOTÕES
+===================== */
+
+.blog-acoes {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+}
+
+.btn-rascunho {
+
+  background: white;
+
+  border: 1px solid #BCE7EF;
+
+  padding: 12px 20px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}
+
+.btn-publicar {
+
+  background: #BCE7EF;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}

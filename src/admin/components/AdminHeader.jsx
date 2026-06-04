@@ -11,7 +11,7 @@ export default function AdminHeader() {
         <div className="admin-notification">
 
           <img
-            src="/img/icons/inform.svg"
+            src="/img/icons/alert.svg"
             alt="Notificações"
           />
 

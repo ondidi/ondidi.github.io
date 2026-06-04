@@ -1,0 +1,139 @@
+.admin-page {
+
+  display: flex;
+
+}
+
+.admin-content {
+
+  width: 100%;
+
+  padding: 40px;
+
+}
+
+.blog-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+}
+
+.blog-header h2 {
+
+  margin: 0;
+
+  font-size: 2rem;
+
+  font-weight: 500;
+
+}
+
+.btn-novo {
+
+  background: #BCE7EF;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+}
+
+.blog-table {
+
+  background: white;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+}
+
+.blog-table-header {
+
+  display: grid;
+
+  grid-template-columns:
+    3fr 1fr 1fr 1fr;
+
+  background: #DDF0F0;
+
+  padding: 16px;
+
+  font-weight: 600;
+
+}
+
+.blog-row {
+
+  display: grid;
+
+  grid-template-columns:
+    3fr 1fr 1fr 1fr;
+
+  padding: 16px;
+
+  border-top: 1px solid #eee;
+
+  align-items: center;
+
+}
+
+.status-publicado {
+
+  background: #DFF5E1;
+
+  color: #237A34;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+}
+
+.status-rascunho {
+
+  background: #FFF2D6;
+
+  color: #9A6B00;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+}
+
+.acoes {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+.acoes button {
+
+  border: none;
+
+  background: #f5f5f5;
+
+  padding: 8px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+}

@@ -56,6 +56,7 @@ import Login from "./admin/pages/Login";
 import Dashboard from "./admin/pages/Dashboard";
 import Pedaladas from "./admin/pages/Pedaladas";
 import BlogAdmin from "./admin/pages/BlogAdmin";
+import BlogEditor from "./admin/pages/BlogEditor";
 
 import "./App.css";
 
@@ -124,9 +125,15 @@ const App = () => {
               path="/admin/pedaladas"
               element={<Pedaladas />}
             />
+
             <Route
-            path="/admin/blog"
-            element={<BlogAdmin />}
+              path="/admin/blog"
+              element={<BlogAdmin />}
+            />
+
+            <Route
+              path="/admin/blog/novo"
+              element={<BlogEditor />}
             />
 
             <Route
