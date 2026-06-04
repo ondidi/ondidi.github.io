@@ -69,27 +69,33 @@ const App = () => {
 
     <Router>
 
-      <ScrollToTop />
-      <MobileHeader setMenuOpen={setMenuOpen} />
-      <MobileFooter />
+    <ScrollToTop />
 
-      <button
-        onClick={() => setMenuOpen(true)}
-      >
+    {!window.location.pathname.startsWith("/admin") && (
+      <>
+        <MobileHeader setMenuOpen={setMenuOpen} />
 
-        <img
-          src="/img/icons/hamburguer.svg"
-          alt="Menu"
-        />
+        <MobileFooter />
 
-      </button>
+        <button
+          onClick={() => setMenuOpen(true)}
+        >
+          <img
+            src="/img/icons/hamburguer.svg"
+            alt="Menu"
+          />
+        </button>
+      </>
+    )}
 
       <div className="layout">
 
-        <Sidebar
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
-        />
+        {!window.location.pathname.startsWith("/admin") && (
+          <Sidebar
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+          />
+        )}
 
         <div className="page-content">
 

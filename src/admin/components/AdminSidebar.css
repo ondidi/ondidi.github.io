@@ -1,19 +1,31 @@
 .admin-sidebar {
-  width: 160px;
-  min-height: 100vh;
 
-  background: #EAF5F8;
+  width: 280px;
 
-  border-radius: 0 0 16px 0;
+  background: #DDF0F0;
 
-  padding: 20px 10px;
+  position: fixed;
 
-  box-sizing: border-box;
+  top: 0;
+
+  left: 0;
+
+  height: 100vh;
+
+  overflow-y: auto;
+
+  z-index: 1000;
+
 }
 
 .admin-logo {
+
   text-align: center;
+
   margin-bottom: 25px;
+
+  padding-top: 20px;
+
 }
 
 .admin-logo h1 {
@@ -83,5 +95,16 @@
   height: 18px;
 
   object-fit: contain;
+
+}
+.admin-menu {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 0 15px;
 
 }
