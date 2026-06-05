@@ -1,6 +1,7 @@
 import AdminSidebar from "../components/AdminSidebar";
 import AdminHeader from "../components/AdminHeader";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import "../styles/BlogAdmin.css";
 
@@ -8,30 +9,36 @@ export default function BlogAdmin() {
 
   const navigate = useNavigate();
 
-  const artigos = [
+  const [artigos, setArtigos] = useState([]);
 
-    {
-      id: 1,
-      titulo: "Rota das Frutas",
-      status: "Publicado",
-      data: "03/06/2026"
-    },
+  useEffect(() => {
 
-    {
-      id: 2,
-      titulo: "Serra do Japi",
-      status: "Rascunho",
-      data: "01/06/2026"
-    },
+    const artigosSalvos =
+      localStorage.getItem("artigos");
 
-    {
-      id: 3,
-      titulo: "Caminho da Fé",
-      status: "Publicado",
-      data: "28/05/2026"
+    if (artigosSalvos) {
+
+      setArtigos(
+        JSON.parse(artigosSalvos)
+      );
+
     }
 
-  ];
+  }, []);
+
+  function excluirArtigo(index) {
+
+    const novosArtigos =
+      artigos.filter((_, i) => i !== index);
+
+    setArtigos(novosArtigos);
+
+    localStorage.setItem(
+      "artigos",
+      JSON.stringify(novosArtigos)
+    );
+
+  }
 
   return (
 
@@ -70,25 +77,21 @@ export default function BlogAdmin() {
 
           </div>
 
-          {artigos.map((item) => (
+          {artigos.map((item, index) => (
 
             <div
               className="blog-row"
-              key={item.id}
+              key={index}
             >
 
               <div>{item.titulo}</div>
 
               <div>
 
-                <span
-                  className={
-                    item.status === "Publicado"
-                      ? "status-publicado"
-                      : "status-rascunho"
-                  }
-                >
-                  {item.status}
+                <span className="status-publicado">
+
+                  {item.status || "Publicado"}
+
                 </span>
 
               </div>
@@ -97,16 +100,46 @@ export default function BlogAdmin() {
 
               <div className="acoes">
 
-                <button>
-                  ✏
+                <button title="Editar">
+
+                  <img
+                    src="/img/icons/editar.svg"
+                    alt="Editar"
+                  />
+
                 </button>
 
-                <button>
-                  👁
+                <button
+                  title="Visualizar"
+                  onClick={() => {
+
+                    localStorage.setItem(
+                      "previewArtigo",
+                      JSON.stringify(item)
+                    );
+
+                    navigate("/admin/blog/preview");
+
+                  }}
+                >
+
+                  <img
+                    src="/img/icons/visualizar.svg"
+                    alt="Visualizar"
+                  />
+
                 </button>
 
-                <button>
-                  🗑
+                <button
+                  title="Excluir"
+                  onClick={() => excluirArtigo(index)}
+                >
+
+                  <img
+                    src="/img/icons/excluir.svg"
+                    alt="Excluir"
+                  />
+
                 </button>
 
               </div>

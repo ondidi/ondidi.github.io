@@ -57,6 +57,8 @@ import Dashboard from "./admin/pages/Dashboard";
 import Pedaladas from "./admin/pages/Pedaladas";
 import BlogAdmin from "./admin/pages/BlogAdmin";
 import BlogEditor from "./admin/pages/BlogEditor";
+import BlogPreview
+from "./admin/pages/BlogPreview";
 
 import "./App.css";
 
@@ -290,6 +292,10 @@ const App = () => {
             <Route
               path="/blog/menino"
               element={<Menino />}
+            />
+            <Route
+              path="/admin/blog/preview"
+              element={<BlogPreview />}
             />
 
           </Routes>

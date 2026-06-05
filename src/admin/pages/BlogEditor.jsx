@@ -1,128 +1,200 @@
 import AdminSidebar from "../components/AdminSidebar";
 import AdminHeader from "../components/AdminHeader";
+import { useState, useEffect } from "react";
 
 import "../styles/BlogEditor.css";
 
 export default function BlogEditor() {
 
-  return (
+const [titulo, setTitulo] = useState("");
+const [chamada, setChamada] = useState("");
+const [tituloCompleto, setTituloCompleto] = useState("");
+const [destaque, setDestaque] = useState("");
+const [textoCompleto, setTextoCompleto] = useState("");
+const [artigos, setArtigos] = useState([]);
 
-    <div className="admin-page">
+useEffect(() => {
 
-      <AdminSidebar />
+const artigosSalvos =
+  localStorage.getItem("artigos");
 
-      <div className="admin-content">
+if (artigosSalvos) {
 
-        <AdminHeader />
+  setArtigos(
+    JSON.parse(artigosSalvos)
+  );
 
-        {/* CHAMADA BLOG */}
+}
 
-        <div className="section-title">
-          Texto chamada blog
-        </div>
+}, []);
 
-        <div className="blog-chamada">
+function publicar() {
 
-          <div className="upload-principal">
+const artigo = {
 
-            <p>Upload foto Principal blog</p>
+  titulo,
+  chamada,
+  tituloCompleto,
+  destaque,
+  textoCompleto,
+  data: new Date().toLocaleDateString("pt-BR"),
+  status: "Publicado"
 
-          </div>
+};
 
-          <div className="blog-chamada-form">
+const novosArtigos = [
+  ...artigos,
+  artigo
+];
 
-            <input
-              type="text"
-              placeholder="Título"
-            />
+setArtigos(novosArtigos);
 
-            <textarea
-              placeholder="Chamada última publicação"
-            ></textarea>
+localStorage.setItem(
+  "artigos",
+  JSON.stringify(novosArtigos)
+);
 
-          </div>
+setTitulo("");
+setChamada("");
+setTituloCompleto("");
+setDestaque("");
+setTextoCompleto("");
 
-          <div className="blog-home">
+}
 
-            <label>
+return (
 
-              <input
-                type="checkbox"
-              />
+<div className="admin-page">
 
-              Destacar na Home
+  <AdminSidebar />
 
-            </label>
+  <div className="admin-content">
 
-            <small>
-              Últimos 5 destaques na página principal
-            </small>
+    <AdminHeader />
 
-          </div>
+    <div className="section-title">
+      Texto chamada blog
+    </div>
 
-        </div>
+    <div className="blog-chamada">
 
-        {/* TEXTO COMPLETO */}
+      <div className="upload-principal">
 
-        <div className="section-title">
-          Texto completo blog
-        </div>
+        <p>Upload foto Principal blog</p>
 
-        <div className="blog-completo">
+      </div>
 
-          <div className="col-esquerda">
+      <div className="blog-chamada-form">
 
-            <input
-              type="date"
-            />
+        <input
+          type="text"
+          placeholder="Título"
+          value={titulo}
+          onChange={(e) => setTitulo(e.target.value)}
+        />
 
-            <input
-              type="text"
-              placeholder="Tempo médio de leitura"
-            />
+        <textarea
+          placeholder="Chamada última publicação"
+          value={chamada}
+          onChange={(e) => setChamada(e.target.value)}
+        ></textarea>
 
-          </div>
+      </div>
 
-          <div className="col-direita">
+      <div className="blog-home">
 
-            <input
-              type="text"
-              placeholder="Título"
-            />
+        <label>
 
-            <textarea
-              className="destaque-texto"
-              placeholder="Destaque do texto"
-            ></textarea>
+          <input
+            type="checkbox"
+          />
 
-          </div>
+          Destacar na Home
 
-        </div>
+        </label>
 
-        <div className="texto-principal">
-
-          <textarea
-            placeholder="Texto completo da publicação..."
-          ></textarea>
-
-        </div>
-
-        <div className="blog-acoes">
-
-          <button className="btn-rascunho">
-            Salvar rascunho
-          </button>
-
-          <button className="btn-publicar">
-            Publicar
-          </button>
-
-        </div>
+        <small>
+          Últimos 5 destaques na página principal
+        </small>
 
       </div>
 
     </div>
 
-  );
+    <div className="section-title">
+      Texto completo blog
+    </div>
+
+    <div className="blog-completo">
+
+      <div className="col-esquerda">
+
+        <input
+          type="date"
+        />
+
+        <input
+          type="text"
+          placeholder="Tempo médio de leitura"
+        />
+
+      </div>
+
+      <div className="col-direita">
+
+        <input
+          type="text"
+          placeholder="Título"
+          value={tituloCompleto}
+          onChange={(e) =>
+            setTituloCompleto(e.target.value)
+          }
+        />
+
+        <textarea
+          placeholder="Destaque do texto"
+          value={destaque}
+          onChange={(e) =>
+            setDestaque(e.target.value)
+          }
+        ></textarea>
+
+      </div>
+
+    </div>
+
+    <div className="texto-principal">
+
+      <textarea
+        placeholder="Texto completo da publicação..."
+        value={textoCompleto}
+        onChange={(e) =>
+          setTextoCompleto(e.target.value)
+        }
+      ></textarea>
+
+    </div>
+
+    <div className="blog-acoes">
+
+      <button className="btn-rascunho">
+        Salvar rascunho
+      </button>
+
+      <button
+        className="btn-publicar"
+        onClick={publicar}
+      >
+        Publicar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+);
 
 }

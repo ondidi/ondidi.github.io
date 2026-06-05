@@ -137,3 +137,39 @@
   cursor: pointer;
 
 }
+.acoes {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+.acoes button {
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  padding: 4px;
+
+}
+
+.acoes img {
+
+  width: 22px;
+
+  height: 22px;
+
+  object-fit: contain;
+
+}
+.acoes button:hover {
+
+  transform: scale(1.15);
+
+  transition: 0.2s;
+
+}
