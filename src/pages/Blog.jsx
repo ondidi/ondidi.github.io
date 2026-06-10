@@ -2,52 +2,42 @@ import "../assets/styles/Blog.css";
 import { NavLink, Link } from "react-router-dom";
 import BlogHeader from "../components/blog/BlogHeader";
 import BlogFooter from "../components/blog/BlogFooter";
-
-const recentPosts = [
-
-  {
-    id: 1,
-    title: "Custodes sui",
-    category: "Greve",
-    date: "16/05/26",
-    excerpt:
-      "Tenho acompanhado a greve dos alunos da Universidade de São Paulo...",
-    link: "/blog/custodes",
-  },
-
-  {
-    id: 2,
-    title: "Deus",
-    category: "Reflexão",
-    date: "25/04/26",
-    excerpt:
-      "Li recentemente, em um jornal de grande circulação de São Paulo, resenha...",
-    link: "/blog/deus",
-  },
-
-  {
-    id: 3,
-    title: "Conversa",
-    category: "Política",
-    date: "11/04/26",
-    excerpt:
-      "O eleitor brasileiro, em sua grande maioria, tem demonstrado...",
-    link: "/blog/conversa",
-  },
-
-  {
-    id: 4,
-    title: "Menino e menina",
-    category: "Comportamento",
-    date: "26/03/26",
-    excerpt:
-      "A polêmica envolvendo a deputada Erika Hilton...",
-    link: "/blog/menino",
-  },
-
-];
+import { useState, useEffect } from "react";
+import { supabase } from "../services/supabase";
 
 const Blog = () => {
+  const [artigos, setArtigos] = useState([]);
+  const destaque = artigos[0];
+  const recentes = artigos.slice(1, 5);
+  useEffect(() => {
+
+  async function carregarArtigos() {
+
+    const { data, error } =
+      await supabase
+        .from("artigos")
+        .select("*")
+        .eq("status", "Publicado")
+        .order("id", {
+          ascending: false
+        });
+
+    if (error) {
+
+      console.error(error);
+      return;
+
+    }
+
+    console.log(data);
+
+    setArtigos(data || []);
+
+  }
+
+  carregarArtigos();
+
+}, []);
 
   return (
 
@@ -56,61 +46,56 @@ const Blog = () => {
       <BlogHeader />
       {/* DESTAQUE */}
 
-      <section className="featured-post">
+      {destaque && (
 
-        <div className="featured-image-container">
+    <section className="featured-post">
+
+      <div className="featured-image-container">
+
+        <img
+          src={
+            destaque.imagem_principal ||
+            "/img/blog/castas.webp"
+          }
+          alt={destaque.titulo}
+          className="featured-image"
+        />
+
+      </div>
+
+      <div className="featured-content">
+
+        <span className="section-label">
+          Publicação mais recente
+        </span>
+
+        <h1 className="featured-title">
+          {destaque.titulo}
+        </h1>
+
+        <p className="featured-text">
+          {destaque.chamada}
+        </p>
+
+        <Link
+          to={`/blog/${destaque.id}`}
+          className="read-button"
+        >
+
+          Ler o texto
 
           <img
-            src="/img/blog/castas.webp"
-            alt="Castas e crenças"
-            className="featured-image"
+            src="/img/icons/seta.svg"
+            alt="Seta"
           />
 
-        </div>
+        </Link>
 
-        <div className="featured-content">
+      </div>
 
-          <span className="section-label">
-            Publicação mais recente
-          </span>
+    </section>
 
-          <h1 className="featured-title">
-            Castas e crenças
-          </h1>
-
-          <p className="featured-text">
-
-            Este texto busca dialogar com uma reflexão
-            que há muito tempo me acompanha: o meio molda
-            quem somos?
-
-            <br /><br />
-
-            Autores como Michel Foucault, Pierre Bourdieu,
-            Hannah Arendt e Jean-Paul Sartre, entre tantos
-            outros, desenvolveram linhas de pensamento sobre
-            moral, instituições, poder, liberdade e
-            condicionamento social.
-
-          </p>
-
-          <Link
-            to="/blog/castas-e-crencas"
-            className="read-button"
-          >
-
-            Ler o texto
-
-            <img
-              src="/img/icons/seta.svg"
-              alt="Seta"
-            />
-
-          </Link>
-
-        </div>
-
-      </section>
+  )}
 
       {/* TEXTOS RECENTES */}
 
@@ -122,7 +107,7 @@ const Blog = () => {
 
         <div className="posts-grid">
 
-          {recentPosts.map((post) => (
+          {recentes.map((post) => (
 
             <div
               className="post-card"
@@ -130,21 +115,31 @@ const Blog = () => {
             >
 
               <h3 className="post-title">
-                {post.title}
+                {post.titulo}
               </h3>
 
               <span className="post-meta">
 
-                {post.category} • {post.date}
+                {new Date(
+                  post.data_publicacao
+                ).toLocaleDateString(
+                  "pt-BR"
+                )}
 
               </span>
 
               <p className="post-excerpt">
-                {post.excerpt}
+
+                {post.chamada
+                  ?.split(" ")
+                  .slice(0, 22)
+                  .join(" ")
+                }...
+
               </p>
 
               <Link
-                to={post.link}
+                to={`/blog/${post.id}`}
                 className="post-button"
               >
 
@@ -158,6 +153,7 @@ const Blog = () => {
               </Link>
 
             </div>
+
           ))}
 
         </div>

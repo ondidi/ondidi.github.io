@@ -46,6 +46,7 @@ import Custodes from "./pages/blog/Custodes.jsx";
 import Deus from "./pages/blog/Deus.jsx";
 import Conversa from "./pages/blog/Conversa.jsx";
 import Menino from "./pages/blog/Menino.jsx";
+import BlogPost from "./pages/BlogPost.jsx";
 
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -274,6 +275,10 @@ const App = () => {
               element={<Blog />}
             />
             <Route
+              path="/blog/:id"
+              element={<BlogPost />}
+            />
+            <Route
               path="/blog/castas-e-crencas"
               element={<Castas />}
             />
@@ -294,8 +299,12 @@ const App = () => {
               element={<Menino />}
             />
             <Route
-              path="/admin/blog/preview"
+              path="/admin/blog/preview/:id"
               element={<BlogPreview />}
+            />
+            <Route
+              path="/admin/blog/editar/:id"
+              element={<BlogEditor />}
             />
 
           </Routes>

@@ -94,25 +94,29 @@
 
 .status-publicado {
 
-  background: #DFF5E1;
+  background: rgba(25, 135, 84, 0.10);
 
-  color: #237A34;
+  color: #198754;
 
-  padding: 6px 12px;
+  padding: 8px 14px;
 
   border-radius: 20px;
+
+  font-weight: 600;
 
 }
 
 .status-rascunho {
 
-  background: #FFF2D6;
+  background: rgba(220, 53, 69, 0.10);
 
-  color: #9A6B00;
+  color: #dc3545;
 
-  padding: 6px 12px;
+  padding: 8px 14px;
 
   border-radius: 20px;
+
+  font-weight: 600;
 
 }
 

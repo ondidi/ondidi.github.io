@@ -1,66 +1,162 @@
 import AdminSidebar from "../components/AdminSidebar";
 import AdminHeader from "../components/AdminHeader";
 import { useState, useEffect } from "react";
+import { supabase } from "../../services/supabase";
+import { useParams } from "react-router-dom";
 
 import "../styles/BlogEditor.css";
 
 export default function BlogEditor() {
+  const { id } = useParams();
 
 const [titulo, setTitulo] = useState("");
 const [chamada, setChamada] = useState("");
 const [tituloCompleto, setTituloCompleto] = useState("");
 const [destaque, setDestaque] = useState("");
 const [textoCompleto, setTextoCompleto] = useState("");
-const [artigos, setArtigos] = useState([]);
+const [dataPublicacao, setDataPublicacao] =
+  useState("");
+
+const [tempoLeitura, setTempoLeitura] =
+  useState("");
+
+const [imagemPrincipal, setImagemPrincipal] =
+  useState("");
 
 useEffect(() => {
 
-const artigosSalvos =
-  localStorage.getItem("artigos");
+  async function carregarArtigo() {
 
-if (artigosSalvos) {
+    if (!id) return;
 
-  setArtigos(
-    JSON.parse(artigosSalvos)
+    const { data, error } =
+      await supabase
+        .from("artigos")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+    console.log(
+      "ARTIGO EDIÇÃO:",
+      data
+    );
+
+    console.log(
+      "ERRO:",
+      error
+    );
+
+    if (!data) return;
+
+    setTitulo(
+      data.titulo || ""
+    );
+
+    setChamada(
+      data.chamada || ""
+    );
+
+    setTituloCompleto(
+      data.titulo_completo || ""
+    );
+
+    setDestaque(
+      data.destaque || ""
+    );
+
+    setTextoCompleto(
+      data.texto_completo || ""
+    );
+
+    setDataPublicacao(
+      data.data_publicacao || ""
+    );
+
+    setTempoLeitura(
+      data.tempo_leitura || ""
+    );
+
+    setImagemPrincipal(
+      data.imagem_principal || ""
+    );
+
+  }
+
+  carregarArtigo();
+
+}, [id]);
+
+async function publicar() {
+    console.log(
+    "ENTROU EM PUBLICAR"
+  );
+
+    let resultado;
+
+if (id) {
+
+  resultado =
+    await supabase
+      .from("artigos")
+      .update({
+        titulo: titulo,
+        chamada: chamada,
+        titulo_completo: tituloCompleto,
+        destaque: destaque,
+        texto_completo: textoCompleto,
+        data_publicacao: dataPublicacao,
+        tempo_leitura: tempoLeitura,
+        imagem_principal: imagemPrincipal,
+        status: "Publicado"
+      })
+      .eq("id", id)
+      .select();
+
+} else {
+
+  resultado =
+    await supabase
+      .from("artigos")
+      .insert([
+        {
+          titulo: titulo,
+          chamada: chamada,
+          titulo_completo: tituloCompleto,
+          destaque: destaque,
+          texto_completo: textoCompleto,
+          data_publicacao: dataPublicacao,
+          tempo_leitura: tempoLeitura,
+          imagem_principal: imagemPrincipal,
+          status: "Publicado",
+          destaque_home: false
+        }
+      ])
+      .select();
+
+}
+
+  const { error } = resultado;
+
+  if (error) {
+
+    console.error(error);
+
+    alert(
+      "Erro ao salvar artigo."
+    );
+
+    return;
+
+  }
+
+  alert(
+    id
+      ? "Artigo atualizado com sucesso!"
+      : "Artigo publicado com sucesso!"
   );
 
 }
 
-}, []);
-
-function publicar() {
-
-const artigo = {
-
-  titulo,
-  chamada,
-  tituloCompleto,
-  destaque,
-  textoCompleto,
-  data: new Date().toLocaleDateString("pt-BR"),
-  status: "Publicado"
-
-};
-
-const novosArtigos = [
-  ...artigos,
-  artigo
-];
-
-setArtigos(novosArtigos);
-
-localStorage.setItem(
-  "artigos",
-  JSON.stringify(novosArtigos)
-);
-
-setTitulo("");
-setChamada("");
-setTituloCompleto("");
-setDestaque("");
-setTextoCompleto("");
-
-}
 
 return (
 
@@ -80,7 +176,47 @@ return (
 
       <div className="upload-principal">
 
-        <p>Upload foto Principal blog</p>
+        {imagemPrincipal && (
+
+          <img
+            src={imagemPrincipal}
+            alt="Preview"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover"
+            }}
+          />
+
+        )}
+
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => {
+
+            const arquivo =
+              e.target.files[0];
+
+            if (!arquivo) return;
+
+            const reader =
+              new FileReader();
+
+            reader.onload = () => {
+
+              setImagemPrincipal(
+                reader.result
+              );
+
+            };
+
+            reader.readAsDataURL(
+              arquivo
+            );
+
+          }}
+        />
 
       </div>
 
@@ -131,11 +267,23 @@ return (
 
         <input
           type="date"
+          value={dataPublicacao}
+          onChange={(e) =>
+            setDataPublicacao(
+              e.target.value
+            )
+          }
         />
 
         <input
           type="text"
           placeholder="Tempo médio de leitura"
+          value={tempoLeitura}
+          onChange={(e) =>
+            setTempoLeitura(
+              e.target.value
+            )
+          }
         />
 
       </div>
@@ -171,14 +319,18 @@ return (
         onChange={(e) =>
           setTextoCompleto(e.target.value)
         }
+        
       ></textarea>
 
     </div>
 
     <div className="blog-acoes">
 
-      <button className="btn-rascunho">
-        Salvar rascunho
+      <button
+        className="btn-rascunho"
+        disabled
+      >
+        Rascunho (em construção)
       </button>
 
       <button

@@ -2,6 +2,7 @@ import AdminSidebar from "../components/AdminSidebar";
 import AdminHeader from "../components/AdminHeader";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { supabase } from "../../services/supabase";
 
 import "../styles/BlogAdmin.css";
 
@@ -13,29 +14,63 @@ export default function BlogAdmin() {
 
   useEffect(() => {
 
-    const artigosSalvos =
-      localStorage.getItem("artigos");
+    async function carregarArtigos() {
 
-    if (artigosSalvos) {
+      const { data, error } =
+        await supabase
+          .from("artigos")
+          .select("*")
+          .order("id", {
+            ascending: false
+          });
 
-      setArtigos(
-        JSON.parse(artigosSalvos)
-      );
+      if (error) {
+
+        console.error(error);
+        return;
+
+      }
+
+      setArtigos(data || []);
 
     }
 
+    carregarArtigos();
+
   }, []);
 
-  function excluirArtigo(index) {
+  async function excluirArtigo(id) {
 
-    const novosArtigos =
-      artigos.filter((_, i) => i !== index);
+    const confirmar =
+      window.confirm(
+        "Deseja realmente excluir este artigo?"
+      );
 
-    setArtigos(novosArtigos);
+    if (!confirmar) return;
 
-    localStorage.setItem(
-      "artigos",
-      JSON.stringify(novosArtigos)
+    const { error } =
+      await supabase
+        .from("artigos")
+        .delete()
+        .eq("id", id);
+
+    if (error) {
+
+      alert(
+        "Erro ao excluir artigo."
+      );
+
+      console.error(error);
+
+      return;
+
+    }
+
+    setArtigos(
+      artigos.filter(
+        artigo =>
+          artigo.id !== id
+      )
     );
 
   }
@@ -56,7 +91,11 @@ export default function BlogAdmin() {
 
           <button
             className="btn-novo"
-            onClick={() => navigate("/admin/blog/novo")}
+            onClick={() =>
+              navigate(
+                "/admin/blog/novo"
+              )
+            }
           >
             + Novo Artigo
           </button>
@@ -77,30 +116,49 @@ export default function BlogAdmin() {
 
           </div>
 
-          {artigos.map((item, index) => (
+          {artigos.map((item) => (
 
             <div
               className="blog-row"
-              key={index}
+              key={item.id}
             >
 
-              <div>{item.titulo}</div>
+              <div>
+                {item.titulo}
+              </div>
 
               <div>
 
-                <span className="status-publicado">
+                <span
+                  className={
+                    item.status === "Rascunho"
+                      ? "status-rascunho"
+                      : "status-publicado"
+                  }
+                >
 
-                  {item.status || "Publicado"}
+                  {item.status}
 
                 </span>
 
               </div>
 
-              <div>{item.data}</div>
+              <div>
+                {item.data_publicacao}
+              </div>
 
               <div className="acoes">
 
-                <button title="Editar">
+                <button
+                  title="Editar"
+                  onClick={() => {
+
+                    navigate(
+                      `/admin/blog/editar/${item.id}`
+                    );
+
+                  }}
+                >
 
                   <img
                     src="/img/icons/editar.svg"
@@ -113,12 +171,9 @@ export default function BlogAdmin() {
                   title="Visualizar"
                   onClick={() => {
 
-                    localStorage.setItem(
-                      "previewArtigo",
-                      JSON.stringify(item)
+                    navigate(
+                      `/admin/blog/preview/${item.id}`
                     );
-
-                    navigate("/admin/blog/preview");
 
                   }}
                 >
@@ -132,7 +187,9 @@ export default function BlogAdmin() {
 
                 <button
                   title="Excluir"
-                  onClick={() => excluirArtigo(index)}
+                  onClick={() =>
+                    excluirArtigo(item.id)
+                  }
                 >
 
                   <img
