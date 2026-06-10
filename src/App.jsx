@@ -60,6 +60,7 @@ import BlogAdmin from "./admin/pages/BlogAdmin";
 import BlogEditor from "./admin/pages/BlogEditor";
 import BlogPreview
 from "./admin/pages/BlogPreview";
+import ProtectedRoute from "./admin/components/ProtectedRoute";
 
 import "./App.css";
 
@@ -127,22 +128,11 @@ const App = () => {
 
             <Route
               path="/admin/dashboard"
-              element={<Dashboard />}
-            />
-
-            <Route
-              path="/admin/pedaladas"
-              element={<Pedaladas />}
-            />
-
-            <Route
-              path="/admin/blog"
-              element={<BlogAdmin />}
-            />
-
-            <Route
-              path="/admin/blog/novo"
-              element={<BlogEditor />}
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
             />
 
             <Route
@@ -299,14 +289,50 @@ const App = () => {
               element={<Menino />}
             />
             <Route
-              path="/admin/blog/preview/:id"
-              element={<BlogPreview />}
-            />
-            <Route
-              path="/admin/blog/editar/:id"
-              element={<BlogEditor />}
+              path="/admin/pedaladas"
+              element={
+                <ProtectedRoute>
+                  <Pedaladas />
+                </ProtectedRoute>
+              }
             />
 
+            <Route
+              path="/admin/blog"
+              element={
+                <ProtectedRoute>
+                  <BlogAdmin />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/admin/blog/novo"
+              element={
+                <ProtectedRoute>
+                  <BlogEditor />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/admin/blog/preview/:id"
+              element={
+                <ProtectedRoute>
+                  <BlogPreview />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/admin/blog/editar/:id"
+              element={
+                <ProtectedRoute>
+                  <BlogEditor />
+                </ProtectedRoute>
+              }
+            />
+            
           </Routes>
 
         </div>
