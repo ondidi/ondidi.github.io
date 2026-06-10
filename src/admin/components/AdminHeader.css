@@ -99,3 +99,13 @@
   object-fit: cover;
 
 }
+.logout-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1);
+}
