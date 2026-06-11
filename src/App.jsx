@@ -97,7 +97,7 @@ const App = () => {
         {!window.location.pathname.startsWith("/admin") && (
           <Sidebar
             menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
+            setMenuOpen={MenuOpen}
           />
         )}
 

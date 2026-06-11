@@ -135,17 +135,25 @@
 
   .admin-close-menu {
 
-    display: block;
+  display: block;
 
-    background: none;
+  position: absolute;
 
-    border: none;
+  top: 15px;
 
-    cursor: pointer;
+  right: 15px;
 
-    margin: 15px;
+  background: none;
 
-  }
+  border: none;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  margin: 0;
+
+}
 
   .admin-close-menu img {
 
