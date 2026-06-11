@@ -77,7 +77,7 @@ const App = () => {
 
     {!window.location.pathname.startsWith("/admin") && (
       <>
-        <MobileHeader setMenuOpen={MenuOpen} />
+        <MobileHeader setMenuOpen={setMenuOpen} />
 
         <MobileFooter />
 
@@ -97,7 +97,7 @@ const App = () => {
         {!window.location.pathname.startsWith("/admin") && (
           <Sidebar
             menuOpen={menuOpen}
-            setMenuOpen={MenuOpen}
+            setMenuOpen={setMenuOpen}
           />
         )}
 
