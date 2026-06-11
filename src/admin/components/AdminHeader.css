@@ -1,19 +1,18 @@
 .admin-header {
 
-  background: #DAE6F1;
+  background: #dce8f3;
 
-  border-radius: 16px;
+  border: 2px solid #9ea9b4;
 
-  padding: 16px 24px;
+  border-radius: 24px;
+
+  padding: 20px 30px;
 
   display: flex;
 
   justify-content: space-between;
 
   align-items: center;
-
-  margin-bottom: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
 
 }
 
@@ -58,8 +57,8 @@
 
 .admin-notification img {
 
-  width: 42px;
-  height: 42px;
+  width: 25px;
+  height: 25px;
 
 }
 
@@ -67,11 +66,11 @@
 
   position: absolute;
 
-  top: -4px;
-  right: -4px;
+  top: 5px;
+  right: 5px;
 
-  width: 18px;
-  height: 18px;
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
 
@@ -91,8 +90,8 @@
 
 .admin-avatar {
 
-  width: 42px;
-  height: 42px;
+  width: 25px;
+  height: 25px;
 
   border-radius: 50%;
 
@@ -100,12 +99,50 @@
 
 }
 .logout-icon {
-  width: 45px;
-  height: 45px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   transition: transform .2s ease;
 }
 
 .logout-icon:hover {
   transform: scale(1.1);
+}
+@media (max-width: 768px) {
+
+  @media (max-width: 768px) {
+
+  .admin-header {
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    padding: 0 0 20px 0;
+
+  }
+
+}
+
+  .admin-header h1 {
+
+    display: none;
+
+  }
+
+}
+@media (max-width: 768px) {
+
+  .dashboard-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+  }
+
 }

@@ -226,3 +226,154 @@
   cursor: pointer;
 
 }
+@media (max-width: 768px) {
+
+  .admin-content {
+
+    padding: 15px;
+
+  }
+
+  .section-title {
+
+    font-size: 1.4rem;
+
+  }
+
+  /* CHAMADA */
+
+  .blog-chamada {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+  .upload-principal {
+
+    width: 100%;
+
+    height: 220px;
+
+  }
+
+  .blog-chamada-form {
+
+    width: 100%;
+
+  }
+
+  .blog-home {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+  }
+
+  /* TEXTO COMPLETO */
+
+  .blog-completo {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+  .col-esquerda {
+
+    width: 100%;
+
+  }
+
+  .col-direita {
+
+    width: 100%;
+
+  }
+
+  /* TEXTO PRINCIPAL */
+
+  .texto-principal textarea {
+
+    min-height: 250px;
+
+  }
+
+  /* BOTÕES */
+
+  .blog-acoes {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+  .btn-rascunho,
+  .btn-publicar {
+
+    width: 100%;
+
+  }
+
+}
+.upload-principal {
+
+  position: relative;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+}
+
+.input-upload {
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+}
+
+.upload-placeholder {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.upload-placeholder img {
+
+  width: 40px;
+
+  height: 40px;
+
+}
+
+.preview-imagem {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}

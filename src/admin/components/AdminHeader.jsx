@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../services/supabase";
 
-export default function AdminHeader() {
+export default function AdminHeader({
+  setMenuOpen
+  }) {
     const navigate = useNavigate();
 
   async function sair() {
@@ -15,6 +17,17 @@ export default function AdminHeader() {
   return (
 
     <div className="admin-header">
+      <button
+        className="admin-menu-button"
+        onClick={() => setMenuOpen(true)}
+      >
+
+        <img
+          src="/img/icons/hamburguer.svg"
+          alt="Menu"
+        />
+
+      </button>
 
       <h1>Portal Ondids</h1>
 

@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import "../styles/BlogEditor.css";
 
 export default function BlogEditor() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const { id } = useParams();
 
 const [titulo, setTitulo] = useState("");
@@ -162,11 +163,16 @@ return (
 
 <div className="admin-page">
 
-  <AdminSidebar />
+  <AdminSidebar
+    menuOpen={menuOpen}
+    setMenuOpen={setMenuOpen}
+  />
 
   <div className="admin-content">
 
-    <AdminHeader />
+    <AdminHeader
+      setMenuOpen={setMenuOpen}
+    />
 
     <div className="section-title">
       Texto chamada blog
@@ -176,21 +182,33 @@ return (
 
       <div className="upload-principal">
 
-        {imagemPrincipal && (
+        {imagemPrincipal ? (
 
           <img
             src={imagemPrincipal}
             alt="Preview"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
+            className="preview-imagem"
           />
+
+        ) : (
+
+          <div className="upload-placeholder">
+
+            <img
+              src="/img/icons/camera.svg"
+              alt="Selecionar imagem"
+            />
+
+            <span>
+              Selecionar foto
+            </span>
+
+          </div>
 
         )}
 
         <input
+          className="input-upload"
           type="file"
           accept="image/*"
           onChange={(e) => {

@@ -3,9 +3,12 @@ import MetricCard from "../components/MetricCard";
 import "../styles/Dashboard.css";
 import AdminHeader from "../components/AdminHeader";
 import "../components/AdminHeader.css";
+import { useState } from "react";
+
 
 
 export default function Dashboard() {
+const [menuOpen, setMenuOpen] = useState(false);
 
 const metrics = [
 
@@ -57,7 +60,10 @@ const metrics = [
 
     <div style={{ display: "flex" }}>
 
-      <AdminSidebar />
+      <AdminSidebar
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
       <div
         style={{
@@ -66,7 +72,9 @@ const metrics = [
         }}
       >
 
-        <AdminHeader />
+        <AdminHeader
+          setMenuOpen={setMenuOpen}
+        />
 
         <div className="dashboard-grid">
 

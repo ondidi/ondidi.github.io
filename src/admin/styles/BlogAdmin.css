@@ -177,3 +177,80 @@
   transition: 0.2s;
 
 }
+@media (max-width: 768px) {
+
+  .admin-content {
+
+    padding: 15px;
+
+  }
+
+  .blog-header {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+
+  }
+
+  .blog-header h2 {
+
+    font-size: 1.5rem;
+
+    text-align: center;
+
+  }
+
+  .btn-novo {
+
+    width: 100%;
+
+  }
+
+  .blog-table {
+
+    border: none;
+
+    background: transparent;
+
+  }
+
+  .blog-table-header {
+
+    display: none;
+
+  }
+
+  .blog-row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background: white;
+
+    border: 1px solid #BCE7EF;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+  }
+
+  .acoes {
+
+    width: 100%;
+
+    justify-content: flex-end;
+
+  }
+
+}

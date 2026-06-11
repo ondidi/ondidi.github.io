@@ -8,6 +8,8 @@ import "../styles/BlogAdmin.css";
 
 export default function BlogAdmin() {
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navigate = useNavigate();
 
   const [artigos, setArtigos] = useState([]);
@@ -79,11 +81,16 @@ export default function BlogAdmin() {
 
     <div className="admin-page">
 
-      <AdminSidebar />
+      <AdminSidebar
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
       <div className="admin-content">
 
-        <AdminHeader />
+        <AdminHeader
+          setMenuOpen={setMenuOpen}
+        />
 
         <div className="blog-header">
 
@@ -151,13 +158,11 @@ export default function BlogAdmin() {
 
                 <button
                   title="Editar"
-                  onClick={() => {
-
+                  onClick={() =>
                     navigate(
                       `/admin/blog/editar/${item.id}`
-                    );
-
-                  }}
+                    )
+                  }
                 >
 
                   <img
@@ -169,13 +174,11 @@ export default function BlogAdmin() {
 
                 <button
                   title="Visualizar"
-                  onClick={() => {
-
+                  onClick={() =>
                     navigate(
                       `/admin/blog/preview/${item.id}`
-                    );
-
-                  }}
+                    )
+                  }
                 >
 
                   <img

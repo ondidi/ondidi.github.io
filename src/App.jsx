@@ -77,7 +77,7 @@ const App = () => {
 
     {!window.location.pathname.startsWith("/admin") && (
       <>
-        <MobileHeader setMenuOpen={setMenuOpen} />
+        <MobileHeader setMenuOpen={MenuOpen} />
 
         <MobileFooter />
 
