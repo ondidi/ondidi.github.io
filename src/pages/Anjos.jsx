@@ -4,8 +4,6 @@ import "../assets/styles/Gallery.css";
 import copiarIcon from "/img/icons/copiar.svg";
 import enviarIcon from "/img/icons/enviar.svg";
 
-console.log("ANJOS NOVO");
-
 const fotos = [
 
   "CA (1).webp",

@@ -47,6 +47,7 @@ import Deus from "./pages/blog/Deus.jsx";
 import Conversa from "./pages/blog/Conversa.jsx";
 import Menino from "./pages/blog/Menino.jsx";
 import BlogPost from "./pages/BlogPost.jsx";
+import Aparecida26 from "./pages/Aparecida26.jsx";
 
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -251,6 +252,10 @@ const App = () => {
             <Route
               path="/aventuras/caminho-da-fe-2015"
               element={<Caminhofe />}
+            />
+            <Route
+              path="/aventuras/aparecida26"
+              element={<Aparecida26 />}
             />
             <Route
               path="/amigos"

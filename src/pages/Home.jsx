@@ -3,8 +3,18 @@ import { Link } from "react-router-dom";
 
 const recentRides = [
 
-  {
+    {
     id: 1,
+    title: "Caminho da Fé 2026",
+    city: "Rio Claro/Aparecida",
+    km: "470 km",
+    level: "Difícil",
+    image: "/img/aparecida26/thumb.webp",
+    slug: "aparecida26"
+  },
+
+  {
+    id: 2,
     title: "Rota das Frutas",
     city: "Louveira/Vinhedo",
     km: "32 km",
@@ -14,7 +24,7 @@ const recentRides = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Serra do Japi",
     city: "Jundiaí - SP",
     km: "52 km",
@@ -24,23 +34,13 @@ const recentRides = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Capelas",
     city: "Serra Negra - SP",
     km: "67 km",
     level: "Difícil",
     image: "/img/capelas/thumb.webp",
     slug: "rota-das-capelas"
-  },
-
-  {
-    id: 4,
-    title: "Márcia Prado",
-    city: "São Paulo - Santos",
-    km: "48 km",
-    level: "Moderado",
-    image: "/img/marcia/thumb.webp",
-    slug: "marcia"
   }
 
 ];

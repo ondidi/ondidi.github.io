@@ -3,6 +3,14 @@ import "../assets/styles/Sidebar.css";
 
 const adventures = [
 
+    {
+    title: "Caminho da Fé 2026",
+    year: 2026,
+    date: "2026-06-13",
+    image: "/img/aparecida26/thumb.webp",
+    slug: "aparecida26"
+  },
+
   {
     title: "Rota das frutas",
     year: 2026,
