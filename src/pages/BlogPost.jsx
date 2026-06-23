@@ -5,6 +5,7 @@ import { supabase } from "../services/supabase";
 
 import BlogHeader from "../components/blog/BlogHeader";
 import BlogFooter from "../components/blog/BlogFooter";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogPost() {
 
@@ -52,6 +53,43 @@ export default function BlogPost() {
   return (
 
   <div className="article-page">
+    <Helmet>
+
+    <title>
+      {artigo.titulo_completo || artigo.titulo} | Ondids
+    </title>
+
+    <meta
+      name="description"
+      content={
+        artigo.destaque ||
+        artigo.titulo
+      }
+    />
+
+    <link
+      rel="canonical"
+      href={`https://ondids.com.br/blog/${id}`}
+    />
+
+    <meta
+      property="og:title"
+      content={
+        artigo.titulo_completo || artigo.titulo
+      }
+    />
+
+    <meta
+      property="og:description"
+      content={artigo.destaque}
+    />
+
+    <meta
+      property="og:url"
+      content={`https://ondids.com.br/blog/${id}`}
+    />
+
+  </Helmet>
 
     <BlogHeader article />
 
@@ -176,6 +214,7 @@ export default function BlogPost() {
     <BlogFooter />
 
   </div>
+  
 
 );
 }
