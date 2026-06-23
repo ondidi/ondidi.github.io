@@ -6,48 +6,97 @@ import enviarIcon from "/img/icons/enviar.svg";
 
 const fotos = [
 
-  "aparecida26 (37).webp",
-  "aparecida26 (1).webp",
-  "aparecida26 (2).webp",
-  "aparecida26 (3).webp",
-  "aparecida26 (4).webp",
-  "aparecida26 (5).webp",
-  "aparecida26 (6).webp",
-  "aparecida26 (7).webp",
-  "aparecida26 (8).webp",
-  "aparecida26 (9).webp",
-  "aparecida26 (10).webp",
-  "aparecida26 (11).webp",
-  "aparecida26 (12).webp",
-  "aparecida26 (13).webp",
-  "aparecida26 (14).webp",
-  "aparecida26 (15).webp",
-  "aparecida26 (16).webp",
-  "aparecida26 (17).webp",
-  "aparecida26 (18).webp",
-  "aparecida26 (19).webp",
-  "aparecida26 (20).webp",
-  "aparecida26 (21).webp",
-  "aparecida26 (22).webp",
-  "aparecida26 (23).webp",
-  "aparecida26 (24).webp",
-  "aparecida26 (25).webp",
-  "aparecida26 (26).webp",
-  "aparecida26 (27).webp",
-  "aparecida26 (28).webp",
-  "aparecida26 (29).webp",
-  "aparecida26 (30).webp",
-  "aparecida26 (31).webp",
-  "aparecida26 (32).webp",
-  "aparecida26 (33).webp",
-  "aparecida26 (34).webp",
-  "aparecida26 (35).webp",
-  "aparecida26 (36).webp",
-  "aparecida26 (38).webp",
+  "paris (7).webp",
+  "paris (1).webp",
+  "paris (2).webp",
+  "paris (3).webp",
+  "paris (4).webp",
+  "paris (5).webp",
+  "paris (6).webp",
+  "paris (8).webp",
+  "paris (9).webp",
+  "paris (10).webp",
+  "paris (11).webp",
+  "paris (12).webp",
+  "paris (13).webp",
+  "paris (14).webp",
+  "paris (15).webp",
+  "paris (16).webp",
+  "paris (17).webp",
+  "paris (18).webp",
+  "paris (19).webp",
+  "paris (20).webp",
+  "paris (21).webp",
+  "paris (22).webp",
+  "paris (23).webp",
+  "paris (24).webp",
+  "paris (25).webp",
+  "paris (26).webp",
+  "paris (27).webp",
+  "paris (28).webp",
+  "paris (29).webp",
+  "paris (30).webp",
+  "paris (31).webp",
+  "paris (32).webp",
+  "paris (33).webp",
+  "paris (34).webp",
+  "paris (35).webp",
+  "paris (36).webp",
+  "paris (37).webp",
+  "paris (38).webp",
   
+
 ];
 
 const Aparecida26 = () => {
+    const compartilharFoto = async (foto) => {
+
+    const imageUrl =
+      `/img/aparecida26/${foto}`;
+
+    try {
+
+      const response =
+        await fetch(imageUrl);
+
+      const blob =
+        await response.blob();
+
+      const file = new File(
+
+        [blob],
+        foto,
+
+        { type: blob.type }
+
+      );
+
+      if (navigator.canShare &&
+          navigator.canShare({ files: [file] })) {
+
+        await navigator.share({
+
+          title: "Aparecida 2026",
+          text: "Confira esta foto 🚴",
+          files: [file],
+
+        });
+
+      } else {
+
+        alert(
+          "Seu navegador não suporta compartilhamento de imagem."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  };
 
   return (
 
@@ -60,11 +109,11 @@ const Aparecida26 = () => {
         <div className="gallery-box">
 
           <h1 className="gallery-title">
-            Caminho da Fé - 2026
+            Aparecida 2026
           </h1>
 
           <p className="gallery-date">
-            Publicado em 13/06/2026
+            Publicado em 25 de março de 2025
           </p>
 
         </div>
@@ -102,7 +151,7 @@ const Aparecida26 = () => {
 
             <img
               src={`/img/aparecida26/${foto}`}
-              alt="Caminho"
+              alt="aparecida26"
             />
 
             <div className="photo-footer">
@@ -113,15 +162,30 @@ const Aparecida26 = () => {
 
               <div className="photo-actions">
 
-                <img
-                  src={copiarIcon}
-                  alt="Copiar"
-                />
+                <a
+                  href={`/img/aparecida/${foto}`}
+                  download
+                >
 
-                <img
-                  src={enviarIcon}
-                  alt="Enviar"
-                />
+                  <img
+                    src={copiarIcon}
+                    alt="Baixar"
+                  />
+
+                </a>
+
+                <button
+                  onClick={() => compartilharFoto(foto)}
+                  className="share-button"
+                >
+
+                  <img
+                    src={enviarIcon}
+                    alt="Compartilhar"
+                  />
+
+                </button>
+
 
               </div>
 
