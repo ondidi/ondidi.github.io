@@ -35,6 +35,8 @@ const fotos = [
   "lug-30.webp",
   "lug-31.webp",
   "lug-32.webp",
+  "lug-33.webp",
+  "lug-34.webp",
  
 ];
 

@@ -44,6 +44,13 @@ const fotos = [
   "paris (36).webp",
   "paris (37).webp",
   "paris (38).webp",
+  "paris (39).webp",
+  "paris (40).webp",
+  "paris (41).webp",
+  "paris (42).webp",
+  "paris (43).webp",
+  "paris (44).webp",
+
   
 
 ];
@@ -113,7 +120,7 @@ const Aparecida26 = () => {
           </h1>
 
           <p className="gallery-date">
-            Publicado em 25 de março de 2025
+            Publicado em 20 de junho de 2026
           </p>
 
         </div>
