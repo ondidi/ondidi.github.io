@@ -66,7 +66,7 @@ const Santa = () => {
 
             <img
               src={`/img/staolimpia/${foto}`}
-              alt="Santa Olimpia"
+              alt="Santa Olimpia - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

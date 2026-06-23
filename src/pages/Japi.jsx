@@ -114,7 +114,7 @@ const Japi = () => {
 
             <img
               src={`/img/japi/${foto}`}
-              alt="Japi"
+              alt="Serra do Japi - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

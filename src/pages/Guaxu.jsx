@@ -112,7 +112,7 @@ const Guaxu = () => {
 
             <img
               src={`/img/guaxu/${foto}`}
-              alt="Cana"
+              alt="Guaxupé - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

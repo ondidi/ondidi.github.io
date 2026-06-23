@@ -59,7 +59,7 @@ const Ana = () => {
 
             <img
               src={`/img/ana/${foto}`}
-              alt="Ana"
+              alt="Analândia - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

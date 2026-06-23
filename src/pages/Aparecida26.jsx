@@ -158,7 +158,7 @@ const Aparecida26 = () => {
 
             <img
               src={`/img/aparecida26/${foto}`}
-              alt="aparecida26"
+              alt="Caminho da Fé 2026 - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

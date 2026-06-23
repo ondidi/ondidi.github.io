@@ -68,7 +68,7 @@ const Caminhofe = () => {
 
             <img
               src={`/img/caminhofe/${foto}`}
-              alt="Camino"
+              alt="Caminho da fé - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

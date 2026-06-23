@@ -58,7 +58,7 @@ const Esqueleto = () => {
 
             <img
               src={`/img/esq/${foto}`}
-              alt="Esqueleto"
+              alt="Ponte do esqueleto - Limeira - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

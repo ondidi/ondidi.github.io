@@ -64,7 +64,7 @@ const Cananeia2023 = () => {
 
             <img
               src={`/img/cananeia/${foto}`}
-              alt="Cananeia2023"
+              alt="Cananeia  - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

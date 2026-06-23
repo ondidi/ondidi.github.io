@@ -108,7 +108,7 @@ const Trem = () => {
 
             <img
               src={`/img/trem/${foto}`}
-              alt="Cana"
+              alt="Jaguariúna - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

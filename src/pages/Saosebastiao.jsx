@@ -59,7 +59,7 @@ const SaoSebastiao = () => {
 
             <img
               src={`/img/saosebastiao/${foto}`}
-              alt="Saosebstião"
+              alt="Sao Sebstião - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

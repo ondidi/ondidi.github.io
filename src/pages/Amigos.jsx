@@ -98,7 +98,7 @@ const Amigos = () => {
 
             <img
               src={`/img/amigos/${foto}`}
-              alt="Amigos"
+              alt="Amigos - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

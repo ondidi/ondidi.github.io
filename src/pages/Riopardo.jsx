@@ -66,7 +66,7 @@ const Riopardo = () => {
 
             <img
               src={`/img/riopardo/${foto}`}
-              alt="Rio Pardo"
+              alt="São José Rio Pardo - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

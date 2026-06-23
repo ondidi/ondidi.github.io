@@ -156,7 +156,7 @@ const Capelas = () => {
 
                 <img
                   src={copiarIcon}
-                  alt="Baixar"
+                  alt="Rotas das capelas - Diógenes Pasqualini"
                 />
 
               </a>

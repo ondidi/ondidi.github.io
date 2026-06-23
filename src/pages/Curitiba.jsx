@@ -69,7 +69,7 @@ const Curitiba = () => {
 
             <img
               src={`/img/curitiba/${foto}`}
-              alt="Curitiba"
+              alt="Curitiba  - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

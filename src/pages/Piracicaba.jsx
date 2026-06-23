@@ -57,7 +57,7 @@ const Piracicaba = () => {
 
             <img
               src={`/img/godinho/${foto}`}
-              alt="Bairro Godinho"
+              alt="Bairro Godinho Piracicaba - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

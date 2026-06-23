@@ -87,7 +87,7 @@ const Lugares = () => {
 
             <img
               src={`/img/lugares/${foto}`}
-              alt="Lugares"
+              alt="Instagram - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

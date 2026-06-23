@@ -1,51 +1,17 @@
 import "../assets/styles/Home.css";
 import { Link } from "react-router-dom";
-
-const recentRides = [
-
-    {
-    id: 1,
-    title: "Caminho da Fé 2026",
-    city: "Rio Claro/Aparecida",
-    km: "470 km",
-    level: "Difícil",
-    image: "/img/aparecida26/thumb.webp",
-    slug: "aparecida26"
-  },
-
-  {
-    id: 2,
-    title: "Rota das Frutas",
-    city: "Louveira/Vinhedo",
-    km: "32 km",
-    level: "Moderado",
-    image: "/img/rota-frutas/thumb.webp",
-    slug: "rota-das-frutas"
-  },
-
-  {
-    id: 3,
-    title: "Serra do Japi",
-    city: "Jundiaí - SP",
-    km: "52 km",
-    level: "Moderado",
-    image: "/img/japi/thumb.webp",
-    slug: "serra-do-japi"
-  },
-
-  {
-    id: 4,
-    title: "Capelas",
-    city: "Serra Negra - SP",
-    km: "67 km",
-    level: "Difícil",
-    image: "/img/capelas/thumb.webp",
-    slug: "rota-das-capelas"
-  }
-
-];
+import { adventures } from "../data/adventures";
 
 const Home = () => {
+
+  const recentRides =
+    [...adventures]
+      .sort(
+        (a, b) =>
+          new Date(b.date) -
+          new Date(a.date)
+      )
+      .slice(0, 4);
 
   return (
 

@@ -58,7 +58,7 @@ const Canta = () => {
 
             <img
               src={`/img/gruta/${foto}`}
-              alt="Gruta"
+              alt="Gruta de Ipeúna - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

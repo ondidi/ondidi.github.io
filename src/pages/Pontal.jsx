@@ -116,7 +116,7 @@ const Pontal = () => {
 
             <img
               src={`/img/pontal/${foto}`}
-              alt="Pontal"
+              alt="Pontal do Paraná - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

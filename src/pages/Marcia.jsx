@@ -121,7 +121,7 @@ const Marcia = () => {
 
             <img
               src={`/img/marcia/${foto}`}
-              alt="Marcia"
+              alt="Rota Márcia Prado - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

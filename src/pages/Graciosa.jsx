@@ -114,7 +114,7 @@ const Graciosa = () => {
 
             <img
               src={`/img/graciosa/${foto}`}
-              alt="Graciosa"
+              alt="Serra da Graciosa - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

@@ -64,7 +64,7 @@ const Ilha = () => {
 
             <img
               src={`/img/ilhacomprida/${foto}`}
-              alt="Cana"
+              alt="Ilha Comprida - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

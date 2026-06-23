@@ -134,7 +134,7 @@ const Caminho = () => {
 
                   <img
                     src={copiarIcon}
-                    alt="Baixar"
+                    alt="Caminho da Fé - Diógenes Pasqualini"
                   />
 
                 </a>

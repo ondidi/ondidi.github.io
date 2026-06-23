@@ -122,7 +122,7 @@ const Frutas = () => {
 
             <img
               src={`/img/rota-frutas/${foto}`}
-              alt="Rota das Frutas"
+              alt="Rota das Frutas - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

@@ -58,7 +58,7 @@ const Horto = () => {
 
             <img
               src={`/img/horto/${foto}`}
-              alt="Horto Florestal"
+              alt="Horto Florestal Rio Claro - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

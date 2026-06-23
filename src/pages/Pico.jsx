@@ -60,7 +60,7 @@ const Pico = () => {
 
             <img
               src={`/img/pico/${foto}`}
-              alt="Pico do Gavião"
+              alt="Pico do Gavião São João da Boa Vista - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

@@ -63,7 +63,7 @@ const Paraitinga = () => {
 
             <img
               src={`/img/paraitinga/${foto}`}
-              alt="Sao Luis"
+              alt="Sao Luis do Paraitinga - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">

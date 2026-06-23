@@ -62,7 +62,7 @@ const Brotas = () => {
 
             <img
               src={`/img/Brotas-torrinha/${foto}`}
-              alt="Brotas"
+              alt="Brotas - Diógenes Pasqualini"
             />
 
             <div className="photo-footer">
