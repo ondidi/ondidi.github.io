@@ -22,6 +22,18 @@ const fotos = [
   "caminho_14.webp",
   "caminho_15.webp",
   "caminho_16.webp",
+  "caminho_17.webp",
+  "caminho_18.webp",
+  "caminho_19.webp",
+  "caminho_20.webp",
+  "caminho_21.webp",
+  "caminho_22.webp",
+  "caminho_23.webp",
+  "caminho_24.webp",
+  "caminho_25.webp",
+  "caminho_26.webp",
+  "caminho_27.webp",
+  "caminho_28.webp",
 
 ];
 
