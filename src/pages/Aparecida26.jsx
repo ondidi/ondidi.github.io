@@ -139,7 +139,7 @@ const Aparecida26 = () => {
 
             Então compreendi que não é a pedalada que nos transforma, mas a peregrinação que realizamos todos os dias dentro da alma. O caminho é apenas uma metáfora, um horizonte que se renova a cada amanhecer, convidando-nos a seguir adiante em direção ao nosso verdadeiro destino.
 
-            E talvez seja esse o maior ensinamento da jornada: descobrir que a chegada não está no fim da estrada, mas na pessoa que nos tornamos enquanto caminhamos.
+            E talvez seja esse o maior ensinamento da jornada: descobrir que a chegada não está no fim da estrada, mas na pessoa que nos tornamos enquanto caminhamos. Lembrando que a primeira foto que você vê abaixo foi gerada por IA.
 
         </p>
 
