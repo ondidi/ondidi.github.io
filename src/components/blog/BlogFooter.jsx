@@ -49,7 +49,7 @@ const BlogFooter = () => {
           </div>
 
           <a
-            href="mailto:contato@ondids.com"
+            href="mailto:contato@ondids.com.br"
             className="footer-mail-icon"
           >
 
