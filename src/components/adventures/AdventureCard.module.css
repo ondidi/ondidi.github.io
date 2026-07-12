@@ -1,0 +1,119 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FFF;
+
+    border: 1px solid #E8DDC9;
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    transition: .25s ease;
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.image {
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+}
+
+.content {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 24px;
+
+}
+
+.city {
+
+    font-size: .95rem;
+    font-weight: 700;
+
+    color: #C68A22;
+
+}
+
+.title {
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+
+    color: #234B63;
+
+}
+
+.info {
+
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+}
+
+.info span {
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 1rem;
+
+    color: #4E4E4E;
+
+}
+
+.info svg {
+
+    width: 18px;
+    height: 18px;
+
+    color: #234B63;
+
+}
+
+.button {
+
+    align-self: flex-start;
+
+    margin-top: 8px;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    background: #173F50;
+
+    color: #FFF;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    transition: .2s;
+
+}
+
+.button:hover {
+
+    background: #1F5268;
+
+}

@@ -1,0 +1,38 @@
+.section {
+
+    margin-top: 40px;
+
+    padding: 32px;
+
+    background: #F7F3EB;
+
+    border-radius: 32px;
+
+}
+
+.header {
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 32px;
+
+}
+
+.icon {
+
+    color: #173F50;
+
+}
+
+.title {
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: #173F50;
+
+    letter-spacing: -.02em;
+
+}

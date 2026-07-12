@@ -1,0 +1,52 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1px 0;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: calc(100% - 48px);
+    margin: 0 24px;
+
+    padding: 14px 18px;
+
+    border-radius: 16px;
+
+    background: #D9B26C;
+
+    color: #111;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.home:hover{
+    background:#CFA75E;
+}
+
+.title {
+    margin: 20px 24px 16px;
+    font-family:var(--font-open-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.scroll {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 0 24px 24px;
+}
+.icon{
+    width:22px;
+    height:22px;
+
+    flex-shrink:0;
+}

@@ -1,0 +1,21 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #F7F3EB;
+    border-right: 1px solid #E4DDD3;
+
+    position: sticky;
+    top: 0;
+}
+
+.list {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 0 24px;
+}

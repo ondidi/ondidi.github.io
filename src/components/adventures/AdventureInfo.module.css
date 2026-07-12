@@ -1,0 +1,63 @@
+.container {
+
+    max-width: 1400px;
+
+    margin: 48px auto;
+
+    padding: 0 32px;
+
+}
+
+.header {
+
+    display: grid;
+
+    grid-template-columns: 420px 1fr;
+
+    gap: 48px;
+
+    align-items: start;
+
+}
+
+.box {
+
+    background: rgba(194,138,44,.10);
+
+    border-radius: 28px;
+
+    padding: 36px;
+
+    text-align: center;
+
+}
+
+.title {
+
+    font-size: 2rem;
+
+    color: #243241;
+
+    margin-bottom: 18px;
+
+}
+
+.date {
+
+    color: #777;
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+}
+
+.text {
+
+    font-size: 1.2rem;
+
+    line-height: 1.4;
+
+    color: #2E2E2E;
+
+}

@@ -1,0 +1,59 @@
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+}
+
+.image {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    top: 50%;
+    right: 56px;
+
+    transform: translateY(-50%);
+
+    max-width: 540px;
+
+}
+
+.title {
+
+    margin: 0;
+
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: #C28A2C;
+
+    text-transform: uppercase;
+
+}
+
+.subtitle {
+
+    margin-top: 24px;
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.7;
+
+    color: #141414;
+
+}

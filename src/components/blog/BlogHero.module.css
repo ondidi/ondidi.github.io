@@ -1,0 +1,61 @@
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:18px;
+
+    margin-bottom:40px;
+
+    border-bottom:1px solid #C9A96A;
+
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.avatar{
+
+    border-radius:50%;
+
+}
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#2D2D2D;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.menu a:hover{
+
+    color:#B48A46;
+
+}

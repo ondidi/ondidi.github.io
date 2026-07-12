@@ -1,0 +1,99 @@
+.card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background: #F3EBDD;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    min-height: 280px;
+
+    transition: .25s;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
+
+}
+
+.card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.title {
+
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    color: #3E2E22;
+
+    margin-bottom: 14px;
+
+}
+
+.date {
+
+    font-size: .95rem;
+
+    color: #8D7B67;
+
+    margin-bottom: 18px;
+
+}
+
+.description {
+
+    flex: 1;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: #4F4F4F;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
+
+}
+
+.readMore {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 24px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color: #7A5A35;
+
+    transition: .2s;
+
+}
+
+.readMore:hover {
+
+    gap: 14px;
+
+}

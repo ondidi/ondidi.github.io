@@ -1,0 +1,49 @@
+.author{
+
+    display:grid;
+
+    grid-template-columns:60px 1fr 1fr 1fr;
+
+    gap:42px;
+
+    padding:50px 0;
+
+    margin-top:60px;
+
+    border-top:1px solid #C9A96A;
+
+}
+
+.social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+    align-items:flex-start;
+
+}
+
+.author h3{
+
+    font-family:Georgia, serif;
+
+    font-size:2rem;
+
+    font-weight:400;
+
+    margin-bottom:24px;
+
+}
+
+.author p{
+
+    font-size:1.05rem;
+
+    line-height:1.7;
+
+    color:#444;
+
+}

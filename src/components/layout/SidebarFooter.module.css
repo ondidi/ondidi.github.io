@@ -1,0 +1,72 @@
+.footer {
+
+    position: relative;
+
+    padding: 20px 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: var(--surface);
+
+}
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 200px;
+    height: 3px;
+
+    background: var(--primary);
+
+    border-radius: 999px;
+
+}
+
+.item{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    font-size:1rem;
+    font-weight:500;
+
+    color:var(--text);
+
+    transition:.2s;
+}
+
+.item:hover{
+
+    color:var(--primary);
+
+    transform:translateX(4px);
+
+}
+
+.item svg {
+
+    width:20px;
+    height:20px;
+
+    stroke-width:1.8;
+
+    flex-shrink:0;
+
+}
+.item:first-child {
+
+    margin-top: 20px;
+
+}
