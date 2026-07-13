@@ -31,7 +31,7 @@ export default function BlogAuthor() {
                 <h3>Diógenes Pasqualini</h3>
 
                 <p>
-                    Este Blog é alimentado pelos textos que publico regularmente
+                    Este <b>Blog</b> eu o mantenho pelos textos que publico regularmente
                     em mídia impressa.
                 </p>
 
@@ -40,10 +40,8 @@ export default function BlogAuthor() {
             <div>
 
                 <p>
-                    Mestre e Doutor em Comunicação. Especialista em Marketing
-                    Político e Propaganda Eleitoral. Estudou nas Universidades
-                    Unimep - Piracicaba, USP - Universidade de São Paulo e
-                    PUC - Pontifícia Universidade de São Paulo por 12 anos.
+                    <b>Mestre e Doutor em Comunicação.</b> Especialista em Marketing
+                    Político e Propaganda Eleitoral. Estudou nas Universidades <b>Unimep</b>  - Piracicaba, <b>USP</b> - Universidade de São Paulo e <b>PUC</b>  - Pontifícia Universidade de São Paulo por 12 anos.
                 </p>
 
             </div>
@@ -51,9 +49,9 @@ export default function BlogAuthor() {
             <div>
 
                 <p>
-                    Tecnologia e Informação. Na TI encontrou uma nova
+                    <b>Tecnologia e Informação.</b> Na <b>TI</b> encontrou uma nova
                     oportunidade de Comunicação e desenvolvimento de Projetos.
-                    Atua na Empresa Softpark Tecnologia Ltda, em São Paulo.
+                    Atua na Empresa <b>Softpark</b> Tecnologia Ltda, em São Paulo.
                 </p>
 
             </div>

@@ -1,0 +1,45 @@
+.hero{
+
+    max-width:980px;
+
+    margin:70px auto 50px;
+
+    text-align:center;
+
+}
+
+.title{
+
+    font-family:var(--font-playfair);
+
+    font-size:5.3rem;
+
+    font-weight:400;
+
+    color:#222;
+
+    line-height:1.05;
+
+    margin-bottom:38px;
+
+}
+
+.subtitle{
+
+    max-width:920px;
+
+    margin:0 auto;
+
+    font-family:var(--font-lora);
+
+    font-size:2rem;
+
+    font-style:italic;
+
+    font-weight:400;
+
+    line-height:1.7;
+
+    color:#333;
+
+}

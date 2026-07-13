@@ -1,0 +1,47 @@
+.article{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:90px;
+
+}
+
+.content{
+
+    max-width:900px;
+
+    width:100%;
+
+    font-family:var(--font-lora);
+
+    font-size:1.42rem;
+
+    line-height:1.55;
+
+    color:#2d2d2d;
+
+    text-align:justify;
+
+    white-space:pre-wrap;
+
+}
+
+.content::first-letter{
+
+    float:left;
+
+    font-family:var(--font-playfair);
+
+    font-size:7rem;
+
+    line-height:.82;
+
+    padding-right:16px;
+
+    padding-top:12px;
+
+    color:#8f7750;
+
+}

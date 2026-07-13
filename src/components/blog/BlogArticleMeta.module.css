@@ -1,0 +1,84 @@
+.meta{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:42px;
+
+    margin:55px auto 80px;
+
+    color:#6d6d6d;
+
+    font-size:.95rem;
+
+}
+
+.item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.fontControls{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.fontControls button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#444;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.fontControls button:hover{
+
+    color:#b38b46;
+
+}
+.shareButton{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#6d6d6d;
+
+    font-size:.95rem;
+
+    font-family:inherit;
+
+    transition:.2s;
+
+}
+
+.shareButton:hover{
+
+    color:#b38b46;
+
+}

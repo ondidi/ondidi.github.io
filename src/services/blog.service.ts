@@ -7,10 +7,7 @@ export class BlogService {
         const { data, error } = await supabase
             .from("artigos")
             .select("*")
-            .eq("status", "Publicado")
-            .order("data_publicacao", {
-                ascending: false,
-            });
+            .order("data_publicacao", { ascending: false });
 
         if (error) {
             console.error(error);
@@ -18,7 +15,22 @@ export class BlogService {
         }
 
         return data ?? [];
+    }
 
+    async getArtigoBySlug(slug: string) {
+
+        const { data, error } = await supabase
+            .from("artigos")
+            .select("*")
+            .eq("slug", slug)
+            .single();
+
+        if (error) {
+            console.error(error);
+            return null;
+        }
+
+        return data;
     }
 
 }
