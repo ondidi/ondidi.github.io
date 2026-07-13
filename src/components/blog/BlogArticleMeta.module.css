@@ -8,7 +8,7 @@
 
     gap:42px;
 
-    margin:55px auto 80px;
+    margin:80px auto 100px;
 
     color:#6d6d6d;
 
@@ -80,5 +80,35 @@
 .shareButton:hover{
 
     color:#b38b46;
+
+}
+.fontControls {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.fontButton{
+
+    background:none;
+    border:none;
+
+    color:#2C4860;
+
+    transition:.2s;
+
+}
+
+.fontButton:hover{
+
+    color:#B58E49;
+
+}
+
+.fontButton:active {
+
+    transform: scale(.96);
 
 }

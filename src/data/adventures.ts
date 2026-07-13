@@ -796,7 +796,7 @@ export const adventures = [
     menu: {
         title: "Horto Florestal",
         year: 2023,
-        image: "/img/floresta/thumb.jpg"
+        image: "/img/horto/thumb.webp"
     },
 
     home: {

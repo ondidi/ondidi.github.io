@@ -6,9 +6,33 @@ import styles from "./BlogArticleMeta.module.css";
 
 type Props = {
     artigo: any;
+    increase: () => void;
+    decrease: () => void;
 };
 
-export default function BlogArticleMeta({ artigo }: Props) {
+export default function BlogArticleMeta({
+
+    artigo,
+    increase,
+    decrease
+
+}: Props) {
+
+    async function compartilhar() {
+
+        if (navigator.share) {
+
+            await navigator.share({
+
+                title: artigo.titulo,
+                text: artigo.chamada,
+                url: window.location.href
+
+            });
+
+        }
+
+    }
 
     return (
 
@@ -24,7 +48,9 @@ export default function BlogArticleMeta({ artigo }: Props) {
                 />
 
                 <span>
+
                     Publicado em: {artigo.data_publicacao}
+
                 </span>
 
             </div>
@@ -33,24 +59,41 @@ export default function BlogArticleMeta({ artigo }: Props) {
 
                 <Image
                     src="/img/icons/leitura.svg"
-                    alt="Tempo de leitura"
+                    alt="Tempo"
                     width={18}
                     height={18}
                 />
 
                 <span>
+
                     Tempo de leitura: {artigo.tempo_leitura}
+
                 </span>
 
             </div>
 
-            <div className={styles.fontControls}>
+            <div className={styles.item}>
 
-                <button>A+</button>
+                <button
+                    className={styles.fontButton}
+                    onClick={increase}
+                >
 
-                <button>A-</button>
+                    A+
+
+                </button>
+
+                <button
+                    className={styles.fontButton}
+                    onClick={decrease}
+                >
+
+                    A-
+
+                </button>
 
             </div>
+
             <div className={styles.item}>
 
                 <Image
@@ -62,11 +105,7 @@ export default function BlogArticleMeta({ artigo }: Props) {
 
                 <button
                     className={styles.shareButton}
-                    onClick={() => navigator.share({
-                        title: artigo.titulo,
-                        text: artigo.chamada,
-                        url: window.location.href
-                    })}
+                    onClick={compartilhar}
                 >
 
                     Compartilhar

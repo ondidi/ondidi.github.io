@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Parisienne, Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -15,8 +16,34 @@ const parisienne = Parisienne({
 });
 
 export const metadata: Metadata = {
-  title: "Ondids",
-  description: "My way, my history, my life",
+  title: {
+    default: "Ondids",
+    template: "%s | Ondids",
+  },
+
+  description:
+    "Pedaladas, aventuras de bicicleta, reflexões, tecnologia e histórias por Diógenes Pasqualini.",
+
+  keywords: [
+    "bike",
+    "pedal",
+    "ciclismo",
+    "aventuras",
+    "blog",
+    "tecnologia",
+    "reflexões",
+    "Ondids",
+  ],
+
+  authors: [
+    {
+      name: "Diógenes Pasqualini",
+    },
+  ],
+
+  creator: "Diógenes Pasqualini",
+
+  metadataBase: new URL("https://ondids.com.br"),
 };
 
 export default function RootLayout({
@@ -28,6 +55,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${jakarta.variable} ${parisienne.variable}`}>
         {children}
+        <GoogleAnalytics gaId="G-CF6BHFP2XB" />
       </body>
     </html>
   );

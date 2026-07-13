@@ -10,19 +10,37 @@ export default function BlogAuthor() {
 
             <div className={styles.social}>
 
-                <Image
-                    src="/img/icons/linkedin.svg"
-                    alt="LinkedIn"
-                    width={28}
-                    height={28}
-                />
+                <a
+                    href="https://www.linkedin.com/in/didibr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                    aria-label="LinkedIn"
+                >
 
-                <Image
-                    src="/img/icons/contato.svg"
-                    alt="Contato"
-                    width={28}
-                    height={28}
-                />
+                    <Image
+                        src="/img/icons/linkedin.svg"
+                        alt="LinkedIn"
+                        width={28}
+                        height={28}
+                    />
+
+                </a>
+
+                <a
+                    href="mailto:didispbr@gmail.com"
+                    className={styles.socialLink}
+                    aria-label="Enviar e-mail"
+                >
+
+                    <Image
+                        src="/img/icons/contato.svg"
+                        alt="E-mail"
+                        width={28}
+                        height={28}
+                    />
+
+                </a>
 
             </div>
 

@@ -30,9 +30,10 @@ export default function BlogFeatured({ artigo }: Props) {
 
                 <Link
                     href={`/blog/${artigo.slug}`}
-                    className={styles.button}
+                    className={styles.readMore}
                 >
-                    Ler o texto →
+                    Ler o texto
+                    <span>→</span>
                 </Link>
 
             </div>
@@ -40,9 +41,10 @@ export default function BlogFeatured({ artigo }: Props) {
             <div className={styles.image}>
 
                 <Image
-                    src={artigo.imagem_principal || "/img/blog/default.webp"}
+                    src={artigo.imagem_principal}
                     alt={artigo.titulo}
                     fill
+                    priority
                     style={{ objectFit: "cover" }}
                 />
 

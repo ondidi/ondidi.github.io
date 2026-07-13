@@ -6,10 +6,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import Footer from "@/components/layout/Footer";
 
 import BlogHero from "@/components/blog/BlogHero";
-import BlogArticleHero from "@/components/blog/BlogArticleHero";
-import BlogArticleMeta from "@/components/blog/BlogArticleMeta";
-import BlogArticleContent from "@/components/blog/BlogArticleContent";
-import BlogArticleActions from "@/components/blog/BlogArticleActions";
+import BlogArticle from "@/components/blog/BlogArticle";
 import BlogAuthor from "@/components/blog/BlogAuthor";
 
 import styles from "@/app/page.module.css";
@@ -42,11 +39,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
                     <BlogHero />
 
-                    <BlogArticleHero artigo={artigo} />
-
-                    <BlogArticleMeta artigo={artigo} />
-
-                    <BlogArticleContent artigo={artigo} />
+                    <BlogArticle artigo={artigo} />
 
                     <BlogAuthor />
 
