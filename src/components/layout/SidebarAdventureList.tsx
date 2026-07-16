@@ -19,7 +19,9 @@ export default function SidebarAdventureList() {
 
     <div className={styles.adventureList}>
 
-      {sortedAdventures.map((adventure) => (
+      {sortedAdventures
+      // .filter(adventure => adventure.home.featured)
+      .map((adventure) => (
 
         <Link
           key={adventure.id}

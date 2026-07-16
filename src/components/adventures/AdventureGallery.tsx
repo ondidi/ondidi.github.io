@@ -18,6 +18,11 @@ export default function AdventureGallery() {
 
         .slice(0, 4);
 
+                console.log(featured.map(a => ({
+            title: a.menu.title,
+            date: a.home.date
+        })));
+
     return (
 
         <section className={styles.gallery}>

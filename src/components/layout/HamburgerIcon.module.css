@@ -1,0 +1,23 @@
+.icon{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:6px;
+
+}
+
+.icon span{
+
+    width:28px;
+
+    height:3px;
+
+    background:#1F3E52;
+
+    border-radius:99px;
+
+}

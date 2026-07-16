@@ -1,0 +1,66 @@
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:66px;
+
+    padding:0 18px;
+
+    background:#F5F1EA;
+
+    border-bottom:1px solid #E6DFD3;
+
+    z-index:400;
+
+}
+
+.button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:48px;
+
+    height:48px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:0;
+
+}
+
+.logo{
+
+    font-family:var(--font-parisienne);
+
+    font-size:2rem;
+    font-weight:500;
+
+    color:#7A5A3A;
+
+}
+
+@media(min-width:1025px){
+
+    .header{
+
+        display:none;
+
+    }
+
+}

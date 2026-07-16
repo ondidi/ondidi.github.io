@@ -14,7 +14,7 @@ type AdventureCardProps = {
         };
         home: {
             city: string;
-            distance: string;
+            distance: number;
             difficulty: string;
         };
     };

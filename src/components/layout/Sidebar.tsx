@@ -1,22 +1,17 @@
 import styles from "./Sidebar.module.css";
 
-import SidebarHeader from "./SidebarHeader";
-import SidebarMenu from "./SidebarMenu";
-import SidebarAdventureList from "./SidebarAdventureList";
-import SidebarFooter from "./SidebarFooter";
+import SidebarContent from "./SidebarContent";
 
 export default function Sidebar() {
-  return (
-    <aside className={styles.sidebar}>
-      <SidebarHeader />
 
-      <SidebarMenu />
+    return (
 
-      <div className={styles.list}>
-        <SidebarAdventureList />
-      </div>
+        <aside className={styles.sidebar}>
 
-      <SidebarFooter />
-    </aside>
-  );
+            <SidebarContent />
+
+        </aside>
+
+    );
+
 }

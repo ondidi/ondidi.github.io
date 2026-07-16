@@ -20,7 +20,7 @@ export const adventures = [
         },
 
         hero: {
-            image: "/img/aparecida26/paris (0).webp",
+            image: "/img/aparecida26/tophero.webp",
             title: "Peregrinação",
 
         },
@@ -1185,6 +1185,64 @@ export const adventures = [
             count: 15,
             caption: "Dor e resignação"
         }
+    },
+
+    {
+    id: 29,
+    slug: "medalha",
+
+    menu: {
+        title: "Caminho da Medalha",
+        year: 2026,
+        image: "/img/caminhofe/thumb.webp"
+    },
+
+    home: {
+        featured: false,
+        city: "Monte Sião",
+        distance: 70,
+        difficulty: "Extrema",
+        date: "2026-07-17"
+    },
+
+    hero: {
+        image: "/img/caminhofe/tophero.webp",
+        title: "Teste top"
+    },
+
+    info: {
+        published: "Publicado em 18 de julho de 2026",
+
+        description: `
+    Lorem
+            `
+        },
+
+        gallery: {
+            folder: "caminhofe",
+            prefix: "caminhofe",
+            extension: "webp",
+            count: 15,
+            caption: "Lorem"
+        }
     }
 
 ];
+
+
+
+
+
+
+export function getOrderedAdventures() {
+
+    return [...adventures].sort((a, b) => {
+
+        return (
+            new Date(b.home.date).getTime() -
+            new Date(a.home.date).getTime()
+        );
+
+    });
+
+}

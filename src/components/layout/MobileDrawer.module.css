@@ -1,0 +1,61 @@
+.drawer {
+
+    position: fixed;
+
+    top: 98px;
+
+    left: -340px;
+
+    width: 320px;
+
+    height: calc(100vh - 98px);
+
+    background: #F5F1EA;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition: left .25s ease;
+
+    z-index: 9999;
+
+}
+
+.open {
+
+    left: 0;
+
+}
+
+.overlay {
+
+    position: fixed;
+
+    top: 98px;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: rgba(0,0,0,.35);
+
+    z-index: 9998;
+
+    opacity: 1;
+
+    transition: opacity .25s ease;
+
+}
+
+.hidden {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}

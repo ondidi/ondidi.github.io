@@ -1,0 +1,29 @@
+.main {
+
+    display: flex;
+
+    min-height: 100vh;
+
+    background: #Ffffff;
+
+}
+
+.content {
+
+    flex: 1;
+
+    overflow: hidden;
+
+    padding: 32px;
+
+}
+
+.container {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+}
