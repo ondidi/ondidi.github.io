@@ -334,6 +334,17 @@ year: 2015,
 date: "2015-06-14",
 image: "/img/caminhofe/thumb.webp",
 slug: "caminho-da-fe-2015"
+},
+{
+id: 29,
+title: "Medalha milagrosa",
+city: "Monte Sião",
+km: "65",
+level: "Difícil",
+year: 2026,
+date: "2026-07-18",
+image: "/img/medalha/thumb.webp",
+slug: "medalha-milagrosa"
 }
 
 ];

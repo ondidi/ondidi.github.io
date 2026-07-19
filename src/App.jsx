@@ -48,6 +48,7 @@ import Conversa from "./pages/blog/Conversa.jsx";
 import Menino from "./pages/blog/Menino.jsx";
 import BlogPost from "./pages/BlogPost.jsx";
 import Aparecida26 from "./pages/Aparecida26.jsx";
+import Medalha from "./pages/Medalha.jsx";
 
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
@@ -256,6 +257,10 @@ const App = () => {
             <Route
               path="/aventuras/aparecida26"
               element={<Aparecida26 />}
+            />
+            <Route
+              path="/aventuras/medalha-milagrosa"
+              element={<Medalha />}
             />
             <Route
               path="/amigos"
