@@ -24,6 +24,11 @@ const fotos = [
   "medalha (17).webp",
   "medalha (18).webp",
   "medalha (19).webp",
+  "medalha (20).webp",
+  "medalha (21).webp",
+  "medalha (22).webp",
+  "medalha (23).webp",
+  "medalha (24).webp",
 ];
 
 const PASTA = "/img/medalha";
