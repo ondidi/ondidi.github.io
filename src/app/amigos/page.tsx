@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import FriendsInfo from "@/components/friends/FriendsInfo";
 import AdventurePhotoGallery from "@/components/adventures/AdventurePhotoGallery";
 import FriendsHero from "@/components/friends/FriendsHero";
-
+import MobileBottomBar from "@/components/layout/MobileBottomBar";
 import styles from "@/app/page.module.css";
 
 export default function FriendsPage() {
@@ -32,6 +32,7 @@ export default function FriendsPage() {
                 />
 
                 <Footer />
+                <MobileBottomBar />
 
             </div>
 

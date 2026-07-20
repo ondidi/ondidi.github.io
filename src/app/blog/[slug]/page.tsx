@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import BlogHero from "@/components/blog/BlogHero";
 import BlogArticle from "@/components/blog/BlogArticle";
 import BlogAuthor from "@/components/blog/BlogAuthor";
+import MobileBottomBar from "@/components/layout/MobileBottomBar";
 
 import styles from "@/app/page.module.css";
 
@@ -48,6 +49,8 @@ export default async function BlogArticlePage({ params }: Props) {
                 </div>
 
             </section>
+
+            <MobileBottomBar />
 
         </main>
 

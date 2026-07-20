@@ -5,6 +5,7 @@ import BlogHero from "@/components/blog/BlogHero";
 import BlogFeatured from "@/components/blog/BlogFeatured";
 import BlogGrid from "@/components/blog/BlogGrid";
 import BlogAuthor from "@/components/blog/BlogAuthor";
+import MobileBottomBar from "@/components/layout/MobileBottomBar";
 
 import { blogService } from "@/services/blog.service";
 
@@ -40,6 +41,8 @@ export default async function BlogPage() {
                 </div>
 
             </section>
+
+            <MobileBottomBar />
 
         </main>
 

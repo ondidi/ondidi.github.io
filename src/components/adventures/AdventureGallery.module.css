@@ -1,9 +1,35 @@
 .gallery {
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:repeat(4,1fr);
 
-    gap: 24px;
+    gap:20px;
+
+}
+
+/* Tablet */
+
+@media (max-width:1200px){
+
+    .gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* Celular */
+
+@media (max-width:768px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
 
 }

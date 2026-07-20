@@ -17,7 +17,7 @@ export default function Home() {
 
             <CardAdventure />
 
-            <Footer />
+           
 
         </PageLayout>
 

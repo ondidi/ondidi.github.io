@@ -28,7 +28,7 @@ export const adventures = [
         info: {
 
             published: "20 de junho de 2026",
-
+            
             description: `
             O caminho transforma. Nunca é o mesmo. Neste ano, diferentemente das outras vezes em que o percorri, encontrei um velho amigo: silencioso, humilde e verdadeiro. Nele, o cansaço já não tem tanta importância. A distância entre as cidades deixa de ser desafio. A jornada de bicicleta tem o poder de nos conduzir de volta a nós mesmos. Aprendi algo novo com um missionário que encontrei, em oração, compartilhou ele algumas palavras de sabedoria: "O que importa não é o caminho, mas aquilo que o caminho trará para você." Então compreendi que não é a pedalada que nos transforma, mas a peregrinação que realizamos todos os dias dentro da alma. O caminho é apenas uma metáfora, um horizonte que se renova a cada amanhecer, convidando-nos a seguir adiante em direção ao nosso verdadeiro destino. E talvez seja esse o maior ensinamento da jornada: descobrir que a chegada não está no fim da estrada, mas na pessoa que nos tornamos enquanto caminhamos. Lembrando que a primeira foto que você vê abaixo foi gerada por IA.
             `
@@ -69,7 +69,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 12 de abril de 2026",
+        published: "12 de abril de 2026",
 
         description: `
         Aproveitando a região de Jundiaí, fiz um pedal pela Rota das Frutas, no trecho mais curto entre Vinhedo e Louveira. A paisagem muda completamente, diferentemente da Serra do Japi: mais gastronômica e etílica, cercada por parreirais e com pouca estrada de terra. Um pedal leve, daqueles para curtir o caminho — e, claro, as paradas.
@@ -108,7 +108,7 @@ export const adventures = [
         },
 
         info: {
-            published: "Publicado em 11 de abril de 2026",
+            published: "11 de abril de 2026",
 
             description: `
             Pedalar pela Serra do Japi é uma experiência que mistura esforço e recompensa o tempo todo. 	As trilhas são cercadas por mata densa, com trechos úmidos, sombra constante e aquele 	friozinho característico da região. Em vários pontos, a água cruza o caminho — seja em 	pequenas nascentes ou cachoeiras. As subidas exigem, mas os mirantes compensam. E muito. O 	mais curioso é a sensação de isolamento: mesmo estando perto de São Paulo.
@@ -149,7 +149,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 2 de março de 2026",
+        published: "2 de março de 2026",
 
         description: `
         Percorri a Rota das Capelas, em Serra Negra, inicialmente movido pela curiosidade. Não imaginava que o desafio seria tão expressivo. O trajeto passa por capelas históricas e por pontos que favorecem tanto o ciclismo quanto uma caminhada contemplativa.
@@ -195,7 +195,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 1º de fevereiro de 2026",
+        published: "1º de fevereiro de 2026",
 
         description: `
     Percorrer a Rota Márcia Prado, que liga São Paulo a Santos passando por São Bernardo do Campo, foi uma experiência marcante, dessas que ficam no corpo e na memória.
@@ -243,7 +243,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 15 de dezembro de 2025",
+        published: "15 de dezembro de 2025",
 
         description: `
     Cada pedal carrega uma história, e toda história percorre uma jornada que nem sempre pode ser dita — seja pelas palavras, seja pelas imagens. Nesta última cicloviagem, segui acompanhado de um time muito bacana: com alguns já havia pedalado antes, outros encontrei pelo próprio caminho. Este foi um ano de muitas aventuras e pedais marcantes. Um ano mais leve, mais romântico e, sobretudo, de astral elevado. Viver não é apenas o que se registra, mas o todo — com tudo aquilo que o destino nos oferece. A chuva e o sol, o dia e a noite, as vitórias e as derrotas. Em tudo, há sempre algo que ensina, algo que vale. Assim, encerro este pedal de 2025, com as belas paisagens de Jacupiranga, Cananéia, Ilha Comprida e Ilha do Cardoso, e fecho um ano em que cumpri grande parte daquilo que desejo como ser humano: ser impecável com as palavras, não levar nada pelo lado pessoal, não tirar conclusões e o mais importante, buscar fazer sempre o melhor.
@@ -283,7 +283,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 6 de dezembro de 2025",
+        published: "6 de dezembro de 2025",
 
         description: `
     Pedalar pela Rota do Café, em Guaxupé, foi uma experiência intensa. Entre fazendas centenárias e belas paisagens, o percurso virou um verdadeiro teste de resistência: mais de 40 km com cerca de 2 mil metros de altimetria acumulada. O ponto mais alto marcou 1.221 metros no Garmin. Fui solo. Como diz o ditado, sozinho a gente vai mais rápido, mas acompanhado vai mais longe. No meu caso, fui rápido… e pouco. À noite curti a cidade, linda, maravilhossa, super enfeitada para o Natal. Acho que vou voltar...
@@ -323,7 +323,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 13 de dezembro de 2025",
+        published: "13 de dezembro de 2025",
 
         description: `
     Fiz um pedal entre Campinas e Jaguariúna margeando a antiga linha férrea por onde ainda passa a charmosa Maria Fumaça. A rota tem trechos muito bem preservados e cenários que misturam natureza, história e aquela sensação gostosa de pedalar em um clima nostálgico foi muito gostoso. Em alguns pontos, o visual faz a gente diminuir o ritmo só para apreciar. O trajeto oferece opções para todos os gostos — desde passeios tranquilos até desafios mais técnicos de MTB — e fiz tudo isso com amigos, o que deixou a experiência ainda mais divertida. No fim, ficou aquela alegria simples de quem viveu um dia leve, conectando paisagem, aventura e boa companhia.
@@ -363,7 +363,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 17 de julho de 2025",
+        published: "17 de julho de 2025",
 
         description: `
     Não foi dessa vez que usei bike moderna ou apoio logístico — fui com a mesma bicicleta de 10 anos atrás, equipada com alforjes de 14 kg, mais comida, água e todo o peso das vestes, minhas e da parceira. Meu propósito era claro: zerar o percurso. Isso significa não colocar o pé no chão nem nas subidas mais teimosas — inclusive a famosa e temida Serra da Luminosa, que costuma testar até os mais experientes. Partimos de São José do Rio Pardo, em vez de Rio Claro, como já fiz. Essa pequena mudança aumentou — e muito — o desafio. A altimetria acumulada passou dos 10.000 metros e a distância originalmente planejada de 357 km acabou se transformando em 418 km de pura vivência. Essa travessia não foi apenas um esforço físico; foi um lembrete luminoso de que sempre podemos recomeçar, de que existe força onde às vezes achamos só cansaço e que a fé — seja ela qual for — é também capacidade de seguir em frente, reinventar nossos passos e acolher novas versões de nós mesmos.
@@ -403,7 +403,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 25 de março de 2025",
+        published: "25 de março de 2025",
 
         description: `
     A Serra da Graciosa encanta pela beleza, pela história e pelo charme de sua estrada centenária. Já a percorri de carro e também no tradicional passeio de trem e van. Desta vez, porém, o desafio foi vivê-la sobre duas rodas.
@@ -449,7 +449,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 23 de março de 2025",
+        published: "23 de março de 2025",
 
         description: `
     A descida da serra pela Estrada do Café foi desafiadora. A logistica era não pedalar por boa parte de Curitiba. Então planejei um pedal misto carro/bike/ônibus: deixei o carro no início da serra e pedalei até o Pontal, explorando boa parte das praias paranaenses. Foram mais de 120 km, sendo 80 km de rodovia e o restante pelas praias, combinando trechos urbanos, a emocionante descida da Serra do Mar e a beleza do litoral paranaense. O percurso passa por cenários incríveis, e a sensação de descer a serra é como estar em uma montanha-russa natural, com curvas que revelam vistas de tirar o fôlego. Chegando ao litoral, o destaque ficou por conta da infraestrutura bem planejada para ciclistas e pedestres. Algumas praias contam com ciclofaixas separadas dos carros, tornando o passeio ainda mais seguro e agradável. Seja para desafiar seus limites, apreciar a natureza ou simplesmente curtir um pedal longo e recompensador, essa rota é altamente recomendada!
@@ -489,7 +489,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 22 de março de 2025",
+        published: "22 de março de 2025",
 
         description: `
     Explorar Curitiba sobre duas rodas, foi uma experiência incrível! O tempo ajudou, clima de começo de outono, fresquinho, sem muito calor, deixou tudo mais agradável para pedalar e, claro, fazer bons registros. A capital paranaense é um convite ao turismo, e percorrê-la de bicicleta foi um sonho realizado. Aqui tenho boas lembranças, que trazem aquela sensação gostosa de nostalgia. Devo ter pedalado mais de 70 quilômetros, e o melhor; sem gastar um litro de combustível, apenas água no "motor".
@@ -529,7 +529,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 20 de junho de 2024",
+        published: "20 de junho de 2024",
 
         description: `
     A Festa da Polenta de Santa Olimpia é, sem dúvida, um evento que combina desafio, cultura e confraternização. É uma tradição que há muitos anos tem minha presença garantida. Ciclistas de diversas regiões se reúnem para participar deste evento que, além de celebrar a cultura local, proporciona um desafio físico amplo. Ao longo do percurso, encontramos pessoas agradáveis, tornando a pedalada ainda mais especial. Este ano, tive a companhia dos amigos Rodrigo e Eli. Pedalar ao lado de bons amigos é sempre um incentivo extra para superar "as pedras" que encontramos pelo caminho. Outra coisa, e muito importante: recepção dos voluntários é algo a ser destacado, eles são impecáveis em todos os detalhes, desde a organização até a acolhida calorosa. E, claro, a comida é maravilhosa, com a polenta sendo a estrela da festa. Saborear os pratos típicos após um longo pedal é uma recompensa e tanto.
@@ -569,7 +569,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 17 de dezembro de 2023",
+        published: "17 de dezembro de 2023",
 
         description: `
     Este pedal também estava guardado na "gaveta" há um bom tempo. A ideia era percorrer um trecho pequeno de aproximadamente 60 quilômetros em São José do Rio Pardo. Como tudo que está próximo de Minas tem muitas subidas, por aqui não é diferente, então ter cautela na jornada faz toda a diferença. Mas, como os grandes amores valem a pena, aqui não seria menos apaixonante, pois a cidade é cercada por uma atmosfera histórica e cultural maravilhosa. O ponto alto foi a visita à Fazenda Fortaleza, com sua estrutura imponente composta por casarões, terreiros, cachoeiras, usina hidrelétrica e áreas agrícolas, que refletem a arquitetura típica das fazendas que foram essenciais para o desenvolvimento da economia brasileira, principalmente no contexto da produção de café. Acredito que está tudo contado. Rio Pardo tem muito a oferecer, e a certeza de voltar é garantida.
@@ -609,7 +609,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 14 de outubro de 2023",
+        published: "14 de outubro de 2023",
 
         description: `
     Todos os pedais têm uma história, mas este foi ao som e "companhia" de Lulu, "foi bom ter ver de novo aqui... Surpresa certa te encontrar... o que for da vida não nos deterá". Simples, porém profunda a metáfora. Isso porque já estive em Brotas em um tour com o grande amigo Rodrigo Torres. Uma jornada épica de 160 quilômetros. Rever este pedal, agora e com outras ideias na cabeça, implica em entender que os eventos da nossa vida são realmente influenciados por fatores imprevisíveis. Tudo tem uma razão e um propósito. Por isso é que eu estou aqui compartilhando este momento. A aceitação da incerteza, a maneira de lidar com a complexidade realmente estão além do controle e imprevisibilidade da vida. Então, "... não há lógica no que o acaso decidir". Me dobro em reverência e respeito ao mistério, mas sem crendices e deuses, sou mais aquele que aprecia a complexidade e diversidade do mundo como modelos de crescimento. Tá contado. Beijos a todos.
@@ -649,7 +649,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 19 de agosto de 2023",
+        published: "19 de agosto de 2023",
 
         description: `
     Este pedal em Analândia é uma homenagem à Frida Kahlo, cujo o quadro, título da poesia, inspirou a música "Viva la Vida" do Coldplay, repleta de significados e referências. No entanto, o que realmente se destaca nesta história é a inspiração que a pintura de Kahlo nos proporciona: a ideia de que nunca é tarde para se redescobrir. Além disso, ela nos ensina uma importante lição: todas as formas de poder são inúteis, uma vez que a natureza segue leis eternas, concedendo vida, mas também retirando-a. Quando combinamos arte com poesia, isso se torna um elemento revolucionário em nossa alma. De qualquer forma, essa conexão que me inspira ressoa como uma canção em homenagem à vida, que recomeça a cada dia. Antes de concluir, não posso deixar de mencionar o quão incrível foi esse passeio de pedal e como a companhia das amigas Andrea e Silene tornou o dia ainda mais especial. A você e a todos que amam a vida livre, "Viva la Vida".
@@ -689,7 +689,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 17 de setembro de 2023",
+        published: "17 de setembro de 2023",
 
         description: `
     Foram 144 quilômetros de estrada e praia que se estenderam por praticamente toda a extensão da Ilha Comprida, culminando na chegada a Cananéia. Essa jornada de pedal foi, sem dúvida, exaustiva, mas também incrivelmente emocionante, repleta de paisagens deslumbrantes e experiências memoráveis ao longo do caminho.
@@ -729,7 +729,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 14 de outubro de 2023",
+        published: "14 de outubro de 2023",
 
         description: `
     O percurso entre São Sebastião e a deslumbrante Praia de Castelhanos, em Ilhabela, pode ser tecnicamente curto, com aproximadamente 42 quilômetros de extensão a partir do ponto onde iniciei o pedal, mas desafia os ciclistas com mais de 1.600 metros de elevação acumulada.
@@ -813,7 +813,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 5 de março de 2023",
+        published: "5 de março de 2023",
 
         description: `
     Para quem mora em Rio Claro, o Horto Florestal é quase uma extensão de casa. Explorar suas trilhas de bicicleta e, depois, seguir para um café aconchegante no distrito de Cascalho é uma experiência verdadeiramente reconfortante.
@@ -855,7 +855,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 10 de julho de 2021",
+        published: "10 de julho de 2021",
 
         description: `
     Neste local, reza a lenda, foi erguida uma estrutura para atender ao ambicioso projeto de expansão de uma linha férrea para o interior do estado. O projeto, porém, nunca foi concluído e o que restou passou a ser conhecido carinhosamente pelos ciclistas como "Ponte do Esqueleto".
@@ -899,7 +899,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 1º de junho de 2018",
+        published: "1º de junho de 2018",
 
         description: `
     Em 2018, meu amigo Rodrigo Torres e eu embarcamos em uma jornada inesquecível de bicicleta. Partindo de Rio Claro, percorremos 157 quilômetros ao longo de três dias, enfrentando estradas, subidas e paisagens que marcaram essa aventura.
@@ -943,7 +943,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 10 de fevereiro de 2018",
+        published: "10 de fevereiro de 2018",
 
         description: `
     Existem pedais que repetimos incansavelmente, e o Cantagalo, em Ipeúna, é definitivamente um deles.
@@ -987,7 +987,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 10 de fevereiro de 2017",
+        published: "10 de fevereiro de 2017",
 
         description: `
     Essa pequena porção de terra, conhecida como Godinhos, no município de Piracicaba, foi o lugar onde minha história começou. É ali que aparece a casa onde estou de bicicleta nas fotografias. Um lugar de importância imensurável, que sempre me conduz a uma conexão entre a realidade e a memória.
@@ -1033,7 +1033,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 24 de junho de 2017",
+        published: "24 de junho de 2017",
 
         description: `
     São Luís do Paraitinga, localizada no Vale do Paraíba, em São Paulo, foi um pedal muito especial. O percurso reuniu trilhas, cachoeiras e longos trechos de estrada, proporcionando uma experiência completa de cicloturismo.
@@ -1077,7 +1077,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 16 de setembro de 2023",
+        published: "16 de setembro de 2023",
 
         description: `
     Foram 144 quilômetros percorridos entre estradas de terra, praias e paisagens preservadas, atravessando praticamente toda a extensão da Ilha Comprida até a chegada a Cananéia.
@@ -1121,7 +1121,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 14 de junho de 2015",
+        published: "14 de junho de 2015",
 
         description: `
     Essa incrível jornada por diversas cidades históricas de Minas Gerais foi compartilhada com meu amigo Erik Aceiro. Foi uma aventura de bicicleta repleta de descobertas, encontros memoráveis e desafios que tornaram cada quilômetro ainda mais especial.
@@ -1167,7 +1167,7 @@ export const adventures = [
     },
 
     info: {
-        published: "Publicado em 1º de abril de 2015",
+        published: "1º de abril de 2015",
 
         description: `
     Muitas vezes, a chegada não representa o fim, mas o reaprendizado de muitas coisas. Acredito que Paulo Coelho tenha inspirado muita gente a embarcar em peregrinações. Ao longo da minha vida, fiz várias delas, a pé ou de bicicleta.
@@ -1194,36 +1194,36 @@ export const adventures = [
     menu: {
         title: "Caminho da Medalha",
         year: 2026,
-        image: "/img/caminhofe/thumb.webp"
+        image: "/img/medalha/thumb.webp"
     },
 
     home: {
-        featured: false,
+        featured: true,
         city: "Monte Sião",
-        distance: 70,
-        difficulty: "Extrema",
-        date: "2026-07-17"
+        distance: 65,
+        difficulty: "Difícil",
+        date: "2026-07-19"
     },
 
     hero: {
-        image: "/img/caminhofe/tophero.webp",
-        title: "Teste top"
+        image: "/img/medalha/tophero.webp",
+        title: "Monte Sião - Borda da Mata"
     },
 
     info: {
-        published: "Publicado em 18 de julho de 2026",
+        published: "19 de julho de 2026",
 
         description: `
-    Lorem
+    O Caminho da Medalha Milagrosa é um percurso que integra um dos trechos do tradicional Caminho da Fé. Mais do que uma rota para bicicletas, foi uma oportunidade genuína de rever e fazer amigos. Durante o trajeto, a conversa flui naturalmente entre uma subida e outra. Histórias são compartilhadas, surgem muitas risadas e cada parada se transforma em mais um capítulo da aventura. No final da jornada, a medalha é apenas uma lembrança do percurso. O verdadeiro prêmio é voltar para casa com a sensação de ter vivido um excelente dia, fortalecido antigas amizades e conquistado novas. Porque algumas aventuras terminam quando o pedal acaba, mas as boas amizades continuam por muito tempo.
             `
         },
 
         gallery: {
-            folder: "caminhofe",
-            prefix: "caminhofe",
+            folder: "medalha",
+            prefix: "medalha",
             extension: "webp",
-            count: 15,
-            caption: "Lorem"
+            count: 24,
+            caption: "Monte Sião - Borda da Mata"
         }
     }
 

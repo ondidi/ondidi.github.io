@@ -4,12 +4,14 @@ import Sidebar from "@/components/layout/Sidebar";
 import Footer from "@/components/layout/Footer";
 
 import AdventureHero from "@/components/adventures/AdventureHero";
-import AdventureInfo from "@/components/adventures/AdventureInfo";
 import AdventurePhotoGallery from "@/components/adventures/AdventurePhotoGallery";
 
 import { adventures } from "@/data/adventures";
 
 import styles from "@/app/page.module.css";
+import AdventureHeader from "@/components/adventures/AdventureHeader/AdventureHeader";
+import AdventureText from "@/components/adventures/AdventureText/AdventureText";
+import MobileBottomBar from "@/components/layout/MobileBottomBar";
 
 type Props = {
     params: Promise<{
@@ -41,7 +43,18 @@ export default async function AdventurePage({ params }: Props) {
 
                     <AdventureHero adventure={adventure} />
 
-                    <AdventureInfo adventure={adventure} />
+                    <div className={styles.intro}>
+
+                        <AdventureHeader
+                            title={adventure.menu.title}
+                            publishedAt={adventure.info.published}
+                        />
+
+                        <AdventureText
+                            text={adventure.info.description}
+                        />
+
+                    </div>
 
                     <AdventurePhotoGallery
                         title={adventure.menu.title}
@@ -52,6 +65,7 @@ export default async function AdventurePage({ params }: Props) {
                     />
 
                     <Footer />
+                    <MobileBottomBar />
 
                 </div>
 

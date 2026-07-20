@@ -117,3 +117,89 @@
     background: #1F5268;
 
 }
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+    .card{
+
+        border-radius:12px;
+        
+
+    }
+
+    .image{
+
+        height:180px;
+
+    }
+
+    .content{
+
+        gap:8px;
+
+        padding:20px;
+
+    }
+
+    .city{
+
+        font-size:.70rem;
+        font-weight:900;
+
+        letter-spacing:.08em;
+
+        text-transform:uppercase;
+
+        color:#C68A22;
+
+    }
+
+    .title{
+
+        font-size:1.3rem;
+
+        line-height:1.08;
+
+        letter-spacing:-.01em;
+        
+        font-weight:900;
+
+    }
+
+    .info{
+
+        gap:18px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .info span{
+
+        font-size:.72rem;
+
+        gap:5px;
+
+    }
+
+    .info svg{
+
+        width:14px;
+        height:14px;
+
+    }
+
+    .button{
+
+        margin-top:10px;
+
+        padding:11px 32px;
+
+        font-size:.92rem;
+
+        font-weight:600;
+
+    }
+
+}

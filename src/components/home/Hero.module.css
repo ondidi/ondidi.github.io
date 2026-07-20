@@ -57,3 +57,55 @@
     color: #141414;
 
 }
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        border-radius: 18px;
+        margin-top: 20px;
+        border-radius: 6;
+
+    }
+
+    .image {
+
+        min-height: 420px;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+    .overlay {
+
+        left: 28px;
+        right: 28px;
+
+        top: auto;
+        bottom: 34px;
+
+        transform: none;
+
+        max-width: none;
+
+    }
+
+    .title {
+
+        font-size: 2rem;
+        line-height: 1.15;
+
+    }
+
+    .subtitle {
+
+        margin-top: 14px;
+
+        font-size: 1rem;
+        line-height: 1.6;
+
+    }
+
+}

@@ -6,6 +6,7 @@ import MobileHeader from "./mobile/MobileHeader";
 import MobileDrawer from "./MobileDrawer";
 import styles from "./PageLayout.module.css";
 import { useEffect, useState } from "react";
+import MobileBottomBar from "./MobileBottomBar";
 
 type Props = {
     children: React.ReactNode;
@@ -47,6 +48,7 @@ export default function PageLayout({ children }: Props) {
                     {children}
 
                     <Footer />
+                    <MobileBottomBar />
 
                 </div>
 

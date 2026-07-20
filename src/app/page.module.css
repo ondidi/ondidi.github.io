@@ -27,4 +27,39 @@
 
     margin: 0 auto;
 
+    padding-bottom: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+.intro {
+
+    display: grid;
+
+    grid-template-columns: 360px 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+
+    margin: 0;
+
+}
+
+@media (max-width:768px){
+
+    .intro{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        margin:20px 0;
+
+    }
+
 }
