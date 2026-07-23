@@ -1,0 +1,63 @@
+:root {
+
+  /* COLORS */
+
+  --color-background: #F5F1EA;
+  --color-surface: #F7F3EB;
+  --color-primary: #D9B26C;
+  --color-border: #E4DDD3;
+
+  --color-text: #23485A;
+  --color-text-light: #6D6D6D;
+  --color-navigation: #d0eafc;
+
+  /* SPACING */
+
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 64px;
+
+
+  /* RADIUS */
+
+  --radius-none: 0;
+
+  --radius-sm: 8px;
+
+  --radius-md: 12px;
+
+  --radius-lg: 24px;
+
+  --radius-full: 9999px;
+
+  /* LAY */
+  --header-height-mobile: 64px;
+  --touch-target-size: 48px;
+  --bottom-nav-height: 72px;
+  --sidebar-width: 280px;
+
+ /* SHADOWS */
+
+  --shadow-sm: 0 2px 8px rgba(35, 72, 90, .06);
+
+  --shadow-md: 0 6px 18px rgba(35, 72, 90, .10);
+
+ /* SHADOWS */
+
+  --section-background: var(--surface-primary);
+  --section-border: var(--border-subtle);
+  --section-radius: var(--radius-lg);
+  --section-padding: var(--space-6);
+  --section-gap: var(--space-10);
+  --section-shadow: var(--shadow-sm);
+
+}

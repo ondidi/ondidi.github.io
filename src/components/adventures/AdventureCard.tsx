@@ -16,6 +16,7 @@ type AdventureCardProps = {
             city: string;
             distance: number;
             difficulty: string;
+            date: string;
         };
     };
 };
@@ -57,6 +58,17 @@ export default function AdventureCard({
                         <Mountain size={16} />
                         {adventure.home.difficulty}
                     </span>
+                    <span>
+                        <Image
+                            src="/img/icons/calendario.svg"
+                            alt="Calendário"
+                            width={16}
+                            height={16}
+                        />
+
+                        {new Date(adventure.home.date).toLocaleDateString("pt-BR")}
+                    </span>
+                    
 
                 </div>
 

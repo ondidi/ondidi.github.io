@@ -1,114 +1,122 @@
 .meta{
+    max-width:760px;
+    margin:32px auto;
+    padding:0 20px;
 
     display:flex;
-
-    justify-content:center;
-
+    flex-direction:column;
     align-items:center;
 
-    gap:42px;
+    gap:18px;
+}
 
-    margin:80px auto 100px;
-
-    color:#6d6d6d;
-
-    font-size:.95rem;
-
+.top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:32px;
+    flex-wrap:wrap;
 }
 
 .item{
-
     display:flex;
-
     align-items:center;
+    gap:8px;
 
-    gap:10px;
-
+    color:#666;
+    font-size:.90rem;
+    font-weight:500;
 }
 
-.fontControls{
-
+.bottom{
     display:flex;
-
+    justify-content:center;
     align-items:center;
-
-    gap:12px;
-
+    gap:24px;
 }
 
-.fontControls button{
-
-    border:none;
-
+.fontButton{
     background:none;
+    border:none;
 
     cursor:pointer;
 
     color:#444;
-
-    font-size:1rem;
-
+    font-size:1.25rem;
     font-weight:600;
 
     transition:.2s;
-
-}
-
-.fontControls button:hover{
-
-    color:#b38b46;
-
-}
-.shareButton{
-
-    border:none;
-
-    background:none;
-
-    cursor:pointer;
-
-    color:#6d6d6d;
-
-    font-size:.95rem;
-
-    font-family:inherit;
-
-    transition:.2s;
-
-}
-
-.shareButton:hover{
-
-    color:#b38b46;
-
-}
-.fontControls {
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-}
-
-.fontButton{
-
-    background:none;
-    border:none;
-
-    color:#2C4860;
-
-    transition:.2s;
-
 }
 
 .fontButton:hover{
-
-    color:#B58E49;
-
+    color:#A67C52;
 }
 
-.fontButton:active {
+.shareButton{
+    display:flex;
+    align-items:center;
+    gap:8px;
 
-    transform: scale(.96);
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    color:#444;
+    font-size:.95rem;
+
+    transition:.2s;
+}
+
+.shareButton:hover{
+    color:#A67C52;
+}
+
+@media (max-width:768px){
+
+    .meta{
+        margin:2px auto;
+        gap:14px;
+    }
+
+    .top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:82px;
+    flex-wrap:wrap;
+    }
+
+    .bottom{
+        gap:18px;
+    }
+
+    .fontButton{
+    font-size:1.1rem;
+    font-weight:600;
+    gap:16px;
+    }
+
+    .shareButton{
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    font-size:.92rem;
+    }
+@media (max-width:380px){
+
+    .content{
+
+        text-align:justify;
+
+        hyphens:auto;
+            font-size:1rem;
+
+    line-height:1.75;
+
+    }
+
+}
 
 }

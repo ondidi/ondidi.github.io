@@ -6,7 +6,11 @@
 
     background: #F7F3EB;
 
-    border-radius: 32px;
+    border: 1px solid var(--border-subtle);
+
+    border-radius: var(--radius-sm);
+
+    box-shadow: var(--shadow-sm);
 
 }
 
@@ -46,7 +50,7 @@
 
         padding:24px 12px;
 
-        border-radius:0;
+        border-radius: var(--radius-lg);
 
     }
 

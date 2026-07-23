@@ -2,13 +2,13 @@ import styles from "./BlogArticleContent.module.css";
 
 type Props = {
     artigo: any;
-    fontSize: number;
+    fontScale: number;
 };
 
 export default function BlogArticleContent({
 
     artigo,
-    fontSize
+    fontScale
 
 }: Props) {
 
@@ -22,7 +22,7 @@ export default function BlogArticleContent({
 
                 style={{
 
-                    fontSize: `${fontSize}rem`
+                    fontSize: `calc(1em + ${fontScale}rem)`
 
                 }}
 

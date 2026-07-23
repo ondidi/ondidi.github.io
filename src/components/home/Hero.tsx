@@ -19,11 +19,15 @@ export default function Hero() {
             <div className={styles.overlay}>
 
                 <h1 className={styles.title}>
-                    A vida é uma ideia em movimento.
+                    A vida se organiza em movimento.
                 </h1>
 
                 <p className={styles.subtitle}>
-                    A JORNADA É O CAMINHO. VIVER NÃO É CHEGAR, MAS PROSSEGUIR.
+                    A JORNADA É O CAMINHO.
+                </p>
+
+                <p className={styles.subtitle}>
+                    Viver não é chegar, mas seguir.
                 </p>
 
             </div>

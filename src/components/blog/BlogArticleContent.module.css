@@ -45,3 +45,60 @@
     color:#8f7750;
 
 }
+@media (max-width:768px){
+
+    .article{
+
+        margin-bottom:60px;
+        padding:0 20px;
+
+    }
+
+    .content{
+
+        max-width:100%;
+        font-size:1.08rem;
+        line-height:1.6;
+        text-align:justify;
+
+    }
+
+    .content::first-letter{
+
+        float:left;
+        font-family:var(--font-playfair);
+        font-size:3.2rem;
+        line-height:.9;
+        color:#8f7750;
+        padding-right:8px;
+        padding-top:4px;
+
+    }
+
+}
+
+@media (max-width:380px){
+
+    .article{
+
+        padding:0 16px;
+
+    }
+
+    .content{
+
+        font-size:1rem;
+        line-height:1.6;
+        text-align:left;
+
+    }
+
+    .content::first-letter{
+
+        font-size:3rem;
+        padding-right:6px;
+        padding-top:2px;
+
+    }
+
+}

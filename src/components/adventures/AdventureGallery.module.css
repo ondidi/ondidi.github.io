@@ -1,20 +1,20 @@
 .gallery {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap:20px;
+    gap: var(--space-5);
 
 }
 
 /* Tablet */
 
-@media (max-width:1200px){
+@media (max-width: 1200px) {
 
-    .gallery{
+    .gallery {
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
 
     }
 
@@ -22,13 +22,13 @@
 
 /* Celular */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .gallery{
+    .gallery {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-        gap:20px;
+        gap: var(--space-5);
 
     }
 

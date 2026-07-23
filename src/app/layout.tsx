@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-scroll-behavior="smooth">
       <body className={`${jakarta.variable} ${parisienne.variable}`}>
         {children}
         <GoogleAnalytics gaId="G-CF6BHFP2XB" />

@@ -33,82 +33,77 @@ export default function BlogArticleMeta({
         }
 
     }
+    function formatarData(data: string) {
+
+    const [ano, mes, dia] = data.split("-");
+
+    return `${dia}/${mes}/${ano}`;
+
+    }
 
     return (
 
         <section className={styles.meta}>
 
-            <div className={styles.item}>
+            <div className={styles.top}>
 
-                <Image
-                    src="/img/icons/calendario.svg"
-                    alt="Publicado"
-                    width={18}
-                    height={18}
-                />
+                <div className={styles.item}>
 
-                <span>
+                    <Image
+                        src="/img/icons/calendario.svg"
+                        alt="Publicado"
+                        width={18}
+                        height={18}
+                    />
 
-                    Publicado em: {artigo.data_publicacao}
+                    <span>{formatarData(artigo.data_publicacao)}</span>
 
-                </span>
+                </div>
 
-            </div>
+                <div className={styles.item}>
 
-            <div className={styles.item}>
+                    <Image
+                        src="/img/icons/leitura.svg"
+                        alt="Tempo de leitura"
+                        width={18}
+                        height={18}
+                    />
 
-                <Image
-                    src="/img/icons/leitura.svg"
-                    alt="Tempo"
-                    width={18}
-                    height={18}
-                />
+                    <span>{artigo.tempo_leitura}</span>
 
-                <span>
-
-                    Tempo de leitura: {artigo.tempo_leitura}
-
-                </span>
+                </div>
 
             </div>
 
-            <div className={styles.item}>
+            <div className={styles.bottom}>
 
                 <button
                     className={styles.fontButton}
                     onClick={increase}
                 >
-
                     A+
-
                 </button>
 
                 <button
                     className={styles.fontButton}
                     onClick={decrease}
                 >
-
                     A-
-
                 </button>
-
-            </div>
-
-            <div className={styles.item}>
-
-                <Image
-                    src="/img/icons/send.svg"
-                    alt="Compartilhar"
-                    width={18}
-                    height={18}
-                />
 
                 <button
                     className={styles.shareButton}
                     onClick={compartilhar}
                 >
 
-                    Compartilhar
+                    <Image
+                        src="/img/icons/send.svg"
+                        alt="Compartilhar"
+                        width={18}
+                        height={18}
+                    />
+
+                    <span>Compartilhar</span>
 
                 </button>
 

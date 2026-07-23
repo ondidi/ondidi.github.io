@@ -14,7 +14,7 @@
 
     padding-bottom:env(safe-area-inset-bottom);
 
-    background:#F3EFE8;
+    background: var(--color-navigation);
 
     border-top:1px solid #DDD5C8;
 
@@ -38,6 +38,8 @@
 
     min-width:0;
 
+    color: var(--color-text);
+
 }
 .item span{
 
@@ -53,13 +55,13 @@
 
 .item:hover{
 
-    color:#C68A22;
+    color:#FFFFFF;
 
 }
 
 .active{
 
-    color:#C68A22;
+    color:#ad7513;
 
 }
 

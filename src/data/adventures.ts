@@ -16,12 +16,12 @@ export const adventures = [
             city: "Rio Claro/Aparecida",
             distance: 470,
             difficulty: "Difícil",
-            date: "2026-06-13"
+            date: "2026-06-14"
         },
 
         hero: {
             image: "/img/aparecida26/tophero.webp",
-            title: "Peregrinação",
+            title: "Rio Claro a Aparecida",
 
         },
 
@@ -40,7 +40,7 @@ export const adventures = [
             prefix: "paris",
             extension: "webp",
             count: 44,
-            caption: "Rio Claro a Aparecida"
+            caption: "Peregrinação"
 
         }
     },
@@ -103,7 +103,7 @@ export const adventures = [
 
         hero: {
             image: "/img/japi/tophero.webp",
-            title: "Natureza exuberante",
+            title: "Jundiaí - SP",
             
         },
 
@@ -140,12 +140,12 @@ export const adventures = [
         city: "Serra Negra - SP",
         distance: 68,
         difficulty: "Difícil",
-        date: "2026-06-13"
+        date: "2026-03-1"
     },
 
     hero: {
         image: "/img/capelas/tophero.webp",
-        title: "Lugar especial"
+        title: "Serra Negra - SP"
     },
 
     info: {
@@ -167,7 +167,7 @@ export const adventures = [
         prefix: "capelas",
         extension: "webp",
         count: 24,
-        caption: "Capelas em Serra Negra"
+        caption: "Muitas Capelas"
     }
 },
 
@@ -176,7 +176,7 @@ export const adventures = [
     slug: "marcia",
 
     menu: {
-        title: "São Paulo a Santos",
+        title: "Márcia Prado",
         year: 2026,
         image: "/img/marcia/thumb.webp"
     },
@@ -191,7 +191,7 @@ export const adventures = [
 
     hero: {
         image: "/img/marcia/tophero.webp",
-        title: "Márcia Prado"
+        title: "São Paulo a Santos"
     },
 
     info: {
@@ -279,7 +279,7 @@ export const adventures = [
 
     hero: {
         image: "/img/guaxu/tophero.webp",
-        title: "Café"
+        title: "Guaxupé - MG"
     },
 
     info: {
@@ -304,7 +304,7 @@ export const adventures = [
     slug: "jaguariuna",
 
     menu: {
-        title: "Jaguariúna",
+        title: "Café com trem",
         year: 2025,
         image: "/img/trem/thumb.webp"
     },
@@ -319,7 +319,7 @@ export const adventures = [
 
     hero: {
         image: "/img/trem/tophero.webp",
-        title: "Nostalgia dos trilhos"
+        title: "Jaguariúna - SP"
     },
 
     info: {
@@ -335,7 +335,7 @@ export const adventures = [
             prefix: "trem",
             extension: "webp",
             count: 7,
-            caption: "Natureza e passado"
+            caption: "Nostalgia sobre trilhos"
         }
     },
 
@@ -359,7 +359,7 @@ export const adventures = [
 
     hero: {
         image: "/img/aparecida/tophero.webp",
-        title: "Emoção e fé"
+        title: "Rio Pardo a Aparecida"
     },
 
     info: {
@@ -374,7 +374,7 @@ export const adventures = [
             folder: "aparecida",
             prefix: "aparecida",
             extension: "webp",
-            count: 16,
+            count: 28,
             caption: "Reencontro com o caminho"
         }
     },
@@ -1223,7 +1223,7 @@ export const adventures = [
             prefix: "medalha",
             extension: "webp",
             count: 24,
-            caption: "Monte Sião - Borda da Mata"
+            caption: "'Minas é música'"
         }
     }
 

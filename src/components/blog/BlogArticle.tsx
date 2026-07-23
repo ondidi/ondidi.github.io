@@ -12,14 +12,14 @@ type Props = {
 
 export default function BlogArticle({ artigo }: Props) {
 
-    const [fontSize, setFontSize] = useState(1.5);
+    const [fontScale, setFontScale] = useState(0);
 
     function increase() {
-        setFontSize(size => Math.min(size + 0.1, 2.2));
+        setFontScale(scale => Math.min(scale + 0.1, 0.8));
     }
 
     function decrease() {
-        setFontSize(size => Math.max(size - 0.1, 1.1));
+        setFontScale(scale => Math.max(scale - 0.4, -0.4));
     }
 
     return (
@@ -35,9 +35,9 @@ export default function BlogArticle({ artigo }: Props) {
             />
 
             <BlogArticleContent
-                artigo={artigo}
-                fontSize={fontSize}
-            />
+            artigo={artigo}
+            fontScale={fontScale}
+        />
 
         </>
 

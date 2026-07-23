@@ -2,7 +2,7 @@
 
     max-width: 1400px;
 
-    margin: 48px auto;
+    margin: 24px auto;
 
     padding: 0 32px;
 
@@ -10,25 +10,29 @@
 
 .header {
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: 420px 1fr;
+    grid-template-columns:420px 1fr;
 
-    gap: 48px;
+    gap:48px;
 
-    align-items: start;
+    align-items:stretch;
 
 }
 
-.box {
+.box{
 
-    background: rgba(194, 138, 44, .10);
+    background:rgba(194,138,44,.10);
 
-    border-radius: 28px;
+    border-radius:28px;
 
-    padding: 36px;
+    padding:36px;
 
-    text-align: center;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
 }
 
@@ -54,56 +58,55 @@
 
 }
 
-.text {
+.text{
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    gap: 24px;
+    justify-content:center;
 
-    font-size: 1.2rem;
+    text-align: justify;
 
-    line-height: 1.4;
+    gap:24px;
 
-    color: #2E2E2E;
+    font-size:1.2rem;
+
+    line-height:1.25;
 
 }
 
 @media (max-width: 900px) {
 
     .container {
-
+        margin: 10px auto;
         padding: 0 20px;
-
     }
 
     .header {
-
-        grid-template-columns: 1fr;
-
-        gap: 28px;
-
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .box {
 
-        padding: 28px;
+        margin: 0 -20px;      /* encosta nas bordas do container */
+
+        border-radius: 28px;
+
+        padding: 28px 20px;
 
     }
 
     .title {
-
         font-size: 2.2rem;
-
     }
 
     .text {
-
+        gap: 20px;
         font-size: 1.05rem;
-
         line-height: 1.6;
-
     }
 
 }

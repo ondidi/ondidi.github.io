@@ -57,7 +57,7 @@ export default async function AdventurePage({ params }: Props) {
                     </div>
 
                     <AdventurePhotoGallery
-                        title={adventure.menu.title}
+                        title={adventure.gallery.caption}
                         folder={adventure.gallery.folder}
                         prefix={adventure.gallery.prefix}
                         extension={adventure.gallery.extension}

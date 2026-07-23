@@ -43,3 +43,32 @@
     color:#333;
 
 }
+@media (max-width: 768px) {
+
+    .hero{
+
+        margin: 0px auto 30px;
+
+        padding: 0 20px;
+
+    }
+
+    .title{
+
+        font-size: clamp(2.8rem, 13vw, 4rem);
+
+        line-height: .95;
+
+        margin-bottom: 20px;
+
+    }
+
+    .subtitle{
+
+        font-size: 1.15rem;
+
+        line-height: 1.6;
+
+    }
+
+}
