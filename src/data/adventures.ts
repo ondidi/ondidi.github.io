@@ -30,7 +30,8 @@ export const adventures = [
             published: "20 de junho de 2026",
             
             description: `
-            O caminho transforma. Nunca é o mesmo. Neste ano, diferentemente das outras vezes em que o percorri, encontrei um velho amigo: silencioso, humilde e verdadeiro. Nele, o cansaço já não tem tanta importância. A distância entre as cidades deixa de ser desafio. A jornada de bicicleta tem o poder de nos conduzir de volta a nós mesmos. Aprendi algo novo com um missionário que encontrei, em oração, compartilhou ele algumas palavras de sabedoria: "O que importa não é o caminho, mas aquilo que o caminho trará para você." Então compreendi que não é a pedalada que nos transforma, mas a peregrinação que realizamos todos os dias dentro da alma. O caminho é apenas uma metáfora, um horizonte que se renova a cada amanhecer, convidando-nos a seguir adiante em direção ao nosso verdadeiro destino. E talvez seja esse o maior ensinamento da jornada: descobrir que a chegada não está no fim da estrada, mas na pessoa que nos tornamos enquanto caminhamos. Lembrando que a primeira foto que você vê abaixo foi gerada por IA.
+            Percorrer o Caminho da Fé de bicicleta entre Rio Claro e Aparecida nunca é a mesma experiência. A cada peregrinação a estrada ensina algo diferente. Em 2026, ao refazer esse percurso de aproximadamente 470 quilômetros, descobri que o maior desafio não estava nas subidas da Serra da Mantiqueira nem no cansaço acumulado ao longo dos dias. Estava dentro de mim.
+            Se você pretende fazer o Caminho da Fé de bicicleta, provavelmente está procurando informações sobre quilometragem, altimetria, hospedagem ou preparação física. Tudo isso faz parte da jornada. Mas existe algo que nenhum mapa consegue mostrar: aquilo que a estrada desperta em cada peregrino. Foi essa a maior lembrança que trouxe comigo de Aparecida. Lembrando que a primeira foto que você vê abaixo foi gerada por IA.
             `
         },
 
