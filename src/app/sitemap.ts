@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { adventures } from "@/data/adventures";
 
 import { blogService } from "@/services/blog.service";
@@ -11,8 +11,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         url: `https://ondids.com.br/blog/${artigo.slug}`,
 
-        lastModified: artigo.updated_at
-            ? new Date(artigo.updated_at)
+        lastModified: artigo.created_at
+            ? new Date(artigo.created_at)
             : new Date(artigo.data_publicacao),
 
         changeFrequency: "monthly" as const,
@@ -27,9 +27,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     lastModified: new Date(adventure.home.date),
 
-    changeFrequency: "yearly" as const,
+    changeFrequency: "monthly" as const,
 
-    priority: adventure.home.featured ? 1 : 0.8,
+    priority: adventure.home.featured ? 0.9 : 0.8,
 
     }));
 
@@ -48,24 +48,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: "daily",
             priority: 0.9,
         },
-        
+
         {
-        url: "https://ondids.com.br/amigos",
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.7,
-    },
+            url: "https://ondids.com.br/amigos",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
 
-    {
-        url: "https://ondids.com.br/lugares",
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.7,
-    },
+        {
+            url: "https://ondids.com.br/lugares",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
 
-        ...blog,
+        {
+            url: "https://ondids.com.br/aventuras",
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.9,
+        },
 
         ...adventurePages,
+
+        ...blog,
 
     ];
 

@@ -1,45 +1,28 @@
-import Sidebar from "@/components/layout/Sidebar";
-import Footer from "@/components/layout/Footer";
+import PageLayout from "@/components/layout/PageLayout";
 
 import PlacesHero from "@/components/places/PlacesHero";
 import PlacesInfo from "@/components/places/PlacesInfo";
 import AdventurePhotoGallery from "@/components/adventures/AdventurePhotoGallery";
-import MobileBottomBar from "@/components/layout/MobileBottomBar";
-
-import styles from "@/app/page.module.css";
 
 export default function PlacesPage() {
 
     return (
 
-        <main className={styles.main}>
+        <PageLayout>
 
-            <Sidebar />
+            <PlacesHero />
 
-            <section className={styles.content}>
+            <PlacesInfo />
 
-                <div className={styles.container}>
+            <AdventurePhotoGallery
+                title="Belas memórias"
+                folder="lugares"
+                prefix="lugares"
+                extension="webp"
+                count={34}
+            />
 
-                    <PlacesHero />
-
-                    <PlacesInfo />
-
-                    <AdventurePhotoGallery
-                        title="Belas memórias"
-                        folder="lugares"
-                        prefix="lugares"
-                        extension="webp"
-                        count={34}
-                    />
-
-                    <Footer />
-                    <MobileBottomBar />
-
-                </div>
-
-            </section>
-
-        </main>
+        </PageLayout>
 
     );
 

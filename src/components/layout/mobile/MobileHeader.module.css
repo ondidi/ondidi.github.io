@@ -1,24 +1,23 @@
-.header{
+.header {
 
-    position: sticky;
+    position: fixed;
+
     top: 0;
+    left: 0;
+    right: 0;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    height:64px;
-    padding:0 var(--space-5);
+    height: 64px;
+    padding: 0 var(--space-5);
 
     background: var(--color-navigation);
 
-    /* ADICIONE ESTAS DUAS LINHAS */
-    margin-left: calc(var(--space-5) * -1);
-    margin-right: calc(var(--space-5) * -1);
+    border-bottom: 1px solid #E6DFD3;
 
-    border-bottom:1px solid #E6DFD3;
-
-    z-index:400;
+    z-index: 9999;
 
 }
 

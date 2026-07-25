@@ -40,7 +40,7 @@
 
     grid-template-columns: 360px 1fr;
 
-    gap: 20px;
+    gap: var(--space-5);
 
     align-items: start;
 
@@ -51,13 +51,17 @@
 @media (max-width:768px){
 
     .intro{
-        display:contents;
+        display:flex;
         flex-direction:column;
         gap: var(--space-5);
     }
     .content {
 
     padding: var(--space-0) var(--space-5);
-}
+    }
+    
+    .container {
+        padding-top: 20px; /* ou var(--space-5) */
+    }
 
 }

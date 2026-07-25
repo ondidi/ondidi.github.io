@@ -1,17 +1,13 @@
 import { notFound } from "next/navigation";
 
-import Sidebar from "@/components/layout/Sidebar";
-import Footer from "@/components/layout/Footer";
+import PageLayout from "@/components/layout/PageLayout";
 
 import AdventureHero from "@/components/adventures/AdventureHero";
 import AdventurePhotoGallery from "@/components/adventures/AdventurePhotoGallery";
-
-import { adventures } from "@/data/adventures";
-
-import styles from "@/app/page.module.css";
 import AdventureHeader from "@/components/adventures/AdventureHeader/AdventureHeader";
 import AdventureText from "@/components/adventures/AdventureText/AdventureText";
-import MobileBottomBar from "@/components/layout/MobileBottomBar";
+
+import { adventures } from "@/data/adventures";
 
 type Props = {
     params: Promise<{
@@ -33,45 +29,32 @@ export default async function AdventurePage({ params }: Props) {
 
     return (
 
-        <main className={styles.main}>
+        <PageLayout>
 
-            <Sidebar />
+            <AdventureHero adventure={adventure} />
 
-            <section className={styles.content}>
+            <div className="intro">
 
-                <div className={styles.container}>
+                <AdventureHeader
+                    title={adventure.menu.title}
+                    publishedAt={adventure.info.published}
+                />
 
-                    <AdventureHero adventure={adventure} />
+                <AdventureText
+                    text={adventure.info.description}
+                />
 
-                    <div className={styles.intro}>
+            </div>
 
-                        <AdventureHeader
-                            title={adventure.menu.title}
-                            publishedAt={adventure.info.published}
-                        />
+            <AdventurePhotoGallery
+                title={adventure.gallery.caption}
+                folder={adventure.gallery.folder}
+                prefix={adventure.gallery.prefix}
+                extension={adventure.gallery.extension}
+                count={adventure.gallery.count}
+            />
 
-                        <AdventureText
-                            text={adventure.info.description}
-                        />
-
-                    </div>
-
-                    <AdventurePhotoGallery
-                        title={adventure.gallery.caption}
-                        folder={adventure.gallery.folder}
-                        prefix={adventure.gallery.prefix}
-                        extension={adventure.gallery.extension}
-                        count={adventure.gallery.count}
-                    />
-
-                    <Footer />
-                    <MobileBottomBar />
-
-                </div>
-
-            </section>
-
-        </main>
+        </PageLayout>
 
     );
 

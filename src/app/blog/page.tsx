@@ -1,51 +1,57 @@
-import Sidebar from "@/components/layout/Sidebar";
-import Footer from "@/components/layout/Footer";
+import type { Metadata } from "next";
+import PageLayout from "@/components/layout/PageLayout";
 
 import BlogHero from "@/components/blog/BlogHero";
 import BlogFeatured from "@/components/blog/BlogFeatured";
 import BlogGrid from "@/components/blog/BlogGrid";
 import BlogAuthor from "@/components/blog/BlogAuthor";
-import MobileBottomBar from "@/components/layout/MobileBottomBar";
 
 import { blogService } from "@/services/blog.service";
 
-import styles from "@/app/page.module.css";
+
+export const metadata: Metadata = {
+    title: "Blog | Ondids",
+    description:
+        "Artigos sobre cicloviagens, mountain bike, filosofia, estoicismo, fotografia, tecnologia e reflexões inspiradas pelas experiências sobre duas rodas.",
+    keywords: [
+        "blog ciclismo",
+        "cicloviagem",
+        "cicloturismo",
+        "mountain bike",
+        "filosofia",
+        "estoicismo",
+        "fotografia",
+        "aventuras",
+        "tecnologia",
+        "Ondids",
+    ],
+    alternates: {
+        canonical: "https://ondids.com.br/blog",
+    },
+    openGraph: {
+        title: "Blog | Ondids",
+        description:
+            "Histórias, aventuras, filosofia e tecnologia reunidas em um blog sobre viver, pedalar e aprender.",
+        url: "https://ondids.com.br/blog",
+        type: "website",
+    },
+};
 
 export default async function BlogPage() {
-
     const artigos = await blogService.getArtigos();
 
     const destaque = artigos[0];
     const recentes = artigos.slice(1, 5);
 
     return (
+        <PageLayout>
+            <BlogHero />
 
-        <main className={styles.main}>
+            <BlogFeatured artigo={destaque} />
 
-            <Sidebar />
+            <BlogGrid artigos={recentes} />
 
-            <section className={styles.content}>
-
-                <div className={styles.container}>
-
-                    <BlogHero />
-
-                    <BlogFeatured artigo={destaque} />
-
-                    <BlogGrid artigos={recentes} />
-
-                    <BlogAuthor />
-
-                    <Footer />
-
-                </div>
-
-            </section>
-
-            <MobileBottomBar />
-
-        </main>
-
+            <BlogAuthor />
+        </PageLayout>
     );
-
 }

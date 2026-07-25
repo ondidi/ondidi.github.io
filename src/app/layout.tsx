@@ -44,6 +44,25 @@ export const metadata: Metadata = {
   creator: "Diógenes Pasqualini",
 
   metadataBase: new URL("https://ondids.com.br"),
+
+  openGraph: {
+    siteName: "Ondids",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/img/seo/ondids-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Ondids - Cicloviagens, Aventuras e Histórias",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/img/seo/ondids-og.webp"],
+  },
 };
 
 export default function RootLayout({
