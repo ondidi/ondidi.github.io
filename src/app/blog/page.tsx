@@ -8,7 +8,7 @@ import BlogAuthor from "@/components/blog/BlogAuthor";
 
 import { blogService } from "@/services/blog.service";
 
-
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
     title: "Blog | Ondids",
     description:
