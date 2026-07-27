@@ -1,0 +1,242 @@
+.admin-page {
+
+  display: flex;
+
+}
+
+.admin-content {
+
+  width: 100%;
+
+  padding: 40px;
+
+}
+
+.blog-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+}
+
+.blog-header h2 {
+
+  margin: 0;
+
+  font-size: 2rem;
+
+  font-weight: 500;
+
+}
+
+.btn-novo {
+
+  background: #BCE7EF;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+}
+
+.blog-table {
+
+  background: white;
+
+  border: 1px solid #BCE7EF;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+}
+
+.blog-table-header {
+
+  display: grid;
+
+  grid-template-columns:
+    3fr 1fr 1fr 1fr;
+
+  background: #DDF0F0;
+
+  padding: 16px;
+
+  font-weight: 600;
+
+}
+
+.blog-row {
+
+  display: grid;
+
+  grid-template-columns:
+    3fr 1fr 1fr 1fr;
+
+  padding: 16px;
+
+  border-top: 1px solid #eee;
+
+  align-items: center;
+
+}
+
+.status-publicado {
+
+  background: rgba(25, 135, 84, 0.10);
+
+  color: #198754;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  font-weight: 600;
+
+}
+
+.status-rascunho {
+
+  background: rgba(220, 53, 69, 0.10);
+
+  color: #dc3545;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  font-weight: 600;
+
+}
+
+.acoes {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+.admin-content {
+  width: calc(100% - 280px);
+  margin-left: 280px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.acoes button {
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  padding: 4px;
+
+}
+
+.acoes img {
+
+  width: 22px;
+
+  height: 22px;
+
+  object-fit: contain;
+
+}
+.acoes button:hover {
+
+  transform: scale(1.15);
+
+  transition: 0.2s;
+
+}
+@media (max-width: 768px) {
+
+  .admin-content {
+
+    padding: 15px;
+
+  }
+
+  .blog-header {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+
+  }
+
+  .blog-header h2 {
+
+    font-size: 1.5rem;
+
+    text-align: center;
+
+  }
+
+  .btn-novo {
+
+    width: 100%;
+
+  }
+
+  .blog-table {
+
+    border: none;
+
+    background: transparent;
+
+  }
+
+  .blog-table-header {
+
+    display: none;
+
+  }
+
+  .blog-row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background: white;
+
+    border: 1px solid #BCE7EF;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+  }
+
+  .acoes {
+
+    width: 100%;
+
+    justify-content: flex-end;
+
+  }
+
+}
