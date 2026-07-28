@@ -100,9 +100,11 @@ export default function BlogAdmin() {
               className="blog-row"
               key={item.id}
             >
-              <div>{item.titulo}</div>
+              <div data-label="Título">
+                {item.titulo}
+              </div>
 
-              <div>
+              <div data-label="Status">
                 <span
                   className={
                     item.status === "Rascunho"
@@ -114,9 +116,14 @@ export default function BlogAdmin() {
                 </span>
               </div>
 
-              <div>{item.data_publicacao}</div>
+              <div data-label="Data">
+                {item.data_publicacao}
+              </div>
 
-              <div className="acoes">
+              <div
+                className="acoes"
+                data-label="Ações"
+              >
                 <button
                   title="Editar"
                   onClick={() =>

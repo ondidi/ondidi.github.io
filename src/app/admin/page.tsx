@@ -51,20 +51,13 @@ export default function Dashboard() {
   ];
 
   return (
-        <div style={{ display: "flex" }}>
+    <>
       <AdminSidebar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
 
-      <main
-        style={{
-          marginLeft: 280,
-          width: "calc(100% - 280px)",
-          padding: 40,
-          boxSizing: "border-box",
-        }}
-      >
+      <main className="admin-content">
         <AdminHeader
           setMenuOpen={setMenuOpen}
         />
@@ -81,6 +74,6 @@ export default function Dashboard() {
           ))}
         </div>
       </main>
-    </div>
+    </>
   );
 }

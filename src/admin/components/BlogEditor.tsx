@@ -116,15 +116,7 @@ export default function BlogEditor() {
         setMenuOpen={setMenuOpen}
       />
 
-      <div
-        className="admin-content"
-        style={{
-          marginLeft: 280,
-          width: "calc(100% - 280px)",
-          padding: 40,
-          boxSizing: "border-box",
-        }}
-      >
+      <div className="admin-content">
         <AdminHeader setMenuOpen={setMenuOpen} />
 
         <div className="section-title">
