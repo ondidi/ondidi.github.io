@@ -1,0 +1,1 @@
+how d1665c26ae26bdd5701cfee055e911177ae86706:src/app/amigos/page.tsx

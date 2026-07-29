@@ -1,0 +1,30 @@
+.sections {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+
+}
+
+.intro {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-9);
+
+}
+@media (max-width: 768px) {
+
+    .sections {
+
+        gap: var(--space-6);
+
+    }
+
+    .intro {
+
+        gap: var(--space-5);
+
+    }
+
+}

@@ -6,7 +6,7 @@ import AdventureHero from "@/components/adventures/AdventureHero";
 import AdventurePhotoGallery from "@/components/adventures/AdventurePhotoGallery";
 import AdventureHeader from "@/components/adventures/AdventureHeader/AdventureHeader";
 import AdventureText from "@/components/adventures/AdventureText/AdventureText";
-
+import styles from "./page.module.css";
 import { adventures } from "@/data/adventures";
 
 type Props = {
@@ -31,28 +31,32 @@ export default async function AdventurePage({ params }: Props) {
 
         <PageLayout>
 
-            <AdventureHero adventure={adventure} />
+            <div className={styles.sections}>
 
-            <div className="intro">
+                <AdventureHero adventure={adventure} />
 
-                <AdventureHeader
-                    title={adventure.menu.title}
-                    publishedAt={adventure.info.published}
-                />
+                <div className={styles.intro}>
 
-                <AdventureText
-                    text={adventure.info.description}
+                    <AdventureHeader
+                        title={adventure.menu.title}
+                        publishedAt={adventure.info.published}
+                    />
+
+                    <AdventureText
+                        text={adventure.info.description}
+                    />
+
+                </div>
+
+                <AdventurePhotoGallery
+                    title={adventure.gallery.caption}
+                    folder={adventure.gallery.folder}
+                    prefix={adventure.gallery.prefix}
+                    extension={adventure.gallery.extension}
+                    count={adventure.gallery.count}
                 />
 
             </div>
-
-            <AdventurePhotoGallery
-                title={adventure.gallery.caption}
-                folder={adventure.gallery.folder}
-                prefix={adventure.gallery.prefix}
-                extension={adventure.gallery.extension}
-                count={adventure.gallery.count}
-            />
 
         </PageLayout>
 
