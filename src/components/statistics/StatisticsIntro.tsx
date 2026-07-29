@@ -16,9 +16,7 @@ export default function StatisticsConstruction() {
 
         <p>
 
-          Estamos organizando milhares de quilômetros percorridos
-          desde 2009 para transformar essa trajetória em um painel
-          completo de estatísticas.
+          Aqui vou organizar 17 anos de registros de minhas pedaladas, mas a aventura começou antes, há exatos 20 anos. Com a popularização dos Aplicativos, foi possível registar, isso bem antes do Strava aparecer.
 
         </p>
 

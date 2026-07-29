@@ -12,7 +12,7 @@ export default function StatisticsHero() {
         <h1>ESTATÍSTICAS</h1>
 
         <p className={styles.subtitle}>
-          17 anos de pedal
+          17 anos de pedal - Em breve!
         </p>
 
       </div>
