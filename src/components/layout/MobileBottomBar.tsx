@@ -7,7 +7,7 @@ import {
     House,
     Users,
     MapPinned,
-    MessageCircle,
+    BarChart3,
     BookOpen,
 } from "lucide-react";
 
@@ -48,15 +48,13 @@ export default function MobileBottomBar() {
                 <span>Lugares</span>
             </Link>
 
-            <a
-                href="https://wa.me/SEUNUMERO"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.item}
+            <Link
+                href="/estatisticas"
+                className={`${styles.item} ${isActive("/estatisticas") ? styles.active : ""}`}
             >
-                <MessageCircle size={20} />
-                <span>Whats</span>
-            </a>
+                <BarChart3 size={20} />
+                <span>Estat.</span>
+            </Link>
 
             <Link
                 href="/blog"
