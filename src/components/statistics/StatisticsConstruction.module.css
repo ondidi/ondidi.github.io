@@ -1,0 +1,83 @@
+.container{
+
+    width:100%;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    border:1px solid var(--color-border);
+
+    box-shadow:0 12px 40px rgba(0,0,0,.05);
+
+}
+
+.badge{
+
+    display:inline-flex;
+
+    background:#F6E8C8;
+
+    color:#B88717;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    color:var(--color-text);
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+    max-width:720px;
+
+}
+
+.grid{
+
+    margin-top:36px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.grid span{
+
+    background:var(--color-surface);
+
+    border-radius:14px;
+
+    padding:18px;
+
+    font-weight:600;
+
+}

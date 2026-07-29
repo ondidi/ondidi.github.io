@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   Users,
   MapPin,
-  MessageCircle,
+  BarChart3,
   BookOpen,
 } from "lucide-react";
 
@@ -23,9 +23,14 @@ export default function SidebarFooter() {
         <span>Lugares</span>
       </Link>
 
-      <Link href="/whatsapp" className={styles.item}>
-        <MessageCircle />
-        <span>WhatsApp</span>
+      <Link href="/estatisticas" className={styles.item}>
+        <img
+          src="/img/icons/estatistica.svg"
+          alt="Estatísticas"
+          width={20}
+          height={20}
+        />
+        <span>Estatísticas</span>
       </Link>
 
       <Link href="/blog" className={styles.item}>
