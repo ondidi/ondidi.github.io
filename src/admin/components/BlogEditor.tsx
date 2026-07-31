@@ -57,12 +57,38 @@ export default function BlogEditor() {
     console.log("ENTROU EM PUBLICAR");
 
     let resultado;
+    const slug = titulo
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
 
     if (id) {
-      resultado = await supabase
-        .from("artigos")
-        .update({
+    resultado = await supabase
+      .from("artigos")
+      .update({
+        titulo,
+        slug,
+        chamada,
+        titulo_completo: tituloCompleto,
+        destaque,
+        texto_completo: textoCompleto,
+        data_publicacao: dataPublicacao,
+        tempo_leitura: tempoLeitura,
+        imagem_principal: imagemPrincipal,
+        status: "Publicado",
+      })
+      .eq("id", id)
+      .select();
+  } else {
+    resultado = await supabase
+      .from("artigos")
+      .insert([
+        {
           titulo,
+          slug,
           chamada,
           titulo_completo: tituloCompleto,
           destaque,
@@ -71,42 +97,25 @@ export default function BlogEditor() {
           tempo_leitura: tempoLeitura,
           imagem_principal: imagemPrincipal,
           status: "Publicado",
-        })
-        .eq("id", id)
-        .select();
-    } else {
-      resultado = await supabase
-        .from("artigos")
-        .insert([
-          {
-            titulo,
-            chamada,
-            titulo_completo: tituloCompleto,
-            destaque,
-            texto_completo: textoCompleto,
-            data_publicacao: dataPublicacao,
-            tempo_leitura: tempoLeitura,
-            imagem_principal: imagemPrincipal,
-            status: "Publicado",
-            destaque_home: false,
-          },
-        ])
-        .select();
-    }
+          destaque_home: false,
+        },
+      ])
+      .select();
+  }
 
-    const { error } = resultado;
+  const { error } = resultado;
 
-    if (error) {
-      console.error(error);
-      alert("Erro ao salvar artigo.");
-      return;
-    }
+  if (error) {
+    console.error(error);
+    alert("Erro ao salvar artigo.");
+    return;
+  }
 
-    alert(
-      id
-        ? "Artigo atualizado com sucesso!"
-        : "Artigo publicado com sucesso!"
-    );
+  alert(
+    id
+      ? "Artigo atualizado com sucesso!"
+      : "Artigo publicado com sucesso!"
+  );
   }
 
   return (
