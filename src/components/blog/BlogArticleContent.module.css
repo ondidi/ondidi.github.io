@@ -1,103 +1,108 @@
-.article{
+.article {
 
-    display:flex;
-
-    justify-content:center;
-
-    margin-bottom:90px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
 
 }
 
-.content{
+.content {
 
-    max-width:900px;
+    max-width: 900px;
+    width: 100%;
 
-    width:100%;
+    font-family: var(--font-lora);
+    font-size: 1.42rem;
+    line-height: 1.55;
 
-    font-family:var(--font-lora);
-
-    font-size:1.42rem;
-
-    line-height:1.55;
-
-    color:#2d2d2d;
-
-    text-align:justify;
-
-    white-space:pre-wrap;
+    color: #2d2d2d;
+    text-align: justify;
 
 }
 
-.content::first-letter{
+.content p {
 
-    float:left;
-
-    font-family:var(--font-playfair);
-
-    font-size:8rem;
-
-    line-height:.82;
-
-    padding-right:16px;
-
-    padding-top:12px;
-
-    color:#8f7750;
-
-}
-@media (max-width:768px){
-
-    .article{
-
-        margin-bottom:60px;
-        padding:0 20px;
-
-    }
-
-    .content{
-
-        max-width:100%;
-        font-size:1.08rem;
-        line-height:1.6;
-        text-align:justify;
-
-    }
-
-    .content::first-letter{
-
-        float:left;
-        font-family:var(--font-playfair);
-        font-size:3.2rem;
-        line-height:.9;
-        color:#8f7750;
-        padding-right:8px;
-        padding-top:4px;
-
-    }
+    margin: 0 0 1.6rem;
+    line-height: 1.9;
 
 }
 
-@media (max-width:380px){
+.content p:last-child {
 
-    .article{
+    margin-bottom: 0;
 
-        padding:0 16px;
+}
+
+.content::first-letter {
+
+    float: left;
+
+    font-family: var(--font-playfair);
+    font-size: 8rem;
+    line-height: .82;
+
+    padding-right: 16px;
+    padding-top: 12px;
+
+    color: #8f7750;
+
+}
+
+@media (max-width: 768px) {
+
+    .article {
+
+        margin-bottom: 60px;
+        padding: 0 20px;
 
     }
 
-    .content{
+    .content {
 
-        font-size:1rem;
-        line-height:1.6;
-        text-align:left;
+        max-width: 100%;
+        font-size: 1.08rem;
+        line-height: 1.6;
+        text-align: justify;
 
     }
 
-    .content::first-letter{
+    .content::first-letter {
 
-        font-size:3rem;
-        padding-right:6px;
-        padding-top:2px;
+        float: left;
+        font-family: var(--font-playfair);
+        font-size: 3.2rem;
+        line-height: .9;
+
+        color: #8f7750;
+
+        padding-right: 8px;
+        padding-top: 4px;
+
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .article {
+
+        padding: 0 16px;
+
+    }
+
+    .content {
+
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;
+
+    }
+
+    .content::first-letter {
+
+        font-size: 3rem;
+        padding-right: 6px;
+        padding-top: 2px;
 
     }
 
