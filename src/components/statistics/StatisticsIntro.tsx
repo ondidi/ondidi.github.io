@@ -11,12 +11,12 @@ export default function StatisticsConstruction() {
         </span>
 
         <h2>
-          Um novo capítulo está chegando.
+          Estes dados não são reais - Esta página está em CONSTRUÇÃO
         </h2>
 
         <p>
 
-          Aqui vou organizar 17 anos de registros de minhas pedaladas, mas a aventura começou antes, há exatos 20 anos. Com a popularização dos Aplicativos, foi possível registar, isso bem antes do Strava aparecer.
+          Aqui vou organizar 17 anos de registros de minhas pedaladas, mas a aventura começou antes, há exatos 20 anos. Com a popularização dos Aplicativos, foi possível registar, isso bem antes do Strava aparecer, em um app chamado Runtastic, hoje Adidas.
 
         </p>
 

@@ -3,6 +3,33 @@
     width:100%;
 
 }
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,241,234,.98) 0%,
+            rgba(245,241,234,.90) 18%,
+            rgba(245,241,234,.60) 35%,
+            rgba(245,241,234,0) 55%
+        );
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
 
 .card{
 
@@ -79,5 +106,12 @@
     padding:18px;
 
     font-weight:600;
+
+}
+.overlay{
+
+    position:relative;
+
+    z-index:2;
 
 }
