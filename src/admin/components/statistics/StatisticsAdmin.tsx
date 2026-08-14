@@ -345,6 +345,7 @@ export default function StatisticsAdmin() {
 
               <input
                 type="number"
+                inputMode="numeric"
                 min="0"
                 placeholder="0"
                 value={form.calorias}
@@ -365,6 +366,7 @@ export default function StatisticsAdmin() {
               <input
                 type="number"
                 min="0"
+                inputMode="numeric"
                 placeholder="0"
                 value={form.ganhoElevacao}
                 onChange={(event) =>
@@ -402,6 +404,7 @@ export default function StatisticsAdmin() {
 
             <input
               type="number"
+              inputMode="numeric"
               min="0"
               placeholder="0"
               value={form.fcMedia}
