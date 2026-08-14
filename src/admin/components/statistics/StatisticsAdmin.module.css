@@ -225,6 +225,21 @@
     padding: 24px 18px 32px;
     box-sizing: border-box;
   }
+    .radioOption {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .radioOption input {
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+  }
 
   .choiceGroup {
     width: 100%;
