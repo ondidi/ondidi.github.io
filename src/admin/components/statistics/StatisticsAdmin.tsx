@@ -56,6 +56,12 @@ export default function StatisticsAdmin() {
     }));
   }
 
+  function converterNumero(valor: string) {
+    if (!valor) return null;
+
+    return Number(valor.replace(",", "."));
+  }
+
   async function handleSubmit(
     event: FormEvent<HTMLFormElement>
   ) {
@@ -300,19 +306,18 @@ export default function StatisticsAdmin() {
               <span>Distância (km)</span>
 
               <input
-                type="number"
-                step="0.01"
-                min="0"
-                placeholder="0,00"
-                value={form.distancia}
-                onChange={(event) =>
-                  handleChange(
-                    "distancia",
-                    event.target.value
-                  )
-                }
-                required
-              />
+              type="text"
+              inputMode="decimal"
+              placeholder="0,00"
+              value={form.distancia}
+              onChange={(event) =>
+                handleChange(
+                  "distancia",
+                  event.target.value
+                )
+              }
+              required
+            />
             </label>
 
             {/* DURAÇÃO */}
@@ -377,9 +382,8 @@ export default function StatisticsAdmin() {
               <span>Velocidade média (km/h)</span>
 
               <input
-                type="number"
-                step="0.1"
-                min="0"
+                type="text"
+                inputMode="decimal"
                 placeholder="0,0"
                 value={form.velocidadeMedia}
                 onChange={(event) =>
