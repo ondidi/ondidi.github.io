@@ -1,0 +1,226 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import {
+  Bike,
+  Mountain,
+  Heart,
+  Flame,
+  Clock,
+} from "lucide-react";
+
+import { supabase } from "@/lib/supabase";
+
+import MetricCard from "./MetricCard";
+import styles from "./StatisticsToday.module.css";
+
+export default function StatisticsToday() {
+  const [metricas, setMetricas] = useState({
+    distancia: 0,
+    altimetria: 0,
+    calorias: 0,
+    segundos: 0,
+    fcMedia: 0,
+    pedalSemana: 0,
+  });
+
+  useEffect(() => {
+    async function carregarEstatisticas() {
+      const hoje = new Date();
+
+      const formatarDataLocal = (date: Date) => {
+        const ano = date.getFullYear();
+        const mes = String(date.getMonth() + 1).padStart(2, "0");
+        const dia = String(date.getDate()).padStart(2, "0");
+
+        return `${ano}-${mes}-${dia}`;
+      };
+
+      const dataHoje = formatarDataLocal(hoje);
+
+      const inicioSemana = new Date(hoje);
+      inicioSemana.setDate(inicioSemana.getDate() - 6);
+
+      const dataInicioSemana = formatarDataLocal(inicioSemana);
+
+      const { data, error } = await supabase
+        .from("atividades")
+        .select(
+          "data, distancia, ganho_elevacao, calorias, duracao, fc_media"
+        )
+        .gte("data", dataInicioSemana)
+        .lte("data", dataHoje);
+
+      if (error) {
+        console.error(
+          "Erro ao carregar estatísticas:",
+          error
+        );
+        return;
+      }
+
+      let distancia = 0;
+      let altimetria = 0;
+      let calorias = 0;
+      let segundos = 0;
+      let pedalSemana = 0;
+
+      const frequencias: number[] = [];
+
+      (data || []).forEach((atividade) => {
+        const distanciaAtividade =
+          Number(atividade.distancia ?? 0);
+
+        pedalSemana += distanciaAtividade;
+
+        // Estatísticas de HOJE
+        if (atividade.data === dataHoje) {
+          distancia += distanciaAtividade;
+          altimetria += Number(
+            atividade.ganho_elevacao ?? 0
+          );
+          calorias += Number(
+            atividade.calorias ?? 0
+          );
+
+          if (atividade.fc_media != null) {
+            frequencias.push(
+              Number(atividade.fc_media)
+            );
+          }
+
+          if (atividade.duracao) {
+            const [
+              horas,
+              minutos,
+              segundosAtividade,
+            ] = atividade.duracao
+              .split(":")
+              .map(Number);
+
+            segundos +=
+              horas * 3600 +
+              minutos * 60 +
+              segundosAtividade;
+          }
+        }
+      });
+
+      const fcMedia =
+        frequencias.length > 0
+          ? Math.round(
+              frequencias.reduce(
+                (total, valor) => total + valor,
+                0
+              ) / frequencias.length
+            )
+          : 0;
+
+      setMetricas({
+        distancia,
+        altimetria,
+        calorias,
+        segundos,
+        fcMedia,
+        pedalSemana,
+      });
+    }
+
+    carregarEstatisticas();
+  }, []);
+
+  const horas = Math.floor(
+    metricas.segundos / 3600
+  );
+
+  const minutos = Math.floor(
+    (metricas.segundos % 3600) / 60
+  );
+
+  const tempo = `${horas}h${String(minutos).padStart(
+    2,
+    "0"
+  )}`;
+
+  return (
+    <section className={styles.container}>
+      <div className={styles.header}>
+        <Bike size={22} strokeWidth={1.8} />
+        <h2>HOJE</h2>
+      </div>
+
+      <div className={styles.metrics}>
+        <MetricCard
+          label="Pedal"
+          value={metricas.distancia.toFixed(2)}
+          unit="km"
+          icon={<Bike size={28} strokeWidth={1.8} />}
+        />
+
+        <MetricCard
+          label="Altimetria"
+          value={Math.round(
+            metricas.altimetria
+          ).toString()}
+          unit="m"
+          icon={
+            <Mountain
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+
+        <MetricCard
+          label="FC média"
+          value={metricas.fcMedia.toString()}
+          unit="bpm"
+          icon={
+            <Heart
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+
+        <MetricCard
+          label="Calorias"
+          value={Math.round(
+            metricas.calorias
+          ).toLocaleString("pt-BR")}
+          unit="kcal"
+          icon={
+            <Flame
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+
+        <MetricCard
+          label="Tempo"
+          value={tempo}
+          unit=""
+          icon={
+            <Clock
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+
+        <MetricCard
+          label="Últimos 7 dias"
+          value={Math.round(metricas.pedalSemana).toString()}
+          unit="km"
+          icon={
+            <Bike
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+      </div>
+    </section>
+  );
+}

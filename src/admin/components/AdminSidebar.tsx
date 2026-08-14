@@ -63,6 +63,17 @@ export default function AdminSidebar({
           />
           Blog
         </Link>
+
+        <Link
+          href="/admin/estatisticas"
+          onClick={() => setMenuOpen(false)}
+        >
+          <img
+            src="/img/icons/bike.svg"
+            alt="Estatísticas"
+          />
+          Estatísticas
+        </Link>
       </nav>
     </aside>
   );
