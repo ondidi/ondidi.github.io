@@ -51,7 +51,15 @@ export default function StatisticsToday() {
 const dataInicioAno = formatarDataLocal(inicioAno);
 
       const inicioSemana = new Date(hoje);
-      inicioSemana.setDate(inicioSemana.getDate() - 6);
+
+      const diaSemana = inicioSemana.getDay();
+
+      const diasDesdeSegunda =
+        diaSemana === 0 ? 6 : diaSemana - 1;
+
+      inicioSemana.setDate(
+        inicioSemana.getDate() - diasDesdeSegunda
+      );
 
       const dataInicioSemana = formatarDataLocal(inicioSemana);
 
@@ -92,7 +100,12 @@ const dataInicioAno = formatarDataLocal(inicioAno);
             totalMes += distanciaAtividade;
           }
 
-        pedalSemana += distanciaAtividade;
+          if (
+            atividade.data >= dataInicioSemana &&
+            atividade.data <= dataHoje
+          ) {
+            pedalSemana += distanciaAtividade;
+          }
 
         // Estatísticas de HOJE
         if (atividade.data === dataHoje) {

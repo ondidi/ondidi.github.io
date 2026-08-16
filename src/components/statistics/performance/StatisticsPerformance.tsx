@@ -31,23 +31,27 @@ export default function StatisticsPerformance() {
 
       const hoje = new Date();
 
+      hoje.setHours(0, 0, 0, 0);
+
       /*
-       * Semana atual:
-       * Domingo → Sábado
+       * Últimos 7 dias:
+       * Hoje + os 6 dias anteriores.
+       *
+       * Exemplo:
+       * Domingo 16/08
+       * → Segunda 10/08 até Domingo 16/08
        */
       const inicioSemana = new Date(hoje);
-      inicioSemana.setHours(0, 0, 0, 0);
+
       inicioSemana.setDate(
-        hoje.getDate() - hoje.getDay()
+        hoje.getDate() - 6
       );
 
-      const fimSemana = new Date(inicioSemana);
-      fimSemana.setDate(
-        inicioSemana.getDate() + 6
-      );
+      const dataInicio =
+        formatarData(inicioSemana);
 
-      const dataInicio = formatarData(inicioSemana);
-      const dataFim = formatarData(fimSemana);
+      const dataFim =
+        formatarData(hoje);
 
       const { data, error } = await supabase
         .from("atividades")
@@ -73,59 +77,63 @@ export default function StatisticsPerformance() {
 
       const atividades = data ?? [];
 
-      const diasSemana = [
-        "Dom",
-        "Seg",
-        "Ter",
-        "Qua",
-        "Qui",
-        "Sex",
-        "Sáb",
-      ];
+      const resultado: PerformanceDay[] = [];
 
-      const resultado: PerformanceDay[] =
-        diasSemana.map((dia, index) => {
-          const dataDia = new Date(inicioSemana);
+      for (let index = 0; index < 7; index++) {
+        const dataDia = new Date(
+          inicioSemana
+        );
 
-          dataDia.setDate(
-            inicioSemana.getDate() + index
+        dataDia.setDate(
+          inicioSemana.getDate() + index
+        );
+
+        const dataFormatada =
+          formatarData(dataDia);
+
+        const atividadesDoDia =
+          atividades.filter(
+            (atividade) =>
+              atividade.data ===
+              dataFormatada
           );
 
-          const dataFormatada =
-            formatarData(dataDia);
+        const distancia =
+          atividadesDoDia.reduce(
+            (total, atividade) =>
+              total +
+              Number(
+                atividade.distancia ?? 0
+              ),
+            0
+          );
 
-          const atividadesDoDia =
-            atividades.filter(
-              (atividade) =>
-                atividade.data === dataFormatada
+        const altimetria =
+          atividadesDoDia.reduce(
+            (total, atividade) =>
+              total +
+              Number(
+                atividade.ganho_elevacao ?? 0
+              ),
+            0
+          );
+
+        const dia =
+          dataDia
+            .toLocaleDateString("pt-BR", {
+              weekday: "short",
+            })
+            .replace(".", "")
+            .replace(/^./, (letra) =>
+              letra.toUpperCase()
             );
 
-          const distancia =
-            atividadesDoDia.reduce(
-              (total, atividade) =>
-                total +
-                Number(
-                  atividade.distancia ?? 0
-                ),
-              0
-            );
-
-          const altimetria =
-            atividadesDoDia.reduce(
-              (total, atividade) =>
-                total +
-                Number(
-                  atividade.ganho_elevacao ?? 0
-                ),
-              0
-            );
-
-          return {
-            dia,
-            distancia,
-            altimetria,
-          };
+        resultado.push({
+          dia,
+          distancia,
+          altimetria,
         });
+      }
 
       console.log(
         "DESEMPENHO SEMANAL:",
@@ -138,10 +146,6 @@ export default function StatisticsPerformance() {
 
     carregarSemana();
   }, []);
-  const totalSemana = dados.reduce(
-  (total, dia) => total + dia.distancia,
-  0
-);
 
   return (
     <section className={styles.container}>
@@ -158,7 +162,10 @@ export default function StatisticsPerformance() {
               styles.distanceIndicator
             }
           />
-          <span>Distância (km)</span>
+
+          <span>
+            Distância (km)
+          </span>
         </div>
 
         <div className={styles.legendItem}>
@@ -167,12 +174,17 @@ export default function StatisticsPerformance() {
               styles.elevationIndicator
             }
           />
-          <span>Altimetria (m)</span>
+
+          <span>
+            Altimetria (m)
+          </span>
         </div>
       </div>
 
       {loading ? (
-        <div>Carregando...</div>
+        <div>
+          Carregando...
+        </div>
       ) : (
         <PerformanceChart data={dados} />
       )}

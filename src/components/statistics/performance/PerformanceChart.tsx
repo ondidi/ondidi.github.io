@@ -23,27 +23,43 @@ interface PerformanceChartProps {
 export default function PerformanceChart({
   data,
 }: PerformanceChartProps) {
-  const [mobile, setMobile] = useState(false);
+  const ordemDias = [
+    "Seg",
+    "Ter",
+    "Qua",
+    "Qui",
+    "Sex",
+    "Sáb",
+    "Dom",
+  ];
 
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
+  const hoje = new Intl.DateTimeFormat("pt-BR", {
+    weekday: "short",
+  })
+    .format(new Date())
+    .replace(".", "")
+    .replace(/^./, (letra) => letra.toUpperCase());
 
-    const atualizar = () => setMobile(media.matches);
+  const indiceHoje = ordemDias.indexOf(hoje);
 
-    atualizar();
-    media.addEventListener("change", atualizar);
+  const ordemAtual = [
+    ...ordemDias.slice(indiceHoje + 1),
+    ...ordemDias.slice(0, indiceHoje + 1),
+  ];
 
-    return () => {
-      media.removeEventListener("change", atualizar);
-    };
-  }, []);
+  const dadosOrdenados = [...data].sort(
+    (a, b) =>
+      ordemAtual.indexOf(a.dia) -
+      ordemAtual.indexOf(b.dia)
+  );
+
   const maiorDistancia = Math.max(
-    ...data.map((item) => item.distancia),
+    ...dadosOrdenados.map((item) => item.distancia),
     0
   );
 
   const maiorAltimetria = Math.max(
-    ...data.map((item) => item.altimetria),
+    ...dadosOrdenados.map((item) => item.altimetria),
     0
   );
 
@@ -84,7 +100,7 @@ export default function PerformanceChart({
         height={230}
       >
         <ComposedChart
-          data={data}
+          data={dadosOrdenados}
           margin={{
             top: 10,
             right: 18,
