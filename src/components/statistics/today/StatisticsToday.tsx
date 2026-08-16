@@ -27,6 +27,7 @@ export default function StatisticsToday() {
     pedalSemana: 0,
     totalMes: 0,
     totalAno: 0,
+    terrenos: [] as string[],
   });
 
   useEffect(() => {
@@ -66,7 +67,7 @@ const dataInicioAno = formatarDataLocal(inicioAno);
       const { data, error } = await supabase
         .from("atividades")
         .select(
-          "data, distancia, ganho_elevacao, calorias, duracao, fc_media"
+          "data, distancia, ganho_elevacao, calorias, duracao, fc_media, terreno"
         )
         .gte("data", dataInicioAno)
         .lte("data", dataHoje);
@@ -88,57 +89,68 @@ const dataInicioAno = formatarDataLocal(inicioAno);
       let totalAno = 0;
 
       const frequencias: number[] = [];
+      const terrenos = new Set<string>();
 
       (data || []).forEach((atividade) => {
-        const distanciaAtividade =
-          Number(atividade.distancia ?? 0);
-          totalAno += distanciaAtividade;
+      const distanciaAtividade =
+        Number(atividade.distancia ?? 0);
 
-          if (atividade.data.startsWith(
-            dataHoje.substring(0, 7)
-          )) {
-            totalMes += distanciaAtividade;
-          }
+      totalAno += distanciaAtividade;
 
-          if (
-            atividade.data >= dataInicioSemana &&
-            atividade.data <= dataHoje
-          ) {
-            pedalSemana += distanciaAtividade;
-          }
+      if (
+        atividade.data.startsWith(
+          dataHoje.substring(0, 7)
+        )
+      ) {
+        totalMes += distanciaAtividade;
+      }
 
-        // Estatísticas de HOJE
-        if (atividade.data === dataHoje) {
-          distancia += distanciaAtividade;
-          altimetria += Number(
-            atividade.ganho_elevacao ?? 0
-          );
-          calorias += Number(
-            atividade.calorias ?? 0
-          );
+      if (
+        atividade.data >= dataInicioSemana &&
+        atividade.data <= dataHoje
+      ) {
+        pedalSemana += distanciaAtividade;
+      }
 
-          if (atividade.fc_media != null) {
-            frequencias.push(
-              Number(atividade.fc_media)
-            );
-          }
+      // Estatísticas de HOJE
+      if (atividade.data === dataHoje) {
 
-          if (atividade.duracao) {
-            const [
-              horas,
-              minutos,
-              segundosAtividade,
-            ] = atividade.duracao
-              .split(":")
-              .map(Number);
-
-            segundos +=
-              horas * 3600 +
-              minutos * 60 +
-              segundosAtividade;
-          }
+        if (atividade.terreno) {
+          terrenos.add(atividade.terreno);
         }
-      });
+
+        distancia += distanciaAtividade;
+
+        altimetria += Number(
+          atividade.ganho_elevacao ?? 0
+        );
+
+        calorias += Number(
+          atividade.calorias ?? 0
+        );
+
+        if (atividade.fc_media != null) {
+          frequencias.push(
+            Number(atividade.fc_media)
+          );
+        }
+
+        if (atividade.duracao) {
+          const [
+            horas,
+            minutos,
+            segundosAtividade,
+          ] = atividade.duracao
+            .split(":")
+            .map(Number);
+
+          segundos +=
+            horas * 3600 +
+            minutos * 60 +
+            segundosAtividade;
+        }
+      }
+    });
 
       const fcMedia =
         frequencias.length > 0
@@ -159,6 +171,7 @@ const dataInicioAno = formatarDataLocal(inicioAno);
         pedalSemana,
         totalMes,
         totalAno,
+        terrenos: Array.from(terrenos),
       });
     }
 
@@ -191,6 +204,29 @@ const dataInicioAno = formatarDataLocal(inicioAno);
           value={metricas.distancia.toFixed(2)}
           unit="km"
           icon={<Bike size={28} strokeWidth={1.8} />}
+        />
+        <MetricCard
+          label="Terreno"
+          value={
+            metricas.terrenos.length > 0
+              ? metricas.terrenos
+                  .map((terreno) => {
+                    if (terreno === "terra") return "Terra";
+                    if (terreno === "asfalto") return "Asfalto";
+                    if (terreno === "trilha") return "Trilha";
+
+                    return terreno;
+                  })
+                  .join(" + ")
+              : "—"
+          }
+          unit=""
+          icon={
+            <Mountain
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
         />
 
         <MetricCard
