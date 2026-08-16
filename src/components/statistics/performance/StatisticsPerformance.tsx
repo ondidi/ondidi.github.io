@@ -147,7 +147,7 @@ export default function StatisticsPerformance() {
     <section className={styles.container}>
       <div className={styles.header}>
         <h2>
-          DESEMPENHO — ÚLTIMOS 7 DIAS
+          DESEMPENHO SEMANAL
         </h2>
       </div>
 

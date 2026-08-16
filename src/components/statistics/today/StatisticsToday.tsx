@@ -7,6 +7,9 @@ import {
   Heart,
   Flame,
   Clock,
+  CalendarDays,
+  Repeat,
+  TrendingUp,
 } from "lucide-react";
 
 import { supabase } from "@/lib/supabase";
@@ -22,6 +25,8 @@ export default function StatisticsToday() {
     segundos: 0,
     fcMedia: 0,
     pedalSemana: 0,
+    totalMes: 0,
+    totalAno: 0,
   });
 
   useEffect(() => {
@@ -37,6 +42,13 @@ export default function StatisticsToday() {
       };
 
       const dataHoje = formatarDataLocal(hoje);
+      const inicioAno = new Date(
+      hoje.getFullYear(),
+      0,
+      1
+    );
+
+const dataInicioAno = formatarDataLocal(inicioAno);
 
       const inicioSemana = new Date(hoje);
       inicioSemana.setDate(inicioSemana.getDate() - 6);
@@ -48,7 +60,7 @@ export default function StatisticsToday() {
         .select(
           "data, distancia, ganho_elevacao, calorias, duracao, fc_media"
         )
-        .gte("data", dataInicioSemana)
+        .gte("data", dataInicioAno)
         .lte("data", dataHoje);
 
       if (error) {
@@ -64,12 +76,21 @@ export default function StatisticsToday() {
       let calorias = 0;
       let segundos = 0;
       let pedalSemana = 0;
+      let totalMes = 0;
+      let totalAno = 0;
 
       const frequencias: number[] = [];
 
       (data || []).forEach((atividade) => {
         const distanciaAtividade =
           Number(atividade.distancia ?? 0);
+          totalAno += distanciaAtividade;
+
+          if (atividade.data.startsWith(
+            dataHoje.substring(0, 7)
+          )) {
+            totalMes += distanciaAtividade;
+          }
 
         pedalSemana += distanciaAtividade;
 
@@ -123,6 +144,8 @@ export default function StatisticsToday() {
         segundos,
         fcMedia,
         pedalSemana,
+        totalMes,
+        totalAno,
       });
     }
 
@@ -214,7 +237,30 @@ export default function StatisticsToday() {
           value={Math.round(metricas.pedalSemana).toString()}
           unit="km"
           icon={
-            <Bike
+            <Repeat
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+        <MetricCard
+          label="Mês atual"
+          value={Math.round(metricas.totalMes).toString()}
+          unit="km"
+          icon={
+            <CalendarDays
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
+
+        <MetricCard
+          label="Ano corrente"
+          value={Math.round(metricas.totalAno).toString()}
+          unit="km"
+          icon={
+            <TrendingUp
               size={28}
               strokeWidth={1.8}
             />
