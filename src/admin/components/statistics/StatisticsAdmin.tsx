@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase";
 
 import styles from "./StatisticsAdmin.module.css";
 
-type TipoAtividade = "pedalada" | "longao" | "aventura";
+type TipoAtividade = "treino" | "longao" | "aventura";
 type Modalidade = "mtb" | "estrada" | "";
 type Terreno = "terra" | "asfalto" | "trilha" | "";
 type Dificuldade = "facil" | "moderada" | "dificil" | "";
@@ -27,7 +27,7 @@ interface FormData {
 }
 
 const initialForm: FormData = {
-  tipo: "pedalada",
+  tipo: "treino",
   data: "",
   modalidade: "",
   terreno: "",
@@ -141,12 +141,13 @@ export default function StatisticsAdmin() {
               <input
                 type="radio"
                 name="tipo"
-                value="pedalada"
-                checked={form.tipo === "pedalada"}
+                value="treino"
+                checked={form.tipo === "treino"}
                 onChange={() =>
-                  handleChange("tipo", "pedalada")
+                  handleChange("tipo", "treino")
                 }
               />
+<span>Treino</span>
               <span>Treino</span>
             </label>
 
