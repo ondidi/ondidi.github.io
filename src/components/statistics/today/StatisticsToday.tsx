@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import {
   Bike,
   Mountain,
+  Route,
+  Map,
   Heart,
   Flame,
   Clock,
@@ -19,6 +21,7 @@ import styles from "./StatisticsToday.module.css";
 
 export default function StatisticsToday() {
   const [metricas, setMetricas] = useState({
+    tipo: "",
     distancia: 0,
     altimetria: 0,
     calorias: 0,
@@ -67,7 +70,7 @@ const dataInicioAno = formatarDataLocal(inicioAno);
       const { data, error } = await supabase
         .from("atividades")
         .select(
-          "data, distancia, ganho_elevacao, calorias, duracao, fc_media, terreno"
+          "data, tipo, distancia, ganho_elevacao, calorias, duracao, fc_media, terreno"
         )
         .gte("data", dataInicioAno)
         .lte("data", dataHoje);
@@ -87,47 +90,52 @@ const dataInicioAno = formatarDataLocal(inicioAno);
       let pedalSemana = 0;
       let totalMes = 0;
       let totalAno = 0;
+      let tipoHoje = "";
 
       const frequencias: number[] = [];
       const terrenos = new Set<string>();
 
       (data || []).forEach((atividade) => {
-      const distanciaAtividade =
-        Number(atividade.distancia ?? 0);
+        const distanciaAtividade =
+          Number(atividade.distancia ?? 0);
 
-      totalAno += distanciaAtividade;
+        totalAno += distanciaAtividade;
 
-      if (
-        atividade.data.startsWith(
-          dataHoje.substring(0, 7)
-        )
-      ) {
-        totalMes += distanciaAtividade;
-      }
-
-      if (
-        atividade.data >= dataInicioSemana &&
-        atividade.data <= dataHoje
-      ) {
-        pedalSemana += distanciaAtividade;
-      }
-
-      // Estatísticas de HOJE
-      if (atividade.data === dataHoje) {
-
-        if (atividade.terreno) {
-          terrenos.add(atividade.terreno);
+        if (
+          atividade.data.startsWith(
+            dataHoje.substring(0, 7)
+          )
+        ) {
+          totalMes += distanciaAtividade;
         }
 
-        distancia += distanciaAtividade;
+        if (
+          atividade.data >= dataInicioSemana &&
+          atividade.data <= dataHoje
+        ) {
+          pedalSemana += distanciaAtividade;
+        }
 
-        altimetria += Number(
-          atividade.ganho_elevacao ?? 0
-        );
+        // Estatísticas de HOJE
+        if (atividade.data === dataHoje) {
 
-        calorias += Number(
-          atividade.calorias ?? 0
-        );
+          if (atividade.tipo) {
+            tipoHoje = atividade.tipo;
+          }
+
+          if (atividade.terreno) {
+            terrenos.add(atividade.terreno);
+          }
+
+          distancia += distanciaAtividade;
+
+          altimetria += Number(
+            atividade.ganho_elevacao ?? 0
+          );
+
+          calorias += Number(
+            atividade.calorias ?? 0
+          );
 
         if (atividade.fc_media != null) {
           frequencias.push(
@@ -163,6 +171,7 @@ const dataInicioAno = formatarDataLocal(inicioAno);
           : 0;
 
       setMetricas({
+        tipo: tipoHoje,
         distancia,
         altimetria,
         calorias,
@@ -197,8 +206,28 @@ const dataInicioAno = formatarDataLocal(inicioAno);
         <Bike size={22} strokeWidth={1.8} />
         <h2>HOJE</h2>
       </div>
+      
 
       <div className={styles.metrics}>
+        <MetricCard
+          label="Tipo de atividade"
+          value={
+            metricas.tipo === "treino"
+              ? "Treino"
+              : metricas.tipo === "longao"
+              ? "Longão"
+              : metricas.tipo === "aventura"
+              ? "Aventura"
+              : "—"
+          }
+          unit=""
+          icon={
+            <Route
+              size={28}
+              strokeWidth={1.8}
+            />
+          }
+        />
         <MetricCard
           label="Pedal"
           value={metricas.distancia.toFixed(2)}
@@ -222,7 +251,7 @@ const dataInicioAno = formatarDataLocal(inicioAno);
           }
           unit=""
           icon={
-            <Mountain
+            <Map
               size={28}
               strokeWidth={1.8}
             />
