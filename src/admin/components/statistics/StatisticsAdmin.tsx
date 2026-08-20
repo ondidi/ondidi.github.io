@@ -147,7 +147,7 @@ export default function StatisticsAdmin() {
                   handleChange("tipo", "pedalada")
                 }
               />
-              <span>Pedalada</span>
+              <span>Treino</span>
             </label>
 
             <label className={styles.radioOption}>

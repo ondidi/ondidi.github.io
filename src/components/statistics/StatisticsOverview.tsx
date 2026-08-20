@@ -1,7 +1,6 @@
 "use client";
 
 import {
-
     Bike,
     MapPin,
     Clock3,
@@ -9,8 +8,6 @@ import {
     Mountain,
     Globe,
     Trophy,
-    Globe2
-
 } from "lucide-react";
 
 import { useEffect, useState } from "react";
@@ -89,7 +86,6 @@ export default function StatisticsOverview() {
             <div className={styles.row}>
 
                 <OverviewCard
-                    className={styles.featured}
                     icon={<Mountain />}
                     title="ALTIMETRIA"
                     subtitle="ACUMULADA"
@@ -105,19 +101,18 @@ export default function StatisticsOverview() {
                 />
 
                 <OverviewCard
+                    icon={<Globe />}
+                    title="PAÍSES"
+                    subtitle="VISITADOS"
+                    value={overview.countries}
+                />
+
+                <OverviewCard
                     icon={<Trophy />}
                     title="AVENTURAS"
                     subtitle="PUBLICADAS"
                     value={overview.adventures}
                 />
-
-                <OverviewCard
-                    icon={<Globe2 />}
-                    title="isso representa"
-                    value="1,87"
-                    unit="volta ao Mundo"
-                />
-
 
             </div>
 

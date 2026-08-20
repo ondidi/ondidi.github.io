@@ -1,36 +1,27 @@
 import styles from "./OverviewCard.module.css";
 
 type Props = {
-
     icon: React.ReactNode;
-
     title: string;
-
     subtitle?: string;
-
     value: string | number;
-
     unit?: string;
-
     className?: string;
-
 };
 
 export default function OverviewCard({
-
     icon,
     title,
     subtitle,
     value,
     unit,
     className
-
 }: Props) {
 
     return (
-
-        <article className={`${styles.card} ${className ?? ""}`}>
-
+        <article
+            className={`${styles.card} ${className ?? ""}`}
+        >
             <div className={styles.icon}>
                 {icon}
             </div>
@@ -62,9 +53,6 @@ export default function OverviewCard({
                 )}
 
             </div>
-
         </article>
-
     );
-
 }

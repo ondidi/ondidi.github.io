@@ -5,6 +5,7 @@ export type StatisticsOverview = {
     calories: number;
     elevation: number;
     states: number;
+    countries: number;
     adventures: number;
 };
 
@@ -25,6 +26,8 @@ class StatisticsService {
             elevation: 328000,
 
             states: 6,
+
+            countries: 2,
 
             adventures: 29
 

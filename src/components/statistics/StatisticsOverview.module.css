@@ -12,22 +12,11 @@
     z-index: 10;
 
 }
-.featured{
-
-    width:320px;
-
-}
 
 .row {
-
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-
-    gap: 22px;
-
-    flex-wrap: nowrap;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
 }
 
 .secondRow{
