@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ChartNoAxesCombined } from "lucide-react";
 
 import { supabase } from "@/lib/supabase";
 
@@ -156,6 +157,11 @@ export default function StatisticsPerformance() {
   return (
     <section className={styles.container}>
       <div className={styles.header}>
+        <ChartNoAxesCombined
+          size={22}
+          strokeWidth={1.8}
+        />
+
         <h2>
           DESEMPENHO SEMANAL
         </h2>

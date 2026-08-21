@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import StatisticsYear from "@/components/statistics/year/StatisticsYear";
 
 import {
   StatisticsCover,
@@ -16,6 +17,7 @@ export default function EstatisticasPage() {
       <div className={styles.todayRow}>
         <StatisticsToday />
         <StatisticsPerformance />
+        <StatisticsYear />
       </div>
     </PageLayout>
   );
