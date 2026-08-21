@@ -6,7 +6,6 @@ import {
   Bar,
   CartesianGrid,
   ComposedChart,
-  Line,
   ReferenceLine,
   ResponsiveContainer,
   Tooltip,
@@ -92,12 +91,19 @@ export default function PerformanceChart({
     },
     (_, index) => index * 10
   );
+  const formatarTipo = (tipo: string) => {
+    if (tipo === "treino") return "Treino";
+    if (tipo === "longao") return "Longão";
+    if (tipo === "aventura") return "Aventura";
+
+    return "";
+  };
 
   return (
     <div className={styles.chart}>
       <ResponsiveContainer
         width="100%"
-        height={230}
+        height={280}
       >
         <ComposedChart
           data={dadosOrdenados}
@@ -105,8 +111,10 @@ export default function PerformanceChart({
             top: 10,
             right: 18,
             left: 0,
-            bottom: 0,
+            bottom: 30,
           }}
+          barCategoryGap="55%"
+          barGap={8}
         >
           {ticksDistancia.map((valor) => (
             <ReferenceLine
@@ -121,12 +129,75 @@ export default function PerformanceChart({
           <XAxis
             dataKey="dia"
             interval={0}
-            tick={{
-              fontSize: 11,
-              fill: "var(--color-text)",
-            }}
+            height={42}
             axisLine={false}
             tickLine={false}
+            tick={({ x, y, payload }) => {
+              const item = dadosOrdenados.find(
+                (dia) => dia.dia === payload.value
+              );
+
+              const tipo = item
+                ? formatarTipo(item.tipo)
+                : "";
+
+              const sigla =
+                tipo === "Treino"
+                  ? "T"
+                  : tipo === "Longão"
+                  ? "L"
+                  : tipo === "Aventura"
+                  ? "A"
+                  : "";
+
+              const posX = Number(x);
+              const posY = Number(y);
+
+              return (
+                <g
+                  transform={`translate(${posX}, ${posY + 10})`}
+                >
+                  <text
+                    x={0}
+                    y={0}
+                    textAnchor="middle"
+                    fill="var(--color-text)"
+                    fontSize={10}
+                  >
+                    {payload.value}
+                  </text>
+                  {sigla && (
+                  <>
+                    <circle
+                      cx={0}
+                      cy={34}
+                      r={15}
+                      fill={
+                      tipo === "Treino"
+                        ? "var(--color-text)"
+                        : tipo === "Longão"
+                        ? "var(--color-primary)"
+                        : "var(--color-text)"
+                    }
+                    />
+
+                    <text
+                      x={0}
+                      y={38}
+                      textAnchor="middle"
+                      fill="white"
+                      fontSize={10}
+                      fontWeight={800}
+                    >
+                      {sigla}
+                    </text>
+                  </>
+                )}
+
+                  
+                </g>
+              );
+            }}
           />
 
           <YAxis
@@ -135,7 +206,7 @@ export default function PerformanceChart({
             domain={[0, escalaDistancia]}
             ticks={ticksDistancia}
             tick={{
-              fontSize: 11,
+              fontSize: 12,
               fill: "var(--color-text)",
             }}
             axisLine={false}
@@ -147,7 +218,7 @@ export default function PerformanceChart({
             orientation="right"
             domain={[0, escalaAltimetria]}
             tick={{
-              fontSize: 11,
+              fontSize: 12,
               fill: "var(--color-text)",
             }}
             axisLine={false}
@@ -164,22 +235,20 @@ export default function PerformanceChart({
             barSize={20}
           />
 
-          <Line
+          <Bar
             yAxisId="elevation"
-            type="monotone"
             dataKey="altimetria"
-            stroke="var(--color-text)"
-            strokeWidth={2.5}
-            dot={{
-              r: 4,
-              fill: "var(--color-text)",
-            }}
-            activeDot={{
-              r: 5,
-            }}
+            fill="var(--color-text)"
+            radius={[3, 3, 0, 0]}
+            barSize={18}
           />
         </ComposedChart>
       </ResponsiveContainer>
+      <div className={styles.activityLegend}>
+        T - Treino&nbsp;&nbsp;|&nbsp;&nbsp;
+        L - Longão&nbsp;&nbsp;|&nbsp;&nbsp;
+        A - Aventura
+      </div>
     </div>
   );
 }

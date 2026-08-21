@@ -11,6 +11,7 @@ export interface PerformanceDay {
   dia: string;
   distancia: number;
   altimetria: number;
+  tipo: string;
 }
 
 function formatarData(date: Date) {
@@ -56,7 +57,7 @@ export default function StatisticsPerformance() {
       const { data, error } = await supabase
         .from("atividades")
         .select(
-          "data, distancia, ganho_elevacao"
+          "data, distancia, ganho_elevacao, tipo"
         )
         .gte("data", dataInicio)
         .lte("data", dataFim)
@@ -80,9 +81,7 @@ export default function StatisticsPerformance() {
       const resultado: PerformanceDay[] = [];
 
       for (let index = 0; index < 7; index++) {
-        const dataDia = new Date(
-          inicioSemana
-        );
+        const dataDia = new Date(inicioSemana);
 
         dataDia.setDate(
           inicioSemana.getDate() + index
@@ -94,9 +93,15 @@ export default function StatisticsPerformance() {
         const atividadesDoDia =
           atividades.filter(
             (atividade) =>
-              atividade.data ===
-              dataFormatada
+              atividade.data === dataFormatada
           );
+
+        const tipo =
+          atividadesDoDia.length > 0
+            ? atividadesDoDia[
+                atividadesDoDia.length - 1
+              ].tipo ?? ""
+            : "";
 
         const distancia =
           atividadesDoDia.reduce(
@@ -132,20 +137,21 @@ export default function StatisticsPerformance() {
           dia,
           distancia,
           altimetria,
+          tipo,
         });
-      }
+        }
 
-      console.log(
-        "DESEMPENHO SEMANAL:",
-        resultado
-      );
+        console.log(
+          "DESEMPENHO SEMANAL:",
+          resultado
+        );
 
-      setDados(resultado);
-      setLoading(false);
-    }
+        setDados(resultado);
+        setLoading(false);
+        }
 
-    carregarSemana();
-  }, []);
+        carregarSemana();
+        }, []);
 
   return (
     <section className={styles.container}>
