@@ -12,7 +12,7 @@ export default function SidebarBodyMobile() {
             <SidebarHeader showLogo={false} />
 
             <h2 className={styles.title}>
-                PEDALADAS
+                AVENTURAS
             </h2>
 
             <div className={styles.list}>

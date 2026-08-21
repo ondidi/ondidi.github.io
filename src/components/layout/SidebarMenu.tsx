@@ -23,7 +23,7 @@ export default function SidebarMenu() {
           <span>Início</span>
           </Link>
           <h2 className={styles.title}>
-            PEDALADAS
+            AVENTURAS
           </h2>
           
         </nav>
