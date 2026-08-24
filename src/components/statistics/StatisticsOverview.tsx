@@ -10,6 +10,7 @@ import {
     Trophy,
     Route,
     Gauge,
+    CalendarDays,
 } from "lucide-react";
 
 import { useEffect, useState } from "react";
@@ -145,7 +146,7 @@ export default function StatisticsOverview() {
                     icon={<Route />}
                     title="MÉDIA"
                     subtitle="KM / ANO"
-                    value={formatCompact(overview.averageYearDistance)}
+                    value={Math.round(overview.averageYearDistance).toLocaleString("pt-BR")}
                     unit="Quilômetros"
                 />
 
@@ -169,6 +170,13 @@ export default function StatisticsOverview() {
                     subtitle="MAIS LONGO"
                     value={formatCompact(overview.longestRide)}
                     unit="Quilômetros"
+                />
+
+                <OverviewCard
+                    icon={<CalendarDays />}
+                    title="ANO"
+                    subtitle="DO PEDAL"
+                    value={overview.longestRideYear}
                 />
 
             </div>

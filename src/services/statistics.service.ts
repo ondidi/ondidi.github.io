@@ -13,8 +13,8 @@ export type StatisticsOverview = {
     averageYearDistance: number;
     averageSpeed: number;
     longestRide: number;
+    longestRideYear: number;
 };
-
 class StatisticsService {
 
     async getOverview(): Promise<StatisticsOverview> {
@@ -44,6 +44,7 @@ class StatisticsService {
                 averageYearDistance: 0,
                 averageSpeed: 0,
                 longestRide: 0,
+                longestRideYear: 0,
             };
         }
 
@@ -157,17 +158,37 @@ class StatisticsService {
         // PEDAL MAIS LONGO
         // --------------------------------
 
-        const longestRide =
+        const maiorPedal =
             atividades.length > 0
-                ? Math.max(
-                    ...atividades.map(
-                        (atividade) =>
-                            Number(
-                                atividade.distancia ?? 0
-                            )
-                    )
-                )
+                ? atividades.reduce((maior, atividade) => {
+
+                    const distanciaAtual =
+                        Number(atividade.distancia ?? 0);
+
+                    const distanciaMaior =
+                        Number(maior.distancia ?? 0);
+
+                    return distanciaAtual > distanciaMaior
+                        ? atividade
+                        : maior;
+
+                })
+                : null;
+
+        const longestRide =
+            maiorPedal
+                ? Number(maiorPedal.distancia ?? 0)
                 : 0;
+
+        const longestRideYear =
+            maiorPedal?.data
+                ? new Date(
+                    maiorPedal.data
+                ).getFullYear()
+                : 0;
+
+        console.log("MAIOR PEDAL:", maiorPedal);
+        console.log("ANO DO MAIOR PEDAL:", longestRideYear);
 
 
         // --------------------------------
@@ -200,6 +221,7 @@ class StatisticsService {
             averageSpeed,
 
             longestRide,
+            longestRideYear,
 
         };
 
