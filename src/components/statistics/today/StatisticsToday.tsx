@@ -56,16 +56,12 @@ const dataInicioAno = formatarDataLocal(inicioAno);
 
       const inicioSemana = new Date(hoje);
 
-      const diaSemana = inicioSemana.getDay();
+        inicioSemana.setDate(
+          hoje.getDate() - 6
+        );
 
-      const diasDesdeSegunda =
-        diaSemana === 0 ? 6 : diaSemana - 1;
-
-      inicioSemana.setDate(
-        inicioSemana.getDate() - diasDesdeSegunda
-      );
-
-      const dataInicioSemana = formatarDataLocal(inicioSemana);
+        const dataInicioSemana =
+          formatarDataLocal(inicioSemana);
 
       const { data, error } = await supabase
         .from("atividades")

@@ -22,6 +22,22 @@ import OverviewCard from "./OverviewCard";
 
 import styles from "./StatisticsOverview.module.css";
 
+function formatCompact(value: number): string {
+    if (value >= 1_000_000) {
+        return `${(value / 1_000_000)
+            .toFixed(1)
+            .replace(".", ",")} M`;
+    }
+
+    if (value >= 1_000) {
+        return `${(value / 1_000)
+            .toFixed(1)
+            .replace(".", ",")} K`;
+    }
+
+    return value.toLocaleString("pt-BR");
+}
+
 export default function StatisticsOverview() {
 
     const [overview, setOverview] =
@@ -61,7 +77,7 @@ export default function StatisticsOverview() {
                     icon={<MapPin />}
                     title="QUILÔMETROS"
                     subtitle="PEDALADOS"
-                    value={overview.distance.toLocaleString("pt-BR")}
+                    value={formatCompact(overview.distance)}
                     unit="Quilômetros"
                 />
 
@@ -69,7 +85,7 @@ export default function StatisticsOverview() {
                     icon={<Clock3 />}
                     title="HORAS"
                     subtitle="EM MOVIMENTO"
-                    value={overview.hours.toLocaleString("pt-BR")}
+                    value={formatCompact(overview.hours)}
                     unit="Horas"
                 />
 
@@ -77,7 +93,7 @@ export default function StatisticsOverview() {
                     icon={<Flame />}
                     title="CALORIAS"
                     subtitle="QUEIMADAS"
-                    value={overview.calories.toLocaleString("pt-BR")}
+                    value={formatCompact(overview.calories)}
                     unit="Kilocalorias"
                 />
 
@@ -89,7 +105,7 @@ export default function StatisticsOverview() {
                     icon={<Mountain />}
                     title="ALTIMETRIA"
                     subtitle="ACUMULADA"
-                    value={overview.elevation.toLocaleString("pt-BR")}
+                    value={formatCompact(overview.elevation)}
                     unit="Metros"
                 />
 
