@@ -1,5 +1,4 @@
 import { supabase } from "@/lib/supabase";
-
 import { adventures } from "@/data/adventures";
 
 export type StatisticsOverview = {
@@ -11,6 +10,9 @@ export type StatisticsOverview = {
     states: number;
     countries: number;
     adventures: number;
+    averageYearDistance: number;
+    averageSpeed: number;
+    longestRide: number;
 };
 
 class StatisticsService {
@@ -20,10 +22,11 @@ class StatisticsService {
         const { data, error } = await supabase
             .from("atividades")
             .select(
-                "distancia, duracao, calorias, ganho_elevacao"
+                "distancia, duracao, calorias, ganho_elevacao, data"
             );
 
         if (error) {
+
             console.error(
                 "Erro ao carregar estatísticas:",
                 error
@@ -38,12 +41,24 @@ class StatisticsService {
                 states: 0,
                 countries: 0,
                 adventures: 0,
+                averageYearDistance: 0,
+                averageSpeed: 0,
+                longestRide: 0,
             };
         }
 
         const atividades = data ?? [];
 
+        // --------------------------------
+        // PEDALADAS
+        // --------------------------------
+
         const rides = atividades.length;
+
+
+        // --------------------------------
+        // DISTÂNCIA
+        // --------------------------------
 
         const distance = atividades.reduce(
             (total, atividade) =>
@@ -52,12 +67,22 @@ class StatisticsService {
             0
         );
 
+
+        // --------------------------------
+        // CALORIAS
+        // --------------------------------
+
         const calories = atividades.reduce(
             (total, atividade) =>
                 total +
                 Number(atividade.calorias ?? 0),
             0
         );
+
+
+        // --------------------------------
+        // ALTIMETRIA
+        // --------------------------------
 
         const elevation = atividades.reduce(
             (total, atividade) =>
@@ -67,6 +92,11 @@ class StatisticsService {
                 ),
             0
         );
+
+
+        // --------------------------------
+        // HORAS
+        // --------------------------------
 
         let totalSegundos = 0;
 
@@ -86,23 +116,91 @@ class StatisticsService {
                 horas * 3600 +
                 minutos * 60 +
                 segundos;
+
         });
 
         const hours =
             totalSegundos / 3600;
 
+
+        // --------------------------------
+        // MÉDIA KM / ANO
+        // --------------------------------
+
+        const years = new Set(
+            atividades
+                .filter((atividade) => atividade.data)
+                .map((atividade) =>
+                    new Date(
+                        atividade.data
+                    ).getFullYear()
+                )
+        );
+
+        const averageYearDistance =
+            years.size > 0
+                ? distance / years.size
+                : 0;
+
+
+        // --------------------------------
+        // VELOCIDADE MÉDIA
+        // --------------------------------
+
+        const averageSpeed =
+            hours > 0
+                ? distance / hours
+                : 0;
+
+
+        // --------------------------------
+        // PEDAL MAIS LONGO
+        // --------------------------------
+
+        const longestRide =
+            atividades.length > 0
+                ? Math.max(
+                    ...atividades.map(
+                        (atividade) =>
+                            Number(
+                                atividade.distancia ?? 0
+                            )
+                    )
+                )
+                : 0;
+
+
+        // --------------------------------
+        // RESULTADO
+        // --------------------------------
+
         return {
+
             rides,
+
             distance,
+
             hours,
+
             calories,
+
             elevation,
 
-            // Ainda não temos esses dados históricos.
+            // Temporariamente mantidos
+            // até termos esses dados estruturados.
             states: 6,
+
             countries: 2,
 
-            adventures: adventures.length,
+            adventures:
+                adventures.length,
+
+            averageYearDistance,
+
+            averageSpeed,
+
+            longestRide,
+
         };
 
     }

@@ -8,6 +8,8 @@ import {
     Mountain,
     Globe,
     Trophy,
+    Route,
+    Gauge,
 } from "lucide-react";
 
 import { useEffect, useState } from "react";
@@ -22,7 +24,12 @@ import OverviewCard from "./OverviewCard";
 
 import styles from "./StatisticsOverview.module.css";
 
-function formatCompact(value: number): string {
+function formatCompact(value: number | undefined): string {
+
+    if (value === undefined || value === null) {
+        return "0";
+    }
+
     if (value >= 1_000_000) {
         return `${(value / 1_000_000)
             .toFixed(1)
@@ -128,6 +135,40 @@ export default function StatisticsOverview() {
                     title="AVENTURAS"
                     subtitle="PUBLICADAS"
                     value={overview.adventures}
+                />
+
+            </div>
+
+            <div className={styles.row}>
+
+                <OverviewCard
+                    icon={<Route />}
+                    title="MÉDIA"
+                    subtitle="KM / ANO"
+                    value={formatCompact(overview.averageYearDistance)}
+                    unit="Quilômetros"
+                />
+
+                <OverviewCard
+                    icon={<Gauge />}
+                    title="VELOCIDADE"
+                    subtitle="MÉDIA"
+                    value={overview.averageSpeed.toLocaleString(
+                        "pt-BR",
+                        {
+                            minimumFractionDigits: 1,
+                            maximumFractionDigits: 1,
+                        }
+                    )}
+                    unit="km/h"
+                />
+
+                <OverviewCard
+                    icon={<Trophy />}
+                    title="PEDAL"
+                    subtitle="MAIS LONGO"
+                    value={formatCompact(overview.longestRide)}
+                    unit="Quilômetros"
                 />
 
             </div>
