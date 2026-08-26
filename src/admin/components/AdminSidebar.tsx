@@ -74,6 +74,17 @@ export default function AdminSidebar({
           />
           Estatísticas
         </Link>
+
+        <Link
+          href="/admin/manutencao"
+          onClick={() => setMenuOpen(false)}
+        >
+          <img
+            src="/img/icons/manutencao.svg"
+            alt="Manutenção"
+          />
+          Manutenção
+        </Link>
       </nav>
     </aside>
   );
