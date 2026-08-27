@@ -12,6 +12,7 @@ const categories = [
     status: "EM DIA",
     statusType: "ok",
     icon: "rodantes.svg",
+    href: "/admin/manutencao/elementos-rodantes",
     components: [],
   },
 
