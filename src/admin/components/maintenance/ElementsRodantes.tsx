@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const components = [
   {
-    name: "Pneu dianteiro",
+    name: "Pneus",
     service: "Última troca",
     date: "13/06/2026",
     mileage: "65.344 km",
@@ -14,21 +14,10 @@ const components = [
     status: "EM DIA",
     statusType: "ok" as const,
     icon: "pneu.svg",
+    slug: "pneus",
   },
   {
-    name: "Pneu traseiro",
-    service: "Última troca",
-    date: "13/06/2026",
-    mileage: "65.344 km",
-    sinceLabel: "Desde a troca",
-    since: "2.530 km",
-    next: "Avaliar desgaste",
-    status: "EM DIA",
-    statusType: "ok" as const,
-    icon: "pneu.svg",
-  },
-  {
-    name: "Câmara dianteira",
+    name: "Câmaras",
     service: "Última troca",
     date: "13/06/2026",
     mileage: "65.344 km",
@@ -38,21 +27,10 @@ const components = [
     status: "EM DIA",
     statusType: "ok" as const,
     icon: "camara.svg",
+    slug: "camaras",
   },
   {
-    name: "Câmara traseira",
-    service: "Última troca",
-    date: "13/06/2026",
-    mileage: "65.344 km",
-    sinceLabel: "Desde a troca",
-    since: "2.530 km",
-    next: "Avaliar condição",
-    status: "EM DIA",
-    statusType: "ok" as const,
-    icon: "camara.svg",
-  },
-  {
-    name: "Roda dianteira",
+    name: "Aros",
     service: "Última manutenção",
     date: "25/05/2026",
     mileage: "64.980 km",
@@ -62,18 +40,20 @@ const components = [
     status: "EM DIA",
     statusType: "ok" as const,
     icon: "roda.svg",
+    slug: "roda",
   },
   {
-    name: "Roda traseira",
+    name: "Cubos",
     service: "Última manutenção",
     date: "25/05/2026",
     mileage: "64.980 km",
     sinceLabel: "Desde a manutenção",
     since: "2.894 km",
     next: "Inspeção",
-    status: "ATENÇÃO",
-    statusType: "attention" as const,
-    icon: "roda.svg",
+    status: "EM DIA",
+    statusType: "ok" as const,
+    icon: "cubo.svg",
+    slug: "cubos",
   },
 ];
 
@@ -105,13 +85,11 @@ export default function ElementsRodantes() {
         <div className="maintenance-item-list">
           {components.map((item) => (
             <Link
-            key={item.name}
-            href={`/admin/manutencao/elementos-rodantes/${item.name
-                .toLowerCase()
-                .replaceAll(" ", "-")}`}
-            className="maintenance-item-link"
+              key={item.name}
+              href={`/admin/manutencao/elementos-rodantes/${item.slug}`}
+              className="maintenance-item-link"
             >
-            <MaintenanceItem {...item} />
+              <MaintenanceItem {...item} />
             </Link>
           ))}
         </div>

@@ -5,9 +5,11 @@ import { useState } from "react";
 import AdminSidebar from "@/admin/components/AdminSidebar";
 import AdminHeader from "@/admin/components/AdminHeader";
 import "@/admin/components/maintenance/maintenance.css";
+import MaintenanceEventModal from "@/admin/components/maintenance/MaintenanceEventModal";
 
 export default function PneuDianteiroPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [eventModalOpen, setEventModalOpen] = useState(false);
 
   return (
     <>
@@ -30,7 +32,7 @@ export default function PneuDianteiroPage() {
 
             <div>
               <span>ELEMENTOS RODANTES</span>
-              <h1>Pneu dianteiro</h1>
+              <h1>Pneus</h1>
             </div>
           </div>
 
@@ -100,13 +102,22 @@ export default function PneuDianteiroPage() {
             </div>
           </section>
 
-          <button className="maintenance-add">
+          <button
+            className="maintenance-add"
+            onClick={() => setEventModalOpen(true)}
+          >
             <span>+</span>
             <small>
               Registrar<br />
               manutenção
             </small>
           </button>
+          {eventModalOpen && (
+          <MaintenanceEventModal
+            componentName="Pneus"
+            onClose={() => setEventModalOpen(false)}
+          />
+        )}
 
         </main>
       </main>
