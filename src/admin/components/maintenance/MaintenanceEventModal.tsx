@@ -1,19 +1,118 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import {
+  buscarQuilometragemNaData,
+  registrarEventoManutencao,
+  processarSubstituicaoManutencao,
+} from "@/services/maintenance.service";
 
 interface MaintenanceEventModalProps {
   componentName: string;
+  cycleId: string;
+  componentId: string;
   onClose: () => void;
 }
 
 export default function MaintenanceEventModal({
   componentName,
+  cycleId,
+  componentId,
   onClose,
 }: MaintenanceEventModalProps) {
   const [eventType, setEventType] = useState<
     "inspection" | "rotation" | "replacement"
   >("inspection");
+
+  const [eventDate, setEventDate] = useState("2026-08-28");
+
+  const [quilometragem, setQuilometragem] = useState<number | null>(
+    null
+  );
+
+  const [calculandoKm, setCalculandoKm] = useState(false);
+  const [reason, setReason] = useState("Desgaste");
+  const [inspectionResult, setInspectionResult] =
+    useState("Sem problemas");
+  const [notes, setNotes] = useState("");
+  const [salvando, setSalvando] = useState(false);
+
+    useEffect(() => {
+    async function calcularQuilometragem() {
+      if (!eventDate) {
+        setQuilometragem(null);
+        return;
+      }
+
+      setCalculandoKm(true);
+
+      const km = await buscarQuilometragemNaData(eventDate);
+
+      setQuilometragem(km);
+      setCalculandoKm(false);
+    }
+
+    calcularQuilometragem();
+  }, [eventDate]);
+
+
+  async function handleSalvar() {
+    if (!eventDate || quilometragem === null) {
+      return;
+    }
+
+    setSalvando(true);
+
+    let sucesso = false;
+
+    if (eventType === "replacement") {
+      console.log(">>> INÍCIO SUBSTITUIÇÃO", {
+        cycleId,
+        eventDate,
+        reason,
+        notes,
+      });
+
+      const novoCycleId =
+        await processarSubstituicaoManutencao(
+          cycleId,
+          eventDate,
+          reason,
+          notes || null
+        );
+
+      console.log(
+        ">>> NOVO CYCLE ID:",
+        novoCycleId
+      );
+
+      sucesso = novoCycleId !== null;
+    } else {
+      sucesso = await registrarEventoManutencao({
+        cycleId,
+        eventDate,
+        eventType,
+        mileage: quilometragem,
+        reason: null,
+        inspectionResult:
+          eventType === "inspection"
+            ? inspectionResult
+            : null,
+        notes: notes || null,
+      });
+    }
+
+    setSalvando(false);
+
+    if (!sucesso) {
+      return;
+    }
+
+    onClose();
+
+    window.location.reload();
+  }
 
   return (
     <div className="maintenance-modal-overlay">
@@ -45,7 +144,8 @@ export default function MaintenanceEventModal({
             <input
               id="event-date"
               type="date"
-              defaultValue="2026-08-28"
+              value={eventDate}
+              onChange={(e) => setEventDate(e.target.value)}
             />
           </div>
 
@@ -53,7 +153,16 @@ export default function MaintenanceEventModal({
             <label>Quilometragem</label>
 
             <div className="maintenance-km-readonly">
-              <strong>67.874 km</strong>
+              <strong>
+                {calculandoKm
+                  ? "Calculando..."
+                  : quilometragem !== null
+                    ? `${Math.round(
+                        quilometragem
+                      ).toLocaleString("pt-BR")} km`
+                    : "—"}
+              </strong>
+
               <span>
                 calculada automaticamente pelas atividades
               </span>
@@ -131,7 +240,11 @@ export default function MaintenanceEventModal({
                 Motivo
               </label>
 
-              <select id="reason">
+              <select
+                id="reason"
+                value={reason}
+                onChange={(e) => setReason(e.target.value)}
+              >
                 <option>Desgaste</option>
                 <option>Dano</option>
                 <option>Preventiva</option>
@@ -146,7 +259,13 @@ export default function MaintenanceEventModal({
                 Resultado da inspeção
               </label>
 
-              <select id="inspection-result">
+              <select
+                id="inspection-result"
+                value={inspectionResult}
+                onChange={(e) =>
+                  setInspectionResult(e.target.value)
+                }
+              >
                 <option>Sem problemas</option>
                 <option>Atenção</option>
                 <option>Necessita substituição</option>
@@ -163,6 +282,8 @@ export default function MaintenanceEventModal({
               id="notes"
               rows={4}
               placeholder="Registre alguma informação importante..."
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
             />
           </div>
 
@@ -180,9 +301,10 @@ export default function MaintenanceEventModal({
           <button
             type="button"
             className="maintenance-button-primary"
-            onClick={onClose}
+            onClick={handleSalvar}
+            disabled={salvando}
           >
-            Salvar
+            {salvando ? "Salvando..." : "Salvar"}
           </button>
         </div>
 

@@ -1,5 +1,4 @@
 import { supabase } from "@/lib/supabase";
-import { adventures } from "@/data/adventures";
 
 export interface HistoricalStatistics {
   pedaladas: number;
