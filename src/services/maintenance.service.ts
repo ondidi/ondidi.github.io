@@ -74,6 +74,40 @@ export async function buscarQuilometragemNaData(
   return kmAtual - kmDepois;
 }
 
+export async function buscarQuilometragemNaDataDeInstalacao(
+  data: string
+): Promise<number> {
+  const dataAtual = new Date()
+    .toISOString()
+    .split("T")[0];
+
+  const { data: atividades, error } = await supabase
+    .from("atividades")
+    .select("distancia")
+    .gte("data", data)
+    .lte("data", dataAtual);
+
+  if (error) {
+    console.error(
+      "Erro ao buscar quilometragem desde a instalação:",
+      error
+    );
+    return 0;
+  }
+
+  const kmDesdeInstalacao =
+    (atividades ?? []).reduce(
+      (total, atividade) =>
+        total + Number(atividade.distancia ?? 0),
+      0
+    );
+
+  const kmAtual =
+    await buscarQuilometragemAtual();
+
+  return kmAtual - kmDesdeInstalacao;
+}
+
 export interface RegistrarEventoManutencao {
   cycleId: string;
   eventDate: string;
