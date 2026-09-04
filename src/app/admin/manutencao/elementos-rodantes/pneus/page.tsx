@@ -49,6 +49,24 @@ export default function PneuDianteiroPage() {
     }[]
   >([]);
 
+  const [historicosAnteriores, setHistoricosAnteriores] =
+  useState<
+    {
+      cycleId: string;
+      dataInicio: string;
+      dataFim: string | null;
+      kmNaInstalacao: number | null;
+      eventos: {
+        event_date: string;
+        event_type: string;
+        reason: string | null;
+        mileage: number | null;
+        inspection_result: string | null;
+        notes: string | null;
+      }[];
+    }[]
+  >([]);
+
   useEffect(() => {
     async function carregarDados() {
       const { data: ciclo, error: cicloError } =
@@ -143,6 +161,101 @@ export default function PneuDianteiroPage() {
         observacao: evento.notes,
       }))
     );
+        const { data: ciclosAnteriores, error: ciclosAnterioresError } =
+      await supabase
+        .from("maintenance_component_cycles")
+        .select("id, installed_at, removed_at")
+        .eq(
+          "component_id",
+          ciclo.component_id
+        )
+        .eq("is_current", false)
+        .order("installed_at", {
+          ascending: false,
+        });
+
+    if (ciclosAnterioresError) {
+      console.error(
+        "Erro ao carregar históricos anteriores:",
+        ciclosAnterioresError
+      );
+    } else {
+      const historicosComEventos = await Promise.all(
+        (ciclosAnteriores ?? []).map(
+          async (cicloAnterior) => {
+            const { data: eventosAnteriores, error } =
+              await supabase
+                .from("maintenance_events")
+                .select(
+                  "event_date, event_type, reason, mileage, inspection_result, notes"
+                )
+                .eq(
+                  "cycle_id",
+                  cicloAnterior.id
+                )
+                .order("event_date", {
+                  ascending: false,
+                });
+
+            if (error) {
+              console.error(
+                "Erro ao carregar eventos do ciclo anterior:",
+                error
+              );
+            }
+
+            const eventosComKm = await Promise.all(
+            (eventosAnteriores ?? []).map(
+              async (evento) => {
+
+                if (evento.mileage !== null) {
+                  return evento;
+                }
+
+                const kmDoEvento =
+                  await buscarQuilometragemNaData(
+                    evento.event_date
+                  );
+
+                return {
+                  ...evento,
+                  mileage: kmDoEvento,
+                };
+              }
+            )
+          );
+
+          const kmNaInstalacaoAnterior =
+            await buscarQuilometragemNaData(
+              cicloAnterior.installed_at
+            );
+
+          return {
+            cycleId: cicloAnterior.id,
+            dataInicio: cicloAnterior.installed_at,
+            dataFim: cicloAnterior.removed_at,
+            kmNaInstalacao: kmNaInstalacaoAnterior,
+            eventos: eventosComKm,
+          };
+          }
+        )
+      );
+
+      console.log(
+        ">>> HISTÓRICOS ANTERIORES COM EVENTOS:",
+        historicosComEventos
+      );
+
+      setHistoricosAnteriores(
+        historicosComEventos.map((cicloAnterior) => ({
+          cycleId: cicloAnterior.cycleId,
+          dataInicio: cicloAnterior.dataInicio,
+          dataFim: cicloAnterior.dataFim,
+          kmNaInstalacao: cicloAnterior.kmNaInstalacao,
+          eventos: cicloAnterior.eventos,
+        }))
+      );
+    }
     }
 
     carregarDados();
@@ -276,58 +389,167 @@ export default function PneuDianteiroPage() {
 
           </section>
 
-          <section className="maintenance-history">
+  <section className="maintenance-history">
 
   <h2>HISTÓRICO</h2>
 
+  {/* CICLO ATUAL */}
+  <div className="history-card">
+
+    <div className="history-date">
+      {dataInstalacao
+        ? new Date(
+            `${dataInstalacao}T00:00:00`
+          ).toLocaleDateString("pt-BR")
+        : "Carregando..."}
+    </div>
+
+    <div className="history-content">
+
+      <strong>
+        Instalação
+      </strong>
+
+      <strong>
+        {kmInstalacao !== null
+          ? `${kmInstalacao.toLocaleString(
+              "pt-BR",
+              {
+                maximumFractionDigits: 0,
+              }
+            )} km`
+          : "Calculando..."}
+      </strong>
+
+    </div>
+
+  </div>
+
   {historicos.map((evento, index) => (
-              <div className="history-card" key={`${evento.data}-${evento.tipo}-${index}`}>
+      <div
+        className="history-card"
+        key={`${evento.data}-${evento.tipo}-${index}`}
+      >
 
-                <div className="history-date">
-                  {new Date(
-                    `${evento.data}T00:00:00`
-                  ).toLocaleDateString("pt-BR")}
+        <div className="history-date">
+          {new Date(
+            `${evento.data}T00:00:00`
+          ).toLocaleDateString("pt-BR")}
+        </div>
+
+        <div className="history-content">
+
+          <strong>
+            {evento.tipo === "replacement"
+              ? "Substituição"
+              : evento.tipo === "rotation"
+                ? "Rodízio"
+                : "Inspeção"}
+          </strong>
+
+          <strong>
+            {evento.mileage !== null
+              ? `${evento.mileage.toLocaleString(
+                  "pt-BR",
+                  {
+                    maximumFractionDigits: 0,
+                  }
+                )} km`
+              : "—"}
+          </strong>
+
+          {evento.resultado && (
+            <span>
+              Resultado: {evento.resultado}
+            </span>
+          )}
+
+          {evento.observacao && (
+            <span>
+              {evento.observacao}
+            </span>
+          )}
+
+        </div>
+
+      </div>
+    ))}
+
+    {/* HISTÓRICOS ANTERIORES */}
+    {historicosAnteriores.length > 0 && (
+      <>
+        <div
+          style={{
+            margin: "24px 0",
+            borderTop: "1px solid #D9B26C",
+          }}
+        />
+
+        {historicosAnteriores.map((cicloAnterior) => (
+          <div key={cicloAnterior.cycleId}>
+
+            {cicloAnterior.eventos.map(
+              (evento, index) => (
+                <div
+                  className="history-card"
+                  key={`${evento.event_date}-${evento.event_type}-${index}`}
+                >
+
+                  <div className="history-date">
+                    {new Date(
+                      `${evento.event_date}T00:00:00`
+                    ).toLocaleDateString("pt-BR")}
+                  </div>
+
+                  <div className="history-content">
+
+                    <strong>
+                      {evento.event_type ===
+                      "replacement"
+                        ? "Substituição"
+                        : evento.event_type ===
+                          "rotation"
+                          ? "Rodízio"
+                          : "Inspeção"}
+                    </strong>
+
+                    <strong>
+                      {evento.mileage !== null
+                        ? `${evento.mileage.toLocaleString(
+                            "pt-BR",
+                            {
+                              maximumFractionDigits: 0,
+                            }
+                          )} km`
+                        : "—"}
+                    </strong>
+
+                    {evento.inspection_result && (
+                      <span>
+                        Resultado:{" "}
+                        {evento.inspection_result}
+                      </span>
+                    )}
+
+                    {evento.notes && (
+                      <span>
+                        {evento.notes}
+                      </span>
+                    )}
+
+                  </div>
+
                 </div>
+              )
+            )}
 
-                <div className="history-content">
+          </div>
+        ))}
 
-                  <strong>
-                    {evento.tipo === "replacement"
-                      ? "Substituição"
-                      : evento.tipo === "rotation"
-                        ? "Rodízio"
-                        : "Inspeção"}
-                  </strong>
+      </>
+    )}
 
-                  <strong>
-                    {evento.mileage !== null
-                      ? `${evento.mileage.toLocaleString(
-                          "pt-BR",
-                          {
-                            maximumFractionDigits: 0,
-                          }
-                        )} km`
-                      : "—"}
-                  </strong>
-
-                  {evento.resultado && (
-                    <span>
-                      Resultado: {evento.resultado}
-                    </span>
-                  )}
-
-                  {evento.observacao && (
-                    <span>
-                      {evento.observacao}
-                    </span>
-                  )}
-
-                </div>
-
-              </div>
-            ))}
-
-          </section>
+  </section>
 
           <button
             className="maintenance-add"
@@ -347,15 +569,15 @@ export default function PneuDianteiroPage() {
           {eventModalOpen &&
             cycleId &&
             componentId && (
-              <MaintenanceEventModal
-                componentName="Pneus"
-                cycleId={cycleId}
-                componentId={componentId}
-                onClose={() =>
-                  setEventModalOpen(false)
-                }
-              />
-            )}
+            <MaintenanceEventModal
+              componentName="Pneus"
+              cycleId={cycleId}
+              componentId={componentId}
+              onClose={() =>
+                setEventModalOpen(false)
+              }
+            />
+          )}
 
         </main>
       </main>
