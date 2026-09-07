@@ -1,8 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import MaintenanceCard from "./MaintenanceCard";
 import "./maintenance.css";
 import MaintenanceItem from "./MaintenanceItem";
+
+import {
+  buscarQuilometragemAtual,
+} from "@/services/maintenance.service";
 
 const categories = [
   {
@@ -134,6 +140,17 @@ const categories = [
 ];
 
 export default function MaintenanceDashboard() {
+  const [kmAtual, setKmAtual] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function carregarQuilometragem() {
+      const km = await buscarQuilometragemAtual();
+      setKmAtual(km);
+    }
+
+    carregarQuilometragem();
+  }, []);
+
   return (
     <main className="maintenance-page">
 
@@ -142,10 +159,15 @@ export default function MaintenanceDashboard() {
           <span>QUILOMETRAGEM ATUAL</span>
 
           <strong>
-            3.864 <small>km</small>
+            {kmAtual !== null
+              ? Math.round(kmAtual).toLocaleString("pt-BR")
+              : "Calculando..."}{" "}
+            <small>km</small>
           </strong>
 
-          <p>Atualizada em 25/08/2026</p>
+          <p>
+            Atualizada em {new Date().toLocaleDateString("pt-BR")}
+          </p>
         </div>
 
         <img

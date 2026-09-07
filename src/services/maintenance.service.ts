@@ -111,7 +111,12 @@ export async function buscarQuilometragemNaDataDeInstalacao(
 export interface RegistrarEventoManutencao {
   cycleId: string;
   eventDate: string;
-  eventType: "inspection" | "rotation" | "replacement";
+  eventType:
+    | "inspection"
+    | "rotation"
+    | "alignment"
+    | "repair"
+    | "replacement";
   mileage: number;
   reason?: string | null;
   inspectionResult?: string | null;

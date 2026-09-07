@@ -14,8 +14,19 @@ import {
   buscarQuilometragemNaData,
 } from "@/services/maintenance.service";
 
-export default function ElementsRodantes() {
+  export default function ElementsRodantes() {
   const [pneuData, setPneuData] = useState({
+    date: "Carregando...",
+    mileage: "Carregando...",
+    since: "Carregando...",
+  });
+
+  const [arosData, setArosData] = useState({
+    date: "Carregando...",
+    mileage: "Carregando...",
+    since: "Carregando...",
+  });
+  const [cubosData, setCubosData] = useState({
     date: "Carregando...",
     mileage: "Carregando...",
     since: "Carregando...",
@@ -77,6 +88,101 @@ export default function ElementsRodantes() {
 
     carregarPneus();
   }, []);
+  useEffect(() => {
+    async function carregarAros() {
+      const { data: ciclo, error } = await supabase
+        .from("maintenance_component_cycles")
+        .select("id, installed_at")
+        .eq(
+          "component_id",
+          "7d21265a-87db-467e-b98c-52b060b14a55"
+        )
+        .eq("is_current", true)
+        .single();
+
+      if (error || !ciclo) {
+        console.error(
+          "Erro ao carregar ciclo dos aros:",
+          error
+        );
+        return;
+      }
+
+      const dataInstalacao = ciclo.installed_at;
+
+      const [
+        kmNaInstalacao,
+        kmAtual,
+      ] = await Promise.all([
+        buscarQuilometragemNaData(dataInstalacao),
+        buscarQuilometragemAtual(),
+      ]);
+
+      setArosData({
+        date: new Date(
+          `${dataInstalacao}T00:00:00`
+        ).toLocaleDateString("pt-BR"),
+
+        mileage: `${Math.round(
+          kmNaInstalacao
+        ).toLocaleString("pt-BR")} km`,
+
+        since: `${Math.round(
+          kmAtual - kmNaInstalacao
+        ).toLocaleString("pt-BR")} km`,
+      });
+    }
+
+    carregarAros();
+  }, []);
+
+  useEffect(() => {
+    async function carregarCubos() {
+      const { data: ciclo, error } = await supabase
+        .from("maintenance_component_cycles")
+        .select("id, installed_at")
+        .eq(
+          "component_id",
+          "69a7233b-cf0b-4b1f-b26e-97beb6758843"
+        )
+        .eq("is_current", true)
+        .single();
+
+      if (error || !ciclo) {
+        console.error(
+          "Erro ao carregar ciclo dos cubos:",
+          error
+        );
+        return;
+      }
+
+      const dataInstalacao = ciclo.installed_at;
+
+      const [
+        kmNaInstalacao,
+        kmAtual,
+      ] = await Promise.all([
+        buscarQuilometragemNaData(dataInstalacao),
+        buscarQuilometragemAtual(),
+      ]);
+
+      setCubosData({
+        date: new Date(
+          `${dataInstalacao}T00:00:00`
+        ).toLocaleDateString("pt-BR"),
+
+        mileage: `${Math.round(
+          kmNaInstalacao
+        ).toLocaleString("pt-BR")} km`,
+
+        since: `${Math.round(
+          kmAtual - kmNaInstalacao
+        ).toLocaleString("pt-BR")} km`,
+      });
+    }
+
+    carregarCubos();
+  }, []);
 
   const components = [
     {
@@ -107,24 +213,24 @@ export default function ElementsRodantes() {
     },
     {
       name: "Aros",
-      service: "Última manutenção",
-      date: "25/05/2026",
-      mileage: "64.980 km",
-      sinceLabel: "Desde a manutenção",
-      since: "2.894 km",
+      service: "Instalação",
+      date: arosData.date,
+      mileage: arosData.mileage,
+      sinceLabel: "Desde a instalação",
+      since: arosData.since,
       next: "Inspeção",
       status: "EM DIA",
       statusType: "ok" as const,
       icon: "roda.svg",
-      slug: "roda",
+      slug: "aros",
     },
     {
       name: "Cubos",
-      service: "Última manutenção",
-      date: "25/05/2026",
-      mileage: "64.980 km",
-      sinceLabel: "Desde a manutenção",
-      since: "2.894 km",
+      service: "Instalação",
+      date: cubosData.date,
+      mileage: cubosData.mileage,
+      sinceLabel: "Desde a instalação",
+      since: cubosData.since,
       next: "Inspeção",
       status: "EM DIA",
       statusType: "ok" as const,
