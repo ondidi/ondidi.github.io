@@ -27,13 +27,13 @@
 .maintenance-mileage-info span {
   display: block;
   margin-bottom: 4px;
-  font-size: 11px;
+  font-size: 18px;
   color: #444;
 }
 
 .maintenance-mileage-info strong {
   display: block;
-  font-size: 34px;
+  font-size: 44px;
   font-weight: 500;
   color: #303030;
 }
@@ -45,12 +45,12 @@
 
 .maintenance-mileage-info p {
   margin: 2px 0 0;
-  font-size: 12px;
+  font-size: 16px;
   color: #555;
 }
 
 .maintenance-mileage img {
-  width: 190px;
+  width: 100px;
   max-width: 45%;
   height: auto;
 }

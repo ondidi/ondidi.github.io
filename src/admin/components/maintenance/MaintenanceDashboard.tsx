@@ -17,7 +17,7 @@ const categories = [
     progress: "4 / 6 itens em dia",
     status: "EM DIA",
     statusType: "ok",
-    icon: "rodantes.svg",
+    icon: "rodantes1.svg",
     href: "/admin/manutencao/elementos-rodantes",
     components: [],
   },
@@ -51,7 +51,7 @@ const categories = [
         next: "4.500 km",
         status: "EM DIA",
         statusType: "ok",
-        icon: "corrente.svg",
+        icon: "corrente1.svg",
       },
 
       {
@@ -64,11 +64,11 @@ const categories = [
         next: "5.000 km",
         status: "ATENÇÃO",
         statusType: "attention",
-        icon: "cassete.svg",
+        icon: "cassete1.svg",
       },
 
       {
-        name: "Câmbio traseiro",
+        name: "Desviador traseiro",
         service: "Última manutenção",
         date: "25/05/2026",
         mileage: "2.900 km",
@@ -77,7 +77,7 @@ const categories = [
         next: "6.000 km",
         status: "EM DIA",
         statusType: "ok",
-        icon: "cambio.svg",
+        icon: "desviador.svg",
       },
 
       {
@@ -90,7 +90,7 @@ const categories = [
         next: "6.000 km",
         status: "EM DIA",
         statusType: "ok",
-        icon: "trocador.svg",
+        icon: "trocador1.svg",
       },
 
       {
