@@ -1226,6 +1226,50 @@ export const adventures = [
             count: 24,
             caption: "'Minas é música'"
         }
+    },
+
+        {
+    id: 30,
+    slug: "Olimpia",
+
+    menu: {
+        title: "Olímpia - SP",
+        year: 2026,
+        image: "/img/olimpia/thumb.webp"
+    },
+
+    home: {
+        featured: true,
+        city: "Olimpia",
+        distance: 54,
+        difficulty: "moderada",
+        date: "2026-09-19"
+    },
+
+    hero: {
+        image: "/img/olimpia/tophero.webp",
+        title: "Pedal Olímpia"
+    },
+
+    info: {
+        published: "19 de setembro de 2026",
+
+        description: `
+    A ideia da viagem para Olímpia - SP era curtir os parques. Mas as bikes, minha e da Ni, insistiram em ir junto e lá elas falaram mais alto.
+    Depois de mais de uma semana de chuva em Rio Claro o tempo, deu um tempo e aproveitamos para conhecer um pouco mais da região pedalando.
+    O interior de São Paulo de bicicleta é interessante porque, além das estradas e pequenas cidades e vilarejos, ainda aparecem lugares que mostram um pouco de um passado rural mais antigo, com restos de uma cultura caipira que hoje convive com uma realidade bem diferente, marcada pelo agro.
+    Olímpia também tem uma boa estrutura cicloviária, o que facilita bastante conhecer a cidade de bike. A cidade também, por ser um ponto turístico também tem lugares gastronômicos interessantes.
+    Ah, os parques, eles vão ter de esperar uma outra hora. A bike ganhou destaque, mas aconselho quem não foi dar um pulo em Olímpia. Se curtir bike, melhor não levar...
+            `
+        },
+
+        gallery: {
+            folder: "olimpia",
+            prefix: "olimpia",
+            extension: "webp",
+            count: 14,
+            caption: "'Explorando interior de SP'"
+        }
     }
 
 ];
