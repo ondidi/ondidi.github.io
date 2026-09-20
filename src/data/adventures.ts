@@ -1267,7 +1267,7 @@ export const adventures = [
             folder: "olimpia",
             prefix: "olimpia",
             extension: "webp",
-            count: 14,
+            count: 18,
             caption: "'Explorando interior de SP'"
         }
     }
