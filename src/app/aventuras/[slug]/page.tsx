@@ -9,6 +9,7 @@ import AdventureText from "@/components/adventures/AdventureText/AdventureText";
 import styles from "./page.module.css";
 import { adventures } from "@/data/adventures";
 
+
 type Props = {
     params: Promise<{
         slug: string;
@@ -46,6 +47,8 @@ export default async function AdventurePage({ params }: Props) {
                         text={adventure.info.description}
                     />
 
+                    
+
                 </div>
 
                 <AdventurePhotoGallery
@@ -54,6 +57,7 @@ export default async function AdventurePage({ params }: Props) {
                     prefix={adventure.gallery.prefix}
                     extension={adventure.gallery.extension}
                     count={adventure.gallery.count}
+                    route={adventure.route?.gpx}
                 />
 
             </div>

@@ -1263,6 +1263,10 @@ export const adventures = [
             `
         },
 
+        route: {
+            gpx: "/gpx/olimpia.gpx"
+        },
+
         gallery: {
             folder: "olimpia",
             prefix: "olimpia",
