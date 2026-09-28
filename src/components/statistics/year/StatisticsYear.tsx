@@ -126,7 +126,7 @@ export default function StatisticsYear() {
     <section className={styles.container}>
         <div className={styles.header}>
         <CalendarDays size={22} strokeWidth={1.8} />
-        <h2>DESEMPENHO ANUAL</h2>
+        <h2>DESEMPENHO MENSAL</h2>
         </div>
 
         <div className={styles.legend}>
