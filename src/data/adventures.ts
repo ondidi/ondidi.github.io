@@ -1274,6 +1274,54 @@ export const adventures = [
             count: 18,
             caption: "'Explorando interior de SP'"
         }
+    },
+
+        {
+    id: 31,
+    slug: "Bueno",
+
+    menu: {
+        title: "Bueno Brandão - MG",
+        year: 2026,
+        image: "/img/bueno/thumb.webp"
+    },
+
+    home: {
+        featured: true,
+        city: "Bueno",
+        distance: 185,
+        difficulty: "Difícil",
+        date: "2026-10-21"
+    },
+
+    hero: {
+        image: "/img/bueno/tophero.webp",
+        title: "Bueno Brandão"
+    },
+
+    info: {
+        published: "22 de outubro de 2026",
+
+        description: `
+    Sempre que terminamos um pedal especial, carregamos nas tintas e o proclamamos como o "estado da arte" da pedalada. Até que vem o próximo. E depois outro, e mais outro. Talvez seja assim mesmo a vida: estamos sempre em busca de algo novo, que nos emocione, nos tire da rotina e nos devolva um pouco daquela alegria que o agito do dia a dia insiste em consumir.
+    Passamos cinco dias em Bueno Brandão, no sul de Minas Gerais. A ideia era conhecer as famosas cachoeiras e seus encantos. Mas, no fim, as montanhas acabaram roubando a cena. O pedal foi um grande desafio de altimetria. Por lá, quando não se sobe, desce. São praticamente duas notas musicais, sem muito espaço para respirar entre elas. Uma saída de apenas 20 quilômetros pode facilmente acumular mil metros de subida.
+    Foram mais de 180 quilômetros pedalados em quatro dias. Percorremos algumas das rotas mais conhecidas, que levam as cachoeiras como Félix, Malacacheta e Machado, além de parques, mirantes, bairros, vilas distantes, alambiques, cafés e tantos outros pontos de interesse.
+        Passamos por estradas, trilhas e descemos por cafezais em caminhos tão íngremes que, por vezes, parece que só os tratores conseguem subir por ali para buscar os grãos de café. 
+    E, claro, aventura que se preze também tem seus percalços. Logo no primeiro passeio, um galho resolveu me acompanhar por mais tempo do que deveria e acabou entortando a gancheira do câmbio. Perdi o último e o primeiro cog do cassete. Na prática, fiquei com menos opções de marcha: mais esforço nas subidas e menos rendimento nas descidas. Tenso.
+    Mas foi justamente no dia da frustração que recebemos uma daquelas surpresas. Fomos acolhidos por uma comunidade religiosa, onde um delicioso almoço estava sendo servido. Teve comida farta, sobremesa e uma boa conversa sobre religião com um jovem padre. Um encontro inesperado, desses que não aparecem no roteiro, mas acabam se tornando parte importante da viagem.
+    No fim, as coisas se ajeitam. Ou, pelo menos, a gente aprende a olhar para elas de outro jeito. O câmbio avariado, as subidas intermináveis, o cansaço e os imprevistos passam a fazer parte da história. E talvez seja justamente isso que torna uma pedalada memorável.
+    Bueno Brandão foi uma aventura maravilhosa, intensa e desafiadora, que recomendo.
+
+            `
+        },
+
+        gallery: {
+            folder: "bueno",
+            prefix: "bueno",
+            extension: "webp",
+            count: 17,
+            caption: "'Paisagens, desafios e bons momentos'"
+        }
     }
 
 ];
