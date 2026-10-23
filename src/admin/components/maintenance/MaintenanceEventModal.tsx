@@ -13,6 +13,8 @@ interface MaintenanceEventModalProps {
   cycleId: string;
   componentId: string;
   onClose: () => void;
+  initialEventType?: "inspection" | "rotation" | "replacement";
+  showEventTypeSelector?: boolean;
 }
 
 export default function MaintenanceEventModal({
@@ -20,10 +22,12 @@ export default function MaintenanceEventModal({
   cycleId,
   componentId,
   onClose,
+  initialEventType = "inspection",
+  showEventTypeSelector = true,
 }: MaintenanceEventModalProps) {
   const [eventType, setEventType] = useState<
-    "inspection" | "rotation" | "replacement"
-  >("inspection");
+  "inspection" | "rotation" | "replacement"
+>(initialEventType);
 
   const [eventDate, setEventDate] = useState("2026-08-28");
 
@@ -169,42 +173,44 @@ export default function MaintenanceEventModal({
             </div>
           </div>
 
-          <fieldset className="maintenance-form-field">
-            <legend>Tipo de evento</legend>
+          {showEventTypeSelector && (
+            <fieldset className="maintenance-form-field">
+              <legend>Tipo de evento</legend>
 
-            <label className="maintenance-radio">
-              <input
-                type="radio"
-                name="event-type"
-                value="inspection"
-                checked={eventType === "inspection"}
-                onChange={() => setEventType("inspection")}
-              />
-              <span>Inspeção</span>
-            </label>
+              <label className="maintenance-radio">
+                <input
+                  type="radio"
+                  name="event-type"
+                  value="inspection"
+                  checked={eventType === "inspection"}
+                  onChange={() => setEventType("inspection")}
+                />
+                <span>Inspeção</span>
+              </label>
 
-            <label className="maintenance-radio">
-              <input
-                type="radio"
-                name="event-type"
-                value="rotation"
-                checked={eventType === "rotation"}
-                onChange={() => setEventType("rotation")}
-              />
-              <span>Rodízio</span>
-            </label>
+              <label className="maintenance-radio">
+                <input
+                  type="radio"
+                  name="event-type"
+                  value="rotation"
+                  checked={eventType === "rotation"}
+                  onChange={() => setEventType("rotation")}
+                />
+                <span>Rodízio</span>
+              </label>
 
-            <label className="maintenance-radio">
-              <input
-                type="radio"
-                name="event-type"
-                value="replacement"
-                checked={eventType === "replacement"}
-                onChange={() => setEventType("replacement")}
-              />
-              <span>Substituição</span>
-            </label>
-          </fieldset>
+              <label className="maintenance-radio">
+                <input
+                  type="radio"
+                  name="event-type"
+                  value="replacement"
+                  checked={eventType === "replacement"}
+                  onChange={() => setEventType("replacement")}
+                />
+                <span>Substituição</span>
+              </label>
+            </fieldset>
+          )}
 
           {eventType === "rotation" && (
             <div className="maintenance-rotation-fields">

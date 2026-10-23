@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { supabase } from "@/lib/supabase";
 
@@ -15,6 +16,7 @@ import {
 } from "@/services/maintenance.service";
 
 export default function CubosPage() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [eventModalOpen, setEventModalOpen] =
@@ -124,7 +126,7 @@ export default function CubosPage() {
     carregarDados();
   }, []);
 
-  return (
+    return (
     <>
       <AdminSidebar
         menuOpen={menuOpen}
@@ -139,185 +141,180 @@ export default function CubosPage() {
         <main className="maintenance-page">
 
           <div className="maintenance-detail-header">
-            <a href="/admin/manutencao/elementos-rodantes">
+
+            <a href="/admin/manutencao">
               ‹
             </a>
 
             <div>
-              <span>ELEMENTOS RODANTES</span>
-              <h1>Cubos</h1>
-            </div>
-          </div>
-
-          <div className="component-status">
-            <span className="maintenance-status ok">
-              EM DIA
-            </span>
-          </div>
-
-          <section className="component-overview">
-
-            <div className="component-overview-row">
-
-              <div>
-                <span>INSTALAÇÃO</span>
-
-                <strong>
-                  {dataInstalacao
-                    ? new Date(
-                        `${dataInstalacao}T00:00:00`
-                      ).toLocaleDateString(
-                        "pt-BR"
-                      )
-                    : "Carregando..."}
-                </strong>
-              </div>
-
-              <div>
-                <span>KM NA DATA</span>
-
-                <strong>
-                  {kmInstalacao !== null
-                    ? `${kmInstalacao.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-            </div>
-
-            <div className="component-overview-row">
-
-              <div>
-                <span>KM ATUAL</span>
-
-                <strong>
-                  {kmAtual !== null
-                    ? `${kmAtual.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-              <div>
-                <span>
-                  USO DESDE A INSTALAÇÃO
-                </span>
-
-                <strong>
-                  {kmUso !== null
-                    ? `${kmUso.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-            </div>
-
-          </section>
-
-          <section className="component-reference">
-
-            <h2>REFERÊNCIA</h2>
-
-            <div className="reference-card">
-
               <span>
-                Critério de avaliação
+                ELEMENTOS RODANTES
               </span>
 
-              <strong>
-                Condição do cubo
-              </strong>
+              <h1>Cubos</h1>
+            </div>
 
-              <p>
-                Avaliar a condição dos cubos,
-                verificando folgas, ruídos,
-                funcionamento dos rolamentos
-                e eventuais danos.
-              </p>
+            <div className="maintenance-component-navigation">
+
+              <button
+                type="button"
+                onClick={() =>
+                  router.push(
+                    "/admin/manutencao/elementos-rodantes/aros"
+                  )
+                }
+              >
+                ‹
+              </button>
+
+              <span>4/4</span>
+
+              <button
+                type="button"
+                disabled
+              >
+                ›
+              </button>
 
             </div>
 
-          </section>
+          </div>
 
-          <section className="maintenance-history">
+          <div className="pneus-list">
 
-            <h2>HISTÓRICO</h2>
+            {/* CUBO DIANTEIRO */}
+            <article className="pneu-card">
 
-            {historicos.map(
-              (evento, index) => (
-                <div
-                  className="history-card"
-                  key={`${evento.data}-${evento.tipo}-${index}`}
-                >
+              <div className="pneu-card-header">
 
-                  <div className="history-date">
-                    {new Date(
-                      `${evento.data}T00:00:00`
-                    ).toLocaleDateString(
-                      "pt-BR"
-                    )}
-                  </div>
-
-                  <div className="history-content">
-
-                    <strong>
-                      {evento.tipo ===
-                      "replacement"
-                        ? "Substituição"
-                        : evento.tipo ===
-                          "inspection"
-                        ? "Inspeção"
-                        : evento.tipo ===
-                          "repair"
-                        ? "Reparo"
-                        : evento.tipo}
-                    </strong>
-
-                    <strong>
-                      {evento.mileage !== null
-                        ? `${evento.mileage.toLocaleString(
-                            "pt-BR",
-                            {
-                              maximumFractionDigits: 0,
-                            }
-                          )} km`
-                        : "—"}
-                    </strong>
-
-                    {evento.resultado && (
-                      <span>
-                        Resultado:{" "}
-                        {evento.resultado}
-                      </span>
-                    )}
-
-                    {evento.observacao && (
-                      <span>
-                        {evento.observacao}
-                      </span>
-                    )}
-
-                  </div>
-
+                <div>
+                  <h2>Cubo</h2>
+                  <span>Dianteiro</span>
                 </div>
-              )
-            )}
 
-          </section>
+                <button
+                  type="button"
+                  className="pneu-menu-button"
+                  aria-label="Opções do cubo dianteiro"
+                >
+                  ⋮
+                </button>
+
+              </div>
+
+              <div className="pneu-card-data">
+
+                <div>
+                  <span>Última troca:</span>
+
+                  <strong>
+                    {dataInstalacao
+                      ? new Date(
+                          `${dataInstalacao}T00:00:00`
+                        ).toLocaleDateString(
+                          "pt-BR"
+                        )
+                      : "Carregando..."}
+                  </strong>
+
+                  <strong>
+                    {kmInstalacao !== null
+                      ? `${kmInstalacao.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>Desde a troca</span>
+
+                  <strong>
+                    {kmUso !== null
+                      ? `${kmUso.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+              </div>
+
+            </article>
+
+            {/* CUBO TRASEIRO */}
+            <article className="pneu-card">
+
+              <div className="pneu-card-header">
+
+                <div>
+                  <h2>Cubo</h2>
+                  <span>Traseiro</span>
+                </div>
+
+                <button
+                  type="button"
+                  className="pneu-menu-button"
+                  aria-label="Opções do cubo traseiro"
+                >
+                  ⋮
+                </button>
+
+              </div>
+
+              <div className="pneu-card-data">
+
+                <div>
+                  <span>Última troca:</span>
+
+                  <strong>
+                    {dataInstalacao
+                      ? new Date(
+                          `${dataInstalacao}T00:00:00`
+                        ).toLocaleDateString(
+                          "pt-BR"
+                        )
+                      : "Carregando..."}
+                  </strong>
+
+                  <strong>
+                    {kmInstalacao !== null
+                      ? `${kmInstalacao.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>Desde a troca</span>
+
+                  <strong>
+                    {kmUso !== null
+                      ? `${kmUso.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
 
           <button
             className="maintenance-add"
@@ -339,16 +336,14 @@ export default function CubosPage() {
 
         {eventModalOpen &&
           cycleId && (
-
-          <MaintenanceEventModalCubos
-            componentName="Cubos"
-            cycleId={cycleId}
-            onClose={() =>
-              setEventModalOpen(false)
-            }
-          />
-
-        )}
+            <MaintenanceEventModalCubos
+              componentName="Cubos"
+              cycleId={cycleId}
+              onClose={() =>
+                setEventModalOpen(false)
+              }
+            />
+          )}
 
       </main>
     </>

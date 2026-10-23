@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { ComponentProps } from "react";
 
 import MaintenanceCard from "./MaintenanceCard";
 import "./maintenance.css";
@@ -10,7 +11,24 @@ import {
   buscarQuilometragemAtual,
 } from "@/services/maintenance.service";
 
-const categories = [
+type MaintenanceComponent = ComponentProps<typeof MaintenanceItem>;
+
+type MaintenanceCategory = {
+  title: string;
+  description: string;
+  progress: string;
+  status: string;
+  statusType: ComponentProps<typeof MaintenanceCard>["statusType"];
+  icon: string;
+  href?: string;
+  menuItems?: {
+    name: string;
+    href: string;
+  }[];
+  components: MaintenanceComponent[];
+};
+
+const categories: MaintenanceCategory[] = [
   {
     title: "Elementos rodantes",
     description: "Pneus, câmaras, rodas, cubos...",
@@ -18,7 +36,24 @@ const categories = [
     status: "EM DIA",
     statusType: "ok",
     icon: "rodantes1.svg",
-    href: "/admin/manutencao/elementos-rodantes",
+    menuItems: [
+      {
+        name: "Pneus",
+        href: "/admin/manutencao/elementos-rodantes/pneus",
+      },
+      {
+        name: "Câmaras",
+        href: "/admin/manutencao/elementos-rodantes/camaras",
+      },
+      {
+        name: "Aros",
+        href: "/admin/manutencao/elementos-rodantes/aros",
+      },
+      {
+        name: "Cubos",
+        href: "/admin/manutencao/elementos-rodantes/cubos",
+      },
+    ],
     components: [],
   },
 
@@ -30,82 +65,6 @@ const categories = [
     statusType: "attention",
     icon: "freios.svg",
     components: [],
-  },
-
-  {
-    title: "Transmissão",
-    description: "Corrente, K7, câmbio, cabos...",
-    progress: "4 / 7 itens em dia",
-    status: "ATENÇÃO",
-    statusType: "attention",
-    icon: "transmissao.svg",
-
-    components: [
-      {
-        name: "Corrente",
-        service: "Última troca",
-        date: "20/08/2026",
-        mileage: "3.800 km",
-        sinceLabel: "Desde a troca",
-        since: "64 km",
-        next: "4.500 km",
-        status: "EM DIA",
-        statusType: "ok",
-        icon: "corrente1.svg",
-      },
-
-      {
-        name: "Cassete (K7)",
-        service: "Última troca",
-        date: "10/06/2026",
-        mileage: "3.200 km",
-        sinceLabel: "Desde a troca",
-        since: "664 km",
-        next: "5.000 km",
-        status: "ATENÇÃO",
-        statusType: "attention",
-        icon: "cassete1.svg",
-      },
-
-      {
-        name: "Desviador traseiro",
-        service: "Última manutenção",
-        date: "25/05/2026",
-        mileage: "2.900 km",
-        sinceLabel: "Desde a manutenção",
-        since: "964 km",
-        next: "6.000 km",
-        status: "EM DIA",
-        statusType: "ok",
-        icon: "desviador.svg",
-      },
-
-      {
-        name: "Trocador",
-        service: "Última manutenção",
-        date: "25/05/2026",
-        mileage: "2.900 km",
-        sinceLabel: "Desde a manutenção",
-        since: "964 km",
-        next: "6.000 km",
-        status: "EM DIA",
-        statusType: "ok",
-        icon: "trocador1.svg",
-      },
-
-      {
-        name: "Cabos e conduítes",
-        service: "Última troca",
-        date: "15/03/2026",
-        mileage: "2.200 km",
-        sinceLabel: "Desde a troca",
-        since: "1.664 km",
-        next: "3.000 km",
-        status: "ATENÇÃO",
-        statusType: "attention",
-        icon: "cabos.svg",
-      },
-    ],
   },
 
   {
@@ -136,6 +95,72 @@ const categories = [
     statusType: "empty",
     icon: "manutencao.svg",
     components: [],
+  },
+];
+const components: MaintenanceComponent[] = [
+  {
+    name: "Corrente",
+    service: "Última troca",
+    date: "20/08/2026",
+    mileage: "3.800 km",
+    sinceLabel: "Desde a troca",
+    since: "64 km",
+    next: "4.500 km",
+    status: "EM DIA",
+    statusType: "ok",
+    icon: "corrente1.svg",
+  },
+
+  {
+    name: "Cassete (K7)",
+    service: "Última troca",
+    date: "10/06/2026",
+    mileage: "3.200 km",
+    sinceLabel: "Desde a troca",
+    since: "664 km",
+    next: "5.000 km",
+    status: "ATENÇÃO",
+    statusType: "attention",
+    icon: "cassete1.svg",
+  },
+
+  {
+    name: "Desviador traseiro",
+    service: "Última manutenção",
+    date: "25/05/2026",
+    mileage: "2.900 km",
+    sinceLabel: "Desde a manutenção",
+    since: "964 km",
+    next: "6.000 km",
+    status: "EM DIA",
+    statusType: "ok",
+    icon: "desviador.svg",
+  },
+
+  {
+    name: "Trocador",
+    service: "Última manutenção",
+    date: "25/05/2026",
+    mileage: "2.900 km",
+    sinceLabel: "Desde a manutenção",
+    since: "964 km",
+    next: "6.000 km",
+    status: "EM DIA",
+    statusType: "ok",
+    icon: "trocador1.svg",
+  },
+
+  {
+    name: "Cabos e conduítes",
+    service: "Última troca",
+    date: "15/03/2026",
+    mileage: "2.200 km",
+    sinceLabel: "Desde a troca",
+    since: "1.664 km",
+    next: "3.000 km",
+    status: "ATENÇÃO",
+    statusType: "attention",
+    icon: "cabos.svg",
   },
 ];
 
@@ -229,23 +254,25 @@ export default function MaintenanceDashboard() {
         <h2>COMPONENTES</h2>
 
         <div className="maintenance-item-list">
-            {categories
-            .flatMap((category) => category.components)
-            .map((item) => (
-                <MaintenanceItem
-                key={item.name}
-                {...item}
-                />
-            ))}
+          {components.map((item) => (
+            <MaintenanceItem
+              key={item.name}
+              {...item}
+            />
+          ))}
         </div>
-        </section>
-      
+      </section>
+
       <button
         className="maintenance-add"
         aria-label="Registrar manutenção"
       >
         <span>+</span>
-        <small>Registrar<br />manutenção</small>
+        <small>
+          Registrar
+          <br />
+          manutenção
+        </small>
       </button>
 
     </main>

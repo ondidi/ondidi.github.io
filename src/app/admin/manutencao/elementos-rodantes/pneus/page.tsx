@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { supabase } from "@/lib/supabase";
+import { useRouter } from "next/navigation";
 
 import AdminSidebar from "@/admin/components/AdminSidebar";
 import AdminHeader from "@/admin/components/AdminHeader";
@@ -16,8 +17,15 @@ import {
 } from "@/services/maintenance.service";
 
 export default function PneuDianteiroPage() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [eventModalOpen, setEventModalOpen] = useState(false);
+
+  const [pneuMenuOpen, setPneuMenuOpen] = useState<
+    "dianteiro" | "traseiro" | null
+  >(null);
+
+const [historicoOpen, setHistoricoOpen] = useState(false);
 
   const [kmInstalacao, setKmInstalacao] = useState<number | null>(null);
   const [kmAtual, setKmAtual] = useState<number | null>(null);
@@ -35,6 +43,9 @@ export default function PneuDianteiroPage() {
     tipo: string;
     motivo: string | null;
   } | null>(null);
+  const [eventModalType, setEventModalType] = useState<
+    "inspection" | "rotation" | "replacement"
+  >("inspection");
 
   const [historicoMileage, setHistoricoMileage] =
     useState<number | null>(null);
@@ -117,22 +128,22 @@ export default function PneuDianteiroPage() {
       setKmAtual(kmAtualBike);
       setKmUso(kmUsoCalculado);
 
-      const { data: eventos, error: eventosError } =
-        await supabase
-          .from("maintenance_events")
-          .select(
-            "event_date, event_type, reason, mileage, inspection_result, notes"
-          )
-          .eq("cycle_id", ciclo.id)
-          .order("event_date", {
-            ascending: false,
-          });
+      
+    const { data: eventos, error: erroEventos } = await supabase
+      .from("maintenance_events")
+      .select(
+        "event_date, event_type, reason, mileage, inspection_result, notes"
+      )
+      .eq("cycle_id", ciclo.id)
+      .order("event_date", { ascending: false });
 
-      if (eventosError) {
-        console.error(
-          "Erro ao carregar histórico:",
-          eventosError
-        );
+    console.log("CICLO CONSULTADO:", ciclo.id);
+    console.log("ERRO NA CONSULTA:", erroEventos);
+    console.log("EVENTOS RETORNADOS:", eventos);
+
+
+      if (erroEventos) {
+        console.error("Erro ao carregar histórico:", erroEventos);
         return;
       }
 
@@ -152,7 +163,7 @@ export default function PneuDianteiroPage() {
 
         setHistoricoMileage(evento.mileage);
       }
-          setHistoricos(
+        setHistoricos(
       (eventos ?? []).map((evento) => ({
         data: evento.event_date,
         tipo: evento.event_type,
@@ -276,7 +287,7 @@ export default function PneuDianteiroPage() {
         <main className="maintenance-page">
 
           <div className="maintenance-detail-header">
-            <a href="/admin/manutencao/elementos-rodantes">
+            <a href="/admin/manutencao">
               ‹
             </a>
 
@@ -284,298 +295,338 @@ export default function PneuDianteiroPage() {
               <span>ELEMENTOS RODANTES</span>
               <h1>Pneus</h1>
             </div>
-          </div>
 
-          <div className="component-status">
-            <span className="maintenance-status ok">
-              EM DIA
-            </span>
-          </div>
+            <div className="maintenance-component-navigation">
+              <button type="button" disabled>
+                ‹
+              </button>
 
-          <section className="component-overview">
+              <span>1/4</span>
 
-            <div className="component-overview-row">
-
-              <div>
-                <span>INSTALAÇÃO</span>
-
-                <strong>
-                  {dataInstalacao
-                    ? new Date(
-                        `${dataInstalacao}T00:00:00`
-                      ).toLocaleDateString("pt-BR")
-                    : "Carregando..."}
-                </strong>
-              </div>
-
-              <div>
-                <span>KM NA DATA</span>
-
-                <strong>
-                  {kmInstalacao !== null
-                    ? `${kmInstalacao.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-            </div>
-
-            <div className="component-overview-row">
-
-              <div>
-                <span>KM ATUAL</span>
-
-                <strong>
-                  {kmAtual !== null
-                    ? `${kmAtual.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-              <div>
-                <span>
-                  USO DESDE A INSTALAÇÃO
-                </span>
-
-                <strong>
-                  {kmUso !== null
-                    ? `${kmUso.toLocaleString(
-                        "pt-BR",
-                        {
-                          maximumFractionDigits: 0,
-                        }
-                      )} km`
-                    : "Calculando..."}
-                </strong>
-              </div>
-
-            </div>
-
-          </section>
-
-          <section className="component-reference">
-
-            <h2>REFERÊNCIA</h2>
-
-            <div className="reference-card">
-
-              <span>
-                Critério de avaliação
-              </span>
-
-              <strong>
-                Desgaste do pneu
-              </strong>
-
-              <p>
-                Avaliar visualmente as
-                condições do pneu,
-                considerando desgaste,
-                cortes, deformações
-                e ressecamento.
-              </p>
-
-            </div>
-
-          </section>
-
-  <section className="maintenance-history">
-
-  <h2>HISTÓRICO</h2>
-
-  {/* CICLO ATUAL */}
-  <div className="history-card">
-
-    <div className="history-date">
-      {dataInstalacao
-        ? new Date(
-            `${dataInstalacao}T00:00:00`
-          ).toLocaleDateString("pt-BR")
-        : "Carregando..."}
-    </div>
-
-    <div className="history-content">
-
-      <strong>
-        Instalação
-      </strong>
-
-      <strong>
-        {kmInstalacao !== null
-          ? `${kmInstalacao.toLocaleString(
-              "pt-BR",
-              {
-                maximumFractionDigits: 0,
+              <button
+              type="button"
+              onClick={() =>
+                router.push(
+                  "/admin/manutencao/elementos-rodantes/camaras"
+                )
               }
-            )} km`
-          : "Calculando..."}
-      </strong>
+            >
+              ›
+            </button>
+            </div>
+          </div>
 
-    </div>
+          <div className="pneus-list">
 
-  </div>
+            <article className="pneu-card">
 
-  {historicos.map((evento, index) => (
-      <div
-        className="history-card"
-        key={`${evento.data}-${evento.tipo}-${index}`}
-      >
+              <div className="pneu-card-header">
+              <div>
+                <h2>Pneu</h2>
+                <span>Dianteiro</span>
+              </div>
 
-        <div className="history-date">
-          {new Date(
-            `${evento.data}T00:00:00`
-          ).toLocaleDateString("pt-BR")}
-        </div>
+              <button
+                type="button"
+                className="pneu-menu-button"
+                aria-label="Opções do pneu dianteiro"
+                onClick={() =>
+                  setPneuMenuOpen(
+                    pneuMenuOpen === "dianteiro" ? null : "dianteiro"
+                  )
+                }
+              >
+                ⋮
+              </button>
+            </div>
 
-        <div className="history-content">
+              {pneuMenuOpen === "dianteiro" && (
+                <div className="pneu-component-menu">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPneuMenuOpen(null);
+                      setEventModalType("inspection");
+                      setEventModalOpen(true);
+                    }}
+                  >
+                    Inspeção
+                  </button>
 
-          <strong>
-            {evento.tipo === "replacement"
-              ? "Substituição"
-              : evento.tipo === "rotation"
-                ? "Rodízio"
-                : "Inspeção"}
-          </strong>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPneuMenuOpen(null);
+                      setEventModalType("rotation");
+                      setEventModalOpen(true);
+                    }}
+                  >
+                    Rodízio
+                  </button>
 
-          <strong>
-            {evento.mileage !== null
-              ? `${evento.mileage.toLocaleString(
-                  "pt-BR",
-                  {
-                    maximumFractionDigits: 0,
-                  }
-                )} km`
-              : "—"}
-          </strong>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPneuMenuOpen(null);
+                      setEventModalType("replacement");
+                      setEventModalOpen(true);
+                    }}
+                  >
+                    Substituição
+                  </button>
 
-          {evento.resultado && (
-            <span>
-              Resultado: {evento.resultado}
-            </span>
-          )}
-
-          {evento.observacao && (
-            <span>
-              {evento.observacao}
-            </span>
-          )}
-
-        </div>
-
-      </div>
-    ))}
-
-    {/* HISTÓRICOS ANTERIORES */}
-    {historicosAnteriores.length > 0 && (
-      <>
-        <div
-          style={{
-            margin: "24px 0",
-            borderTop: "1px solid #D9B26C",
-          }}
-        />
-
-        {historicosAnteriores.map((cicloAnterior) => (
-          <div key={cicloAnterior.cycleId}>
-
-            {cicloAnterior.eventos.map(
-              (evento, index) => (
-                <div
-                  className="history-card"
-                  key={`${evento.event_date}-${evento.event_type}-${index}`}
-                >
-
-                  <div className="history-date">
-                    {new Date(
-                      `${evento.event_date}T00:00:00`
-                    ).toLocaleDateString("pt-BR")}
-                  </div>
-
-                  <div className="history-content">
-
-                    <strong>
-                      {evento.event_type ===
-                      "replacement"
-                        ? "Substituição"
-                        : evento.event_type ===
-                          "rotation"
-                          ? "Rodízio"
-                          : "Inspeção"}
-                    </strong>
-
-                    <strong>
-                      {evento.mileage !== null
-                        ? `${evento.mileage.toLocaleString(
-                            "pt-BR",
-                            {
-                              maximumFractionDigits: 0,
-                            }
-                          )} km`
-                        : "—"}
-                    </strong>
-
-                    {evento.inspection_result && (
-                      <span>
-                        Resultado:{" "}
-                        {evento.inspection_result}
-                      </span>
-                    )}
-
-                    {evento.notes && (
-                      <span>
-                        {evento.notes}
-                      </span>
-                    )}
-
-                  </div>
-
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setPneuMenuOpen(null);
+                      setHistoricoOpen(true);
+                    }}
+                  >
+                    Ver histórico
+                  </button>
                 </div>
-              )
-            )}
+              )}
+
+              <div className="pneu-card-data">
+
+                <div>
+                  <span>Última troca:</span>
+
+                  <strong>
+                    {dataInstalacao
+                      ? new Date(
+                          `${dataInstalacao}T00:00:00`
+                        ).toLocaleDateString("pt-BR")
+                      : "Carregando..."}
+                  </strong>
+
+                  <strong>
+                    {kmInstalacao !== null
+                      ? `${kmInstalacao.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>Desde a troca</span>
+
+                  <strong>
+                    {kmUso !== null
+                      ? `${kmUso.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article className="pneu-card">
+
+              <div className="pneu-card-header">
+                <div>
+                  <h2>Pneu</h2>
+                  <span>Traseiro</span>
+                </div>
+
+                <button
+                  type="button"
+                  className="pneu-menu-button"
+                  aria-label="Opções do pneu traseiro"
+                  onClick={() =>
+                    setPneuMenuOpen(
+                      pneuMenuOpen === "traseiro"
+                        ? null
+                        : "traseiro"
+                    )
+                  }
+                >
+                  ⋮
+                </button>
+                {pneuMenuOpen === "traseiro" && (
+                  <div className="pneu-component-menu">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPneuMenuOpen(null);
+                        setEventModalType("inspection");
+                        setEventModalOpen(true);
+                      }}
+                    >
+                      Inspeção
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPneuMenuOpen(null);
+                        setEventModalType("rotation");
+                        setEventModalOpen(true);
+                      }}
+                    >
+                      Rodízio
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPneuMenuOpen(null);
+                        setEventModalType("replacement");
+                        setEventModalOpen(true);
+                      }}
+                    >
+                      Substituição
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPneuMenuOpen(null);
+                        setHistoricoOpen(true);
+                      }}
+                    >
+                      Ver histórico
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              <div className="pneu-card-data">
+
+                <div>
+                  <span>Última troca:</span>
+
+                  <strong>
+                    {dataInstalacao
+                      ? new Date(
+                          `${dataInstalacao}T00:00:00`
+                        ).toLocaleDateString("pt-BR")
+                      : "Carregando..."}
+                  </strong>
+
+                  <strong>
+                    {kmInstalacao !== null
+                      ? `${kmInstalacao.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>Desde a troca</span>
+
+                  <strong>
+                    {kmUso !== null
+                      ? `${kmUso.toLocaleString(
+                          "pt-BR",
+                          {
+                            maximumFractionDigits: 0,
+                          }
+                        )} km`
+                      : "Calculando..."}
+                  </strong>
+                </div>
+
+              </div>
+
+            </article>
 
           </div>
-        ))}
+          {historicoOpen && (
+            <div className="pneu-history-card">
 
-      </>
-    )}
+              <button
+                type="button"
+                className="pneu-history-close"
+                onClick={() => setHistoricoOpen(false)}
+                aria-label="Fechar histórico"
+              >
+                ×
+              </button>
 
-  </section>
+              <div className="pneu-history-header">
+                ...
+              </div>
 
-          <button
-            className="maintenance-add"
-            onClick={() =>
-              setEventModalOpen(true)
-            }
-          >
-            <span>+</span>
+              <div className="pneu-history-list">
+                {historicos.map((item, index) => (
+                  <div
+                    key={`${item.data}-${item.tipo}-${index}`}
+                    className="pneu-history-item"
+                  >
+                    <div>
+                      <span>
+                        {new Date(item.data + "T00:00:00").toLocaleDateString(
+                          "pt-BR"
+                        )}
+                      </span>
+                    </div>
 
-            <small>
-              Registrar
-              <br />
-              manutenção
-            </small>
-          </button>
+                    <div>
+                      <strong>
+                        {item.tipo === "inspection"
+                          ? "Inspeção"
+                          : item.tipo === "rotation"
+                            ? "Rodízio"
+                            : item.tipo === "replacement"
+                              ? "Substituição"
+                              : item.tipo}
+                      </strong>
+
+                      <span>
+                        {item.mileage !== null
+                          ? `${Math.round(item.mileage).toLocaleString("pt-BR")} km`
+                          : "—"}
+                      </span>
+                    </div>
+
+                    {(item.resultado || item.observacao) && (
+                      <div className="pneu-history-details">
+                        {item.resultado && (
+                          <span>
+                            Resultado: {item.resultado}
+                          </span>
+                        )}
+
+                        {item.observacao && (
+                          <span>{item.observacao}</span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {eventModalOpen &&
             cycleId &&
             componentId && (
-            <MaintenanceEventModal
-              componentName="Pneus"
+              <MaintenanceEventModal
+              componentName={
+                eventModalType === "inspection"
+                  ? "INSPEÇÃO"
+                  : eventModalType === "rotation"
+                    ? "RODÍZIO"
+                    : "SUBSTITUIÇÃO"
+              }
               cycleId={cycleId}
               componentId={componentId}
-              onClose={() =>
-                setEventModalOpen(false)
-              }
+              initialEventType={eventModalType}
+              showEventTypeSelector={false}
+              onClose={() => setEventModalOpen(false)}
             />
           )}
 
