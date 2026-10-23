@@ -1319,7 +1319,7 @@ export const adventures = [
             folder: "bueno",
             prefix: "bueno",
             extension: "webp",
-            count: 17,
+            count: 29,
             caption: "'Paisagens, desafios e bons momentos'"
         }
     }
