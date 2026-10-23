@@ -11,9 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         url: `https://ondids.com.br/blog/${artigo.slug}`,
 
-        lastModified: artigo.created_at
-            ? new Date(artigo.created_at)
-            : new Date(artigo.data_publicacao),
+        lastModified: new Date(artigo.data_publicacao),
 
         changeFrequency: "monthly" as const,
 
