@@ -41,7 +41,11 @@ export default function BlogFeatured({ artigo }: Props) {
             <div className={styles.image}>
 
                 <Image
-                    src={artigo.imagem_principal}
+                    src={
+                        artigo.imagem_principal?.startsWith("http")
+                            ? artigo.imagem_principal
+                            : "https://udyltmkwhmizfucdnjip.supabase.co/storage/v1/object/public/artigos/38/imagem-principal.png"
+                    }
                     alt={artigo.titulo}
                     fill
                     priority
