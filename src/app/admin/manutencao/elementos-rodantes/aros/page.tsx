@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 
 import { supabase } from "@/lib/supabase";
 
@@ -16,7 +15,6 @@ import {
 } from "@/services/maintenance.service";
 
 export default function ArosPage() {
-  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [eventModalOpen, setEventModalOpen] =
   useState(false);
@@ -121,7 +119,7 @@ export default function ArosPage() {
     carregarDados();
   }, []);
 
-    return (
+  return (
     <>
       <AdminSidebar
         menuOpen={menuOpen}
@@ -136,213 +134,214 @@ export default function ArosPage() {
         <main className="maintenance-page">
 
           <div className="maintenance-detail-header">
-
-            <a href="/admin/manutencao">
+            <a href="/admin/manutencao/elementos-rodantes">
               ‹
             </a>
 
             <div>
-              <span>
-                ELEMENTOS RODANTES
-              </span>
-
+              <span>ELEMENTOS RODANTES</span>
               <h1>Aros</h1>
             </div>
+          </div>
 
-            <div className="maintenance-component-navigation">
+          <div className="component-status">
+            <span className="maintenance-status ok">
+              EM DIA
+            </span>
+          </div>
 
-              <button
-                type="button"
-                onClick={() =>
-                  router.push(
-                    "/admin/manutencao/elementos-rodantes/camaras"
-                  )
-                }
-              >
-                ‹
-              </button>
+          <section className="component-overview">
 
-              <span>3/4</span>
+            <div className="component-overview-row">
 
-              <button
-                type="button"
-                onClick={() =>
-                  router.push(
-                    "/admin/manutencao/elementos-rodantes/cubos"
-                  )
-                }
-              >
-                ›
-              </button>
+              <div>
+                <span>INSTALAÇÃO</span>
+
+                <strong>
+                  {dataInstalacao
+                    ? new Date(
+                        `${dataInstalacao}T00:00:00`
+                      ).toLocaleDateString(
+                        "pt-BR"
+                      )
+                    : "Carregando..."}
+                </strong>
+              </div>
+
+              <div>
+                <span>KM NA DATA</span>
+
+                <strong>
+                  {kmInstalacao !== null
+                    ? `${kmInstalacao.toLocaleString(
+                        "pt-BR",
+                        {
+                          maximumFractionDigits: 0,
+                        }
+                      )} km`
+                    : "Calculando..."}
+                </strong>
+              </div>
 
             </div>
 
-          </div>
+            <div className="component-overview-row">
 
-          <div className="pneus-list">
+              <div>
+                <span>KM ATUAL</span>
 
-            {/* ARO DIANTEIRO */}
-            <article className="pneu-card">
+                <strong>
+                  {kmAtual !== null
+                    ? `${kmAtual.toLocaleString(
+                        "pt-BR",
+                        {
+                          maximumFractionDigits: 0,
+                        }
+                      )} km`
+                    : "Calculando..."}
+                </strong>
+              </div>
 
-              <div className="pneu-card-header">
+              <div>
+                <span>
+                  USO DESDE A INSTALAÇÃO
+                </span>
 
-                <div>
-                  <h2>Aro</h2>
-                  <span>Dianteiro</span>
-                </div>
+                <strong>
+                  {kmUso !== null
+                    ? `${kmUso.toLocaleString(
+                        "pt-BR",
+                        {
+                          maximumFractionDigits: 0,
+                        }
+                      )} km`
+                    : "Calculando..."}
+                </strong>
+              </div>
 
-                <button
-                  type="button"
-                  className="pneu-menu-button"
-                  aria-label="Opções do aro dianteiro"
+            </div>
+
+          </section>
+
+          <section className="component-reference">
+
+            <h2>REFERÊNCIA</h2>
+
+            <div className="reference-card">
+
+              <span>
+                Critério de avaliação
+              </span>
+
+              <strong>
+                Condição do aro
+              </strong>
+
+              <p>
+                Avaliar visualmente a condição
+                do aro, verificando alinhamento,
+                deformações, trincas e danos.
+              </p>
+
+            </div>
+
+          </section>
+
+          <section className="maintenance-history">
+
+            <h2>HISTÓRICO</h2>
+
+            {historicos.map(
+              (evento, index) => (
+                <div
+                  className="history-card"
+                  key={`${evento.data}-${evento.tipo}-${index}`}
                 >
-                  ⋮
-                </button>
 
-              </div>
+                  <div className="history-date">
+                    {new Date(
+                      `${evento.data}T00:00:00`
+                    ).toLocaleDateString(
+                      "pt-BR"
+                    )}
+                  </div>
 
-              <div className="pneu-card-data">
+                  <div className="history-content">
 
-                <div>
-                  <span>Última troca:</span>
+                    <strong>
+                      {evento.tipo ===
+                      "replacement"
+                        ? "Substituição"
+                        : evento.tipo ===
+                          "inspection"
+                        ? "Inspeção"
+                        : evento.tipo ===
+                          "alignment"
+                        ? "Alinhamento"
+                        : evento.tipo ===
+                          "repair"
+                        ? "Reparo"
+                        : evento.tipo}
+                    </strong>
 
-                  <strong>
-                    {dataInstalacao
-                      ? new Date(
-                          `${dataInstalacao}T00:00:00`
-                        ).toLocaleDateString(
-                          "pt-BR"
-                        )
-                      : "Carregando..."}
-                  </strong>
+                    <strong>
+                      {evento.mileage !== null
+                        ? `${evento.mileage.toLocaleString(
+                            "pt-BR",
+                            {
+                              maximumFractionDigits: 0,
+                            }
+                          )} km`
+                        : "—"}
+                    </strong>
 
-                  <strong>
-                    {kmInstalacao !== null
-                      ? `${kmInstalacao.toLocaleString(
-                          "pt-BR",
-                          {
-                            maximumFractionDigits: 0,
-                          }
-                        )} km`
-                      : "Calculando..."}
-                  </strong>
+                    {evento.resultado && (
+                      <span>
+                        Resultado:{" "}
+                        {evento.resultado}
+                      </span>
+                    )}
+
+                    {evento.observacao && (
+                      <span>
+                        {evento.observacao}
+                      </span>
+                    )}
+
+                  </div>
+
                 </div>
+              )
+            )}
 
-                <div>
-                  <span>Desde a troca</span>
-
-                  <strong>
-                    {kmUso !== null
-                      ? `${kmUso.toLocaleString(
-                          "pt-BR",
-                          {
-                            maximumFractionDigits: 0,
-                          }
-                        )} km`
-                      : "Calculando..."}
-                  </strong>
-                </div>
-
-              </div>
-
-            </article>
-
-            {/* ARO TRASEIRO */}
-            <article className="pneu-card">
-
-              <div className="pneu-card-header">
-
-                <div>
-                  <h2>Aro</h2>
-                  <span>Traseiro</span>
-                </div>
-
-                <button
-                  type="button"
-                  className="pneu-menu-button"
-                  aria-label="Opções do aro traseiro"
-                >
-                  ⋮
-                </button>
-
-              </div>
-
-              <div className="pneu-card-data">
-
-                <div>
-                  <span>Última troca:</span>
-
-                  <strong>
-                    {dataInstalacao
-                      ? new Date(
-                          `${dataInstalacao}T00:00:00`
-                        ).toLocaleDateString(
-                          "pt-BR"
-                        )
-                      : "Carregando..."}
-                  </strong>
-
-                  <strong>
-                    {kmInstalacao !== null
-                      ? `${kmInstalacao.toLocaleString(
-                          "pt-BR",
-                          {
-                            maximumFractionDigits: 0,
-                          }
-                        )} km`
-                      : "Calculando..."}
-                  </strong>
-                </div>
-
-                <div>
-                  <span>Desde a troca</span>
-
-                  <strong>
-                    {kmUso !== null
-                      ? `${kmUso.toLocaleString(
-                          "pt-BR",
-                          {
-                            maximumFractionDigits: 0,
-                          }
-                        )} km`
-                      : "Calculando..."}
-                  </strong>
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
+          </section>
 
           <button
             className="maintenance-add"
-            onClick={() =>
-              setEventModalOpen(true)
-            }
-          >
+            onClick={() => setEventModalOpen(true)}
+            >
             <span>+</span>
 
             <small>
-              Registrar
-              <br />
-              manutenção
+                Registrar
+                <br />
+                manutenção
             </small>
           </button>
 
         </main>
-
         {eventModalOpen &&
-          cycleId && (
-            <MaintenanceEventModalAros
-              componentName="Aros"
-              cycleId={cycleId}
-              onClose={() =>
-                setEventModalOpen(false)
-              }
-            />
-          )}
+        cycleId && (
 
+        <MaintenanceEventModalAros
+          componentName="Aros"
+          cycleId={cycleId}
+          onClose={() =>
+            setEventModalOpen(false)
+          }
+        />
+
+      )}
       </main>
     </>
   );

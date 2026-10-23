@@ -255,7 +255,11 @@ import {
         Pneus, câmaras, rodas e cubos
       </p>
 
-      
+      <div className="maintenance-category-summary">
+        <strong>4 / 6</strong>
+        <span>itens em dia</span>
+      </div>
+
       <section className="maintenance-history">
         <h2>COMPONENTES</h2>
 

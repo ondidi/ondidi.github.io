@@ -1,12 +1,4 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-
-interface MaintenanceMenuItem {
-  name: string;
-  href: string;
-}
 
 interface MaintenanceCardProps {
   title: string;
@@ -15,7 +7,7 @@ interface MaintenanceCardProps {
   status: string;
   statusType: string;
   icon: string;
-  menuItems?: MaintenanceMenuItem[];
+  href?: string;
 }
 
 export default function MaintenanceCard({
@@ -25,12 +17,10 @@ export default function MaintenanceCard({
   status,
   statusType,
   icon,
-  menuItems = [],
+  href,
 }: MaintenanceCardProps) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <article className="maintenance-card">
+  const content = (
+    <>
       <div className={`maintenance-card-icon ${statusType}`}>
         <img
           src={`/img/icons/${icon}`}
@@ -52,28 +42,21 @@ export default function MaintenanceCard({
         <small>{progress}</small>
       </div>
 
-      <button
-        type="button"
-        className="maintenance-menu-button"
-        aria-label={`Opções de ${title}`}
-        onClick={() => setMenuOpen((open) => !open)}
-      >
-        ⋮
-      </button>
+      <span className="maintenance-arrow">›</span>
+    </>
+  );
 
-      {menuOpen && menuItems.length > 0 && (
-        <div className="maintenance-component-menu">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      )}
+  if (href) {
+    return (
+      <Link href={href} className="maintenance-card">
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <article className="maintenance-card">
+      {content}
     </article>
   );
 }
