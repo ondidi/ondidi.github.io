@@ -6,8 +6,9 @@ export class BlogService {
 
         const { data, error } = await supabase
             .from("artigos")
-            .select("*")
-            .order("data_publicacao", { ascending: false });
+            .select("id, titulo, slug, chamada, data_publicacao, imagem_principal")
+            .order("data_publicacao", { ascending: false })
+            .limit(5);
 
         if (error) {
             console.error(error);
